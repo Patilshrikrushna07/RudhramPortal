@@ -49,7 +49,8 @@ export default function Contact() {
     mutationFn: async (data: InsertContact) => {
       return await apiRequest("POST", "/api/contact", data);
     },
-    onSuccess: () => {
+    onSuccess: (data) => {
+      console.log("Form submission successful:", data);
       toast({
         title: "Message Sent!",
         description: "Thank you for your message! We will get back to you soon.",
@@ -57,18 +58,20 @@ export default function Contact() {
       form.reset();
       setIsSubmitting(false);
     },
-    onError: (error: Error) => {
+    onError: (error: any) => {
       console.error("Contact form error:", error);
+      const errorMessage = error?.message || "Something went wrong. Please try again.";
       toast({
         variant: "destructive",
         title: "Error",
-        description: "Something went wrong. Please try again.",
+        description: errorMessage,
       });
       setIsSubmitting(false);
     },
   });
 
   const onSubmit = async (data: InsertContact) => {
+    console.log("Form submission started with data:", data);
     setIsSubmitting(true);
     contactMutation.mutate(data);
   };
@@ -77,20 +80,23 @@ export default function Contact() {
     {
       icon: Mail,
       title: "Email",
-      value: "contact@rudhramsoft.com",
-      color: "bg-primary-500"
+      value: "hello@rudhram.dev",
+      color: "bg-primary-500",
+      action: "mailto:hello@rudhram.dev"
     },
     {
       icon: Phone,
       title: "Phone", 
-      value: "+91-XXXXXXXXXX",
-      color: "bg-secondary-500"
+      value: "Schedule a Call",
+      color: "bg-secondary-500",
+      action: "#contact-form"
     },
     {
       icon: MapPin,
       title: "Office",
-      value: "Tech Park, Innovation District\nBangalore, Karnataka, India",
-      color: "bg-accent-emerald"
+      value: "Bangalore, India\nRemote Worldwide",
+      color: "bg-accent-emerald",
+      action: null
     }
   ];
 
@@ -300,10 +306,16 @@ export default function Contact() {
                 className="border-2 border-white text-white hover:bg-white hover:text-primary-900 px-8 py-6 text-lg font-semibold rounded-full backdrop-blur-sm transition-all duration-300"
                 data-testid="button-schedule-call"
               >
-                <Link href="tel:+91-XXXXXXXXXX">
+                <a href="#contact-form" onClick={(e) => {
+                  e.preventDefault();
+                  const element = document.getElementById('contact-form');
+                  if (element) {
+                    element.scrollIntoView({ behavior: 'smooth' });
+                  }
+                }}>
                   <Phone className="w-5 h-5 mr-2" />
                   Schedule Call
-                </Link>
+                </a>
               </Button>
             </motion.div>
           </motion.div>
