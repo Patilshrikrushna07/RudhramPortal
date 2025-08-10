@@ -326,52 +326,23 @@ export default function Home() {
               </motion.div>
             </motion.div>
 
-            {/* Impressive Stats Grid */}
-            <motion.div
-              className="grid grid-cols-2 md:grid-cols-4 gap-6 sm:gap-8 lg:gap-12 pt-8 sm:pt-10 lg:pt-12 border-t border-white/10 px-4 sm:px-0"
-              initial={{ opacity: 0, y: 40 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 1, delay: 1.1 }}
-            >
-              {[
-                { number: "800+", label: "Elite Developers", color: "from-blue-400 to-blue-600" },
-                { number: "5-7", label: "Days to Deploy", color: "from-yellow-400 to-yellow-600" },
-                { number: "250+", label: "Projects Delivered", color: "from-blue-500 to-blue-700" },
-                { number: "98%", label: "Client Retention", color: "from-yellow-500 to-yellow-700" }
-              ].map((stat, index) => (
-                <motion.div
-                  key={index}
-                  className="text-center group"
-                  initial={{ opacity: 0, scale: 0.8 }}
-                  animate={{ opacity: 1, scale: 1 }}
-                  transition={{ duration: 0.8, delay: 1.3 + index * 0.1 }}
-                  whileHover={{ scale: 1.1 }}
-                >
-                  <div className={`text-2xl sm:text-3xl lg:text-4xl xl:text-5xl font-black bg-gradient-to-r ${stat.color} bg-clip-text text-transparent mb-2 sm:mb-3`}>
-                    {stat.number}
-                  </div>
-                  <div className="text-white/60 text-sm sm:text-base lg:text-lg font-medium group-hover:text-white transition-colors duration-300">
-                    {stat.label}
-                  </div>
-                </motion.div>
-              ))}
-            </motion.div>
+
           </motion.div>
 
 
         </div>
 
-        {/* Advanced Scroll Indicator */}
+        {/* Centered Discover More Button */}
         <motion.div
-          className="absolute bottom-8 sm:bottom-12 left-1/2 transform -translate-x-1/2"
+          className="absolute bottom-8 sm:bottom-12 left-1/2 transform -translate-x-1/2 z-20"
           animate={{ y: [0, 15, 0] }}
           transition={{ duration: 2.5, repeat: Infinity }}
         >
-          <div className="flex flex-col items-center gap-2 sm:gap-4 text-white/50">
-            <span className="text-xs sm:text-sm font-medium tracking-wider">Discover More</span>
-            <div className="w-6 sm:w-8 h-10 sm:h-14 border-2 border-blue-400/50 rounded-full flex justify-center relative overflow-hidden shadow-lg shadow-blue-500/20">
+          <div className="flex flex-col items-center gap-3 sm:gap-4 text-white/70 hover:text-white transition-colors duration-300">
+            <span className="text-sm sm:text-base font-medium tracking-wider">Discover More</span>
+            <div className="w-8 sm:w-10 h-12 sm:h-16 border-2 border-blue-400/60 hover:border-blue-300 rounded-full flex justify-center relative overflow-hidden shadow-lg shadow-blue-500/30 transition-all duration-300 hover:shadow-blue-400/40">
               <motion.div
-                className="w-1 sm:w-1.5 h-3 sm:h-4 bg-gradient-to-b from-blue-400 to-yellow-400 rounded-full mt-2 sm:mt-3"
+                className="w-1.5 sm:w-2 h-4 sm:h-5 bg-gradient-to-b from-blue-400 to-yellow-400 rounded-full mt-3 sm:mt-4"
                 animate={{ y: [0, 15, 0] }}
                 transition={{ duration: 2.5, repeat: Infinity }}
               />
