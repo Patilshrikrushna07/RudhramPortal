@@ -227,7 +227,7 @@ export default function Home() {
         </div>
         
         {/* Main Hero Content */}
-        <div className="relative z-10 text-center max-w-7xl mx-auto w-full">
+        <div className="relative z-10 text-center max-w-7xl mx-auto w-full px-2 sm:px-4">
           <motion.div
             initial={{ opacity: 0, y: 50 }}
             animate={{ opacity: 1, y: 0 }}
@@ -247,7 +247,7 @@ export default function Home() {
 
             {/* Spectacular Main Headline */}
             <motion.h1
-              className="text-3xl sm:text-4xl md:text-6xl lg:text-7xl xl:text-8xl 2xl:text-9xl font-black text-black dark:text-white mb-4 sm:mb-6 lg:mb-8 leading-[0.9] sm:leading-[0.85] tracking-tight"
+              className="text-3xl sm:text-4xl md:text-6xl lg:text-7xl xl:text-8xl 2xl:text-9xl font-black text-black dark:text-white mb-4 sm:mb-6 lg:mb-8 leading-[0.9] sm:leading-[0.85] tracking-tight px-2 sm:px-4 lg:px-6"
               initial={{ opacity: 0, y: 40 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 1, delay: 0.5 }}
@@ -277,7 +277,7 @@ export default function Home() {
 
             {/* Premium Subtitle */}
             <motion.p
-              className="text-sm sm:text-base md:text-lg lg:text-xl xl:text-2xl 2xl:text-3xl text-gray-700 dark:text-white/70 max-w-xs sm:max-w-2xl lg:max-w-4xl xl:max-w-5xl mx-auto leading-relaxed mb-8 sm:mb-12 lg:mb-16 font-light px-4 sm:px-0"
+              className="text-sm sm:text-base md:text-lg lg:text-xl xl:text-2xl 2xl:text-3xl text-gray-700 dark:text-white/70 max-w-xs sm:max-w-2xl lg:max-w-4xl xl:max-w-5xl mx-auto leading-relaxed mb-8 sm:mb-12 lg:mb-16 font-light px-6 sm:px-8 lg:px-4"
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 1, delay: 0.7 }}
