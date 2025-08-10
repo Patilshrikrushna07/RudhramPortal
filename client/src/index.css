@@ -141,6 +141,21 @@
   50% { opacity: 0.5; }
 }
 
+@keyframes bounce-slow {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
+}
+
+@keyframes spin-slow {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+@keyframes gradient {
+  0%, 100% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+}
+
 .glass-card {
   background: rgba(255, 255, 255, 0.1);
   backdrop-filter: blur(10px);
@@ -164,12 +179,24 @@
 }
 
 .section-padding { 
-  padding: 5rem 0; 
+  padding: 3rem 0; 
 }
 
-@media (max-width: 768px) {
+@media (min-width: 640px) {
   .section-padding { 
-    padding: 3rem 0; 
+    padding: 4rem 0; 
+  }
+}
+
+@media (min-width: 768px) {
+  .section-padding { 
+    padding: 5rem 0; 
+  }
+}
+
+@media (min-width: 1024px) {
+  .section-padding { 
+    padding: 6rem 0; 
   }
 }
 
@@ -197,4 +224,17 @@
 
 .animate-pulse-slow {
   animation: pulse-slow 3s infinite;
+}
+
+.animate-bounce-slow {
+  animation: bounce-slow 3s ease-in-out infinite;
+}
+
+.animate-spin-slow {
+  animation: spin-slow 8s linear infinite;
+}
+
+.animate-gradient {
+  background-size: 400% 400%;
+  animation: gradient 6s ease infinite;
 }

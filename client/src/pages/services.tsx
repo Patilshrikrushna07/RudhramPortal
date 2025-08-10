@@ -115,17 +115,17 @@ export default function Services() {
     <div className="min-h-screen pt-16">
       {/* Header Section */}
       <section className="section-padding bg-gradient-to-br from-gray-50 to-white dark:from-gray-900 dark:to-gray-800">
-        <div className="container mx-auto px-4">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
-            className="text-center mb-16"
+            className="text-center mb-12 sm:mb-16"
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
           >
-            <h1 className="text-4xl md:text-5xl font-bold mb-6 gradient-text">
+            <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mb-4 sm:mb-6 gradient-text px-4 sm:px-0">
               Staff Augmentation Services
             </h1>
-            <p className="text-xl text-gray-600 dark:text-gray-400 max-w-3xl mx-auto">
+            <p className="text-lg sm:text-xl text-gray-600 dark:text-gray-400 max-w-3xl mx-auto px-4 sm:px-0 leading-relaxed">
               At The Rudhram Software Solutions, we deliver specialized staff augmentation services to help you scale your development capabilities instantly. Whether you need MERN + LLM, Java Full Stack, or Python + LLM experts, our talent pool covers every modern technology stack.
             </p>
           </motion.div>
@@ -134,9 +134,9 @@ export default function Services() {
 
       {/* Core Services Section */}
       <section className="section-padding bg-white dark:bg-gray-800">
-        <div className="container mx-auto px-4">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
-            className="space-y-12"
+            className="space-y-8 sm:space-y-12"
             variants={containerVariants}
             initial="hidden"
             whileInView="visible"
@@ -145,19 +145,19 @@ export default function Services() {
             {coreServices.map((service, index) => (
               <motion.div key={index} variants={itemVariants}>
                 <Card className="shadow-lg hover:shadow-xl transition-shadow border-0">
-                  <CardContent className="p-8">
-                    <div className="grid lg:grid-cols-3 gap-8">
+                  <CardContent className="p-6 sm:p-8">
+                    <div className="grid lg:grid-cols-3 gap-6 sm:gap-8">
                       {/* Service Header */}
                       <div className="lg:col-span-1">
-                        <div className="flex items-center mb-6">
-                          <div className={`w-16 h-16 bg-gradient-to-r ${service.gradient} rounded-xl flex items-center justify-center mr-6`}>
-                            <service.icon className="text-white text-2xl w-8 h-8" />
+                        <div className="flex items-start sm:items-center mb-4 sm:mb-6">
+                          <div className={`w-12 h-12 sm:w-16 sm:h-16 bg-gradient-to-r ${service.gradient} rounded-xl flex items-center justify-center mr-4 sm:mr-6 flex-shrink-0`}>
+                            <service.icon className="text-white w-6 h-6 sm:w-8 sm:h-8" />
                           </div>
                           <div>
-                            <h3 className="text-2xl font-bold text-gray-800 dark:text-white mb-2">
+                            <h3 className="text-xl sm:text-2xl font-bold text-gray-800 dark:text-white mb-1 sm:mb-2 leading-tight">
                               {service.title}
                             </h3>
-                            <p className="text-primary-500 font-medium">
+                            <p className="text-primary-500 font-medium text-sm sm:text-base">
                               {service.subtitle}
                             </p>
                           </div>
@@ -209,7 +209,7 @@ export default function Services() {
 
       {/* Additional Roles Section */}
       <section className="section-padding bg-gray-50 dark:bg-gray-900">
-        <div className="container mx-auto px-4">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -217,22 +217,22 @@ export default function Services() {
             transition={{ duration: 0.6 }}
           >
             <Card className="shadow-lg border-0">
-              <CardContent className="p-8">
-                <div className="flex items-center mb-8">
-                  <div className="w-16 h-16 bg-gradient-to-r from-secondary-500 to-purple-600 rounded-xl flex items-center justify-center mr-6">
-                    <Users className="text-white text-2xl w-8 h-8" />
+              <CardContent className="p-6 sm:p-8">
+                <div className="flex items-start sm:items-center mb-6 sm:mb-8">
+                  <div className="w-12 h-12 sm:w-16 sm:h-16 bg-gradient-to-r from-secondary-500 to-purple-600 rounded-xl flex items-center justify-center mr-4 sm:mr-6 flex-shrink-0">
+                    <Users className="text-white w-6 h-6 sm:w-8 sm:h-8" />
                   </div>
                   <div>
-                    <h3 className="text-2xl font-bold text-gray-800 dark:text-white mb-2">
+                    <h3 className="text-xl sm:text-2xl font-bold text-gray-800 dark:text-white mb-1 sm:mb-2 leading-tight">
                       Additional Specialized Roles
                     </h3>
-                    <p className="text-secondary-500 font-medium">
+                    <p className="text-secondary-500 font-medium text-sm sm:text-base">
                       Complete Tech Teams
                     </p>
                   </div>
                 </div>
 
-                <div className="grid md:grid-cols-2 gap-8">
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-6 sm:gap-8">
                   {additionalRoles.map((category, index) => (
                     <div key={index}>
                       <h4 className="font-semibold text-gray-800 dark:text-white mb-4">
@@ -257,30 +257,30 @@ export default function Services() {
 
       {/* CTA Section */}
       <section className="section-padding bg-gradient-to-br from-primary-600 to-secondary-600 text-white">
-        <div className="container mx-auto px-4 text-center">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
           >
-            <h2 className="text-3xl md:text-4xl font-bold mb-6">
+            <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold mb-4 sm:mb-6 px-4 sm:px-0">
               Let's build your team – faster, better, smarter.
             </h2>
-            <p className="text-xl mb-8 opacity-90 max-w-2xl mx-auto">
+            <p className="text-lg sm:text-xl mb-6 sm:mb-8 opacity-90 max-w-2xl mx-auto px-4 sm:px-0 leading-relaxed">
               Let's discuss your specific requirements and match you with the perfect developers for your project.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link href="/quote">
-                <Button className="bg-accent-amber hover:bg-yellow-400 text-gray-900 px-8 py-4 text-lg font-semibold">
-                  <Calculator className="w-5 h-5 mr-2" />
+            <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center px-4 sm:px-0">
+              <Link href="/quote" className="w-full sm:w-auto">
+                <Button className="bg-accent-amber hover:bg-yellow-400 text-gray-900 px-6 sm:px-8 py-3 sm:py-4 text-base sm:text-lg font-semibold w-full sm:w-auto transition-all transform hover:scale-105">
+                  <Calculator className="w-4 h-4 sm:w-5 sm:h-5 mr-2" />
                   Get Custom Quote
                 </Button>
               </Link>
-              <Link href="/contact">
+              <Link href="/contact" className="w-full sm:w-auto">
                 <Button
                   variant="outline"
-                  className="border-2 border-white text-white px-8 py-4 text-lg font-semibold hover:bg-white hover:text-gray-900"
+                  className="border-2 border-white text-white px-6 sm:px-8 py-3 sm:py-4 text-base sm:text-lg font-semibold hover:bg-white hover:text-gray-900 w-full sm:w-auto transition-all transform hover:scale-105"
                 >
                   Schedule Consultation
                 </Button>
