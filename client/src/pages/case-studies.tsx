@@ -3,7 +3,18 @@ import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { Link } from "wouter";
 import { motion } from "framer-motion";
-import { ArrowUp, Calculator } from "lucide-react";
+import { 
+  ArrowUp, 
+  Calculator, 
+  Trophy, 
+  Target, 
+  Zap, 
+  Globe, 
+  BarChart3, 
+  TrendingUp,
+  Sparkles,
+  Star
+} from "lucide-react";
 
 const containerVariants = {
   hidden: { opacity: 0 },
@@ -122,27 +133,274 @@ export default function CaseStudies() {
 
   return (
     <div className="min-h-screen pt-16">
-      {/* Header Section */}
-      <section className="section-padding bg-gradient-to-br from-gray-50 to-white dark:from-gray-900 dark:to-gray-800">
-        <div className="container mx-auto px-4">
+      {/* Immersive Hero Section */}
+      <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-gradient-to-br from-primary-900 via-primary-700 to-secondary-600 bg-grid-pattern">
+        {/* Animated Background Elements */}
+        <div className="absolute inset-0 bg-gradient-to-br from-primary-900/90 via-primary-700/90 to-secondary-600/90" />
+        
+        {/* Floating Achievement Icons */}
+        <motion.div
+          className="absolute top-20 left-10 text-white/20 animate-float"
+          animate={{ 
+            rotate: [0, 360],
+            scale: [1, 1.2, 1]
+          }}
+          transition={{ 
+            duration: 8, 
+            repeat: Infinity,
+            delay: 0
+          }}
+        >
+          <Trophy className="w-16 h-16" />
+        </motion.div>
+        
+        <motion.div
+          className="absolute top-40 right-20 text-white/20 animate-bounce-slow"
+          animate={{ 
+            rotate: [0, -360],
+            scale: [1, 1.3, 1]
+          }}
+          transition={{ 
+            duration: 10, 
+            repeat: Infinity,
+            delay: 2
+          }}
+        >
+          <Target className="w-12 h-12" />
+        </motion.div>
+
+        <motion.div
+          className="absolute bottom-32 left-20 text-white/20 animate-pulse-slow"
+          animate={{ 
+            y: [0, -20, 0],
+            scale: [1, 1.1, 1]
+          }}
+          transition={{ 
+            duration: 6, 
+            repeat: Infinity,
+            delay: 1
+          }}
+        >
+          <BarChart3 className="w-14 h-14" />
+        </motion.div>
+
+        <motion.div
+          className="absolute top-60 left-1/4 text-white/20 animate-spin-slow"
+          animate={{ 
+            scale: [1, 1.2, 1],
+            opacity: [0.2, 0.4, 0.2]
+          }}
+          transition={{ 
+            duration: 7, 
+            repeat: Infinity,
+            delay: 3
+          }}
+        >
+          <Globe className="w-10 h-10" />
+        </motion.div>
+
+        <motion.div
+          className="absolute bottom-20 right-1/3 text-white/20 animate-float"
+          animate={{ 
+            rotate: [0, 180, 360],
+            scale: [1, 1.15, 1]
+          }}
+          transition={{ 
+            duration: 9, 
+            repeat: Infinity,
+            delay: 4
+          }}
+        >
+          <TrendingUp className="w-12 h-12" />
+        </motion.div>
+
+        {/* Orbiting Elements */}
+        <motion.div
+          className="absolute inset-0 flex items-center justify-center"
+          animate={{ rotate: 360 }}
+          transition={{ duration: 30, repeat: Infinity, ease: "linear" }}
+        >
+          <div className="relative w-96 h-96">
+            <motion.div 
+              className="absolute -top-4 left-1/2 transform -translate-x-1/2 text-white/30"
+              animate={{ scale: [1, 1.2, 1] }}
+              transition={{ duration: 3, repeat: Infinity }}
+            >
+              <Sparkles className="w-8 h-8" />
+            </motion.div>
+            <motion.div 
+              className="absolute top-1/2 -right-4 transform -translate-y-1/2 text-white/30"
+              animate={{ scale: [1, 1.3, 1] }}
+              transition={{ duration: 3, repeat: Infinity, delay: 0.75 }}
+            >
+              <Star className="w-6 h-6" />
+            </motion.div>
+            <motion.div 
+              className="absolute -bottom-4 left-1/2 transform -translate-x-1/2 text-white/30"
+              animate={{ scale: [1, 1.2, 1] }}
+              transition={{ duration: 3, repeat: Infinity, delay: 1.5 }}
+            >
+              <Zap className="w-8 h-8" />
+            </motion.div>
+            <motion.div 
+              className="absolute top-1/2 -left-4 transform -translate-y-1/2 text-white/30"
+              animate={{ scale: [1, 1.3, 1] }}
+              transition={{ duration: 3, repeat: Infinity, delay: 2.25 }}
+            >
+              <Star className="w-6 h-6" />
+            </motion.div>
+          </div>
+        </motion.div>
+
+        {/* Main Content */}
+        <div className="relative z-10 text-center max-w-6xl mx-auto px-4">
           <motion.div
-            className="text-center mb-16"
+            initial={{ opacity: 0, y: 50 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            className="mb-8"
+          >
+            <motion.div
+              className="inline-flex items-center gap-2 bg-white/10 backdrop-blur-sm rounded-full px-6 py-3 mb-8"
+              initial={{ opacity: 0, scale: 0.8 }}
+              animate={{ opacity: 1, scale: 1 }}
+              transition={{ duration: 0.6, delay: 0.2 }}
+            >
+              <Trophy className="w-5 h-5 text-amber-300" />
+              <span className="text-white text-sm font-medium">Success Stories That Inspire</span>
+            </motion.div>
+
+            <motion.h1
+              className="text-5xl md:text-7xl lg:text-8xl font-bold text-white mb-6 leading-tight"
+              initial={{ opacity: 0, y: 30 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: 0.4 }}
+            >
+              Client{" "}
+              <span className="relative">
+                <span className="bg-gradient-to-r from-amber-300 via-yellow-300 to-amber-300 bg-clip-text text-transparent animate-gradient">
+                  Success
+                </span>
+                <motion.div
+                  className="absolute -bottom-2 left-0 right-0 h-1 bg-gradient-to-r from-amber-300 via-yellow-300 to-amber-300 animate-gradient"
+                  initial={{ scaleX: 0 }}
+                  animate={{ scaleX: 1 }}
+                  transition={{ duration: 1, delay: 1 }}
+                />
+              </span>
+              <br />
+              Stories
+            </motion.h1>
+
+            <motion.p
+              className="text-xl md:text-2xl text-white/90 max-w-4xl mx-auto leading-relaxed"
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: 0.6 }}
+            >
+              Discover how we've transformed businesses across industries with our expert developers. 
+              From AI-powered platforms to enterprise solutions, our success stories speak volumes.
+            </motion.p>
+          </motion.div>
+
+          <motion.div
+            className="flex flex-col sm:flex-row gap-4 justify-center items-center"
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
+            transition={{ duration: 0.8, delay: 0.8 }}
           >
-            <h1 className="text-4xl md:text-5xl font-bold mb-6 gradient-text">
-              Client Case Studies
-            </h1>
-            <p className="text-xl text-gray-600 dark:text-gray-400 max-w-3xl mx-auto">
-              Our clients trust us to deliver not just developers, but solutions. Here's how we've helped businesses scale quickly and efficiently.
-            </p>
+            <motion.div
+              whileHover={{ scale: 1.05 }}
+              whileTap={{ scale: 0.95 }}
+            >
+              <Button
+                asChild
+                size="lg"
+                className="bg-white text-primary-900 hover:bg-white/90 px-8 py-6 text-lg font-semibold rounded-full shadow-xl hover:shadow-2xl transition-all duration-300"
+                data-testid="button-view-projects"
+              >
+                <Link href="#case-studies">
+                  <BarChart3 className="w-5 h-5 mr-2" />
+                  View Our Projects
+                </Link>
+              </Button>
+            </motion.div>
+            
+            <motion.div
+              whileHover={{ scale: 1.05 }}
+              whileTap={{ scale: 0.95 }}
+            >
+              <Button
+                asChild
+                variant="outline"
+                size="lg"
+                className="border-2 border-white text-white hover:bg-white hover:text-primary-900 px-8 py-6 text-lg font-semibold rounded-full backdrop-blur-sm transition-all duration-300"
+                data-testid="button-start-project"
+              >
+                <Link href="/contact">
+                  <Sparkles className="w-5 h-5 mr-2" />
+                  Start Your Project
+                </Link>
+              </Button>
+            </motion.div>
+          </motion.div>
+
+          {/* Success Metrics */}
+          <motion.div
+            className="grid grid-cols-2 md:grid-cols-4 gap-8 mt-16 pt-8 border-t border-white/20"
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 1 }}
+          >
+            {[
+              { number: "150+", label: "Projects Delivered", icon: Trophy },
+              { number: "98%", label: "Client Satisfaction", icon: Star },
+              { number: "50+", label: "Industries Served", icon: Globe },
+              { number: "40%", label: "Average ROI Boost", icon: TrendingUp }
+            ].map((stat, index) => (
+              <motion.div
+                key={index}
+                className="text-center"
+                initial={{ opacity: 0, scale: 0.8 }}
+                animate={{ opacity: 1, scale: 1 }}
+                transition={{ duration: 0.6, delay: 1.2 + index * 0.1 }}
+                whileHover={{ scale: 1.1 }}
+              >
+                <div className="flex justify-center mb-3">
+                  <stat.icon className="w-8 h-8 text-amber-300" />
+                </div>
+                <div className="text-3xl md:text-4xl font-bold text-white mb-2">
+                  {stat.number}
+                </div>
+                <div className="text-white/80 text-sm font-medium">
+                  {stat.label}
+                </div>
+              </motion.div>
+            ))}
           </motion.div>
         </div>
+
+        {/* Scroll Indicator */}
+        <motion.div
+          className="absolute bottom-8 left-1/2 transform -translate-x-1/2 text-white/60"
+          animate={{ y: [0, 10, 0] }}
+          transition={{ duration: 2, repeat: Infinity }}
+        >
+          <div className="flex flex-col items-center gap-2">
+            <span className="text-sm font-medium">Scroll to explore</span>
+            <div className="w-6 h-10 border-2 border-white/40 rounded-full flex justify-center">
+              <motion.div
+                className="w-1 h-3 bg-white/60 rounded-full mt-2"
+                animate={{ y: [0, 12, 0] }}
+                transition={{ duration: 2, repeat: Infinity }}
+              />
+            </div>
+          </div>
+        </motion.div>
       </section>
 
       {/* Case Studies Grid */}
-      <section className="section-padding bg-white dark:bg-gray-800">
+      <section id="case-studies" className="section-padding bg-white dark:bg-gray-800">
         <div className="container mx-auto px-4">
           <motion.div
             className="grid md:grid-cols-2 lg:grid-cols-3 gap-8"

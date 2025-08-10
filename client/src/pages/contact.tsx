@@ -16,7 +16,17 @@ import {
   Phone, 
   MapPin, 
   Send,
-  MessageSquare
+  MessageSquare,
+  Clock,
+  HeadphonesIcon,
+  Rocket,
+  Zap,
+  Globe,
+  Users,
+  Star,
+  Sparkles,
+  CheckCircle,
+  ArrowRight
 } from "lucide-react";
 import type { InsertContact } from "@shared/schema";
 
@@ -85,27 +95,290 @@ export default function Contact() {
 
   return (
     <div className="min-h-screen pt-16">
-      {/* Header Section */}
-      <section className="section-padding bg-gradient-to-br from-gray-50 to-white dark:from-gray-900 dark:to-gray-800">
-        <div className="container mx-auto px-4">
+      {/* Immersive Hero Section */}
+      <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-gradient-to-br from-primary-700 via-secondary-500 to-primary-900 bg-grid-pattern">
+        {/* Animated Background Elements */}
+        <div className="absolute inset-0 bg-gradient-to-br from-primary-700/90 via-secondary-500/90 to-primary-900/90" />
+        
+        {/* Floating Communication Icons */}
+        <motion.div
+          className="absolute top-24 left-12 text-white/20 animate-float"
+          animate={{ 
+            rotate: [0, 360],
+            scale: [1, 1.4, 1]
+          }}
+          transition={{ 
+            duration: 10, 
+            repeat: Infinity,
+            delay: 0
+          }}
+        >
+          <Mail className="w-16 h-16" />
+        </motion.div>
+        
+        <motion.div
+          className="absolute top-36 right-20 text-white/20 animate-bounce-slow"
+          animate={{ 
+            rotate: [0, -360],
+            scale: [1, 1.2, 1]
+          }}
+          transition={{ 
+            duration: 8, 
+            repeat: Infinity,
+            delay: 1
+          }}
+        >
+          <Phone className="w-14 h-14" />
+        </motion.div>
+
+        <motion.div
+          className="absolute bottom-36 left-16 text-white/20 animate-pulse-slow"
+          animate={{ 
+            y: [0, -20, 0],
+            scale: [1, 1.2, 1]
+          }}
+          transition={{ 
+            duration: 6, 
+            repeat: Infinity,
+            delay: 2
+          }}
+        >
+          <HeadphonesIcon className="w-14 h-14" />
+        </motion.div>
+
+        <motion.div
+          className="absolute top-48 left-1/4 text-white/20 animate-spin-slow"
+          animate={{ 
+            scale: [1, 1.3, 1],
+            opacity: [0.2, 0.5, 0.2]
+          }}
+          transition={{ 
+            duration: 7, 
+            repeat: Infinity,
+            delay: 3
+          }}
+        >
+          <MessageSquare className="w-12 h-12" />
+        </motion.div>
+
+        <motion.div
+          className="absolute bottom-24 right-1/3 text-white/20 animate-float"
+          animate={{ 
+            rotate: [0, 180, 360],
+            scale: [1, 1.3, 1]
+          }}
+          transition={{ 
+            duration: 9, 
+            repeat: Infinity,
+            delay: 4
+          }}
+        >
+          <Rocket className="w-12 h-12" />
+        </motion.div>
+
+        {/* Orbiting Elements */}
+        <motion.div
+          className="absolute inset-0 flex items-center justify-center"
+          animate={{ rotate: 360 }}
+          transition={{ duration: 20, repeat: Infinity, ease: "linear" }}
+        >
+          <div className="relative w-96 h-96">
+            <motion.div 
+              className="absolute -top-4 left-1/2 transform -translate-x-1/2 text-white/30"
+              animate={{ scale: [1, 1.3, 1] }}
+              transition={{ duration: 3, repeat: Infinity }}
+            >
+              <CheckCircle className="w-8 h-8" />
+            </motion.div>
+            <motion.div 
+              className="absolute top-1/2 -right-4 transform -translate-y-1/2 text-white/30"
+              animate={{ scale: [1, 1.2, 1] }}
+              transition={{ duration: 3, repeat: Infinity, delay: 0.75 }}
+            >
+              <Clock className="w-7 h-7" />
+            </motion.div>
+            <motion.div 
+              className="absolute -bottom-4 left-1/2 transform -translate-x-1/2 text-white/30"
+              animate={{ scale: [1, 1.3, 1] }}
+              transition={{ duration: 3, repeat: Infinity, delay: 1.5 }}
+            >
+              <Users className="w-8 h-8" />
+            </motion.div>
+            <motion.div 
+              className="absolute top-1/2 -left-4 transform -translate-y-1/2 text-white/30"
+              animate={{ scale: [1, 1.2, 1] }}
+              transition={{ duration: 3, repeat: Infinity, delay: 2.25 }}
+            >
+              <Globe className="w-7 h-7" />
+            </motion.div>
+          </div>
+        </motion.div>
+
+        {/* Main Content */}
+        <div className="relative z-10 text-center max-w-6xl mx-auto px-4">
           <motion.div
-            className="text-center mb-16"
+            initial={{ opacity: 0, y: 50 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            className="mb-8"
+          >
+            <motion.div
+              className="inline-flex items-center gap-2 bg-white/10 backdrop-blur-sm rounded-full px-6 py-3 mb-8"
+              initial={{ opacity: 0, scale: 0.8 }}
+              animate={{ opacity: 1, scale: 1 }}
+              transition={{ duration: 0.6, delay: 0.2 }}
+            >
+              <MessageSquare className="w-5 h-5 text-cyan-300" />
+              <span className="text-white text-sm font-medium">Let's Start Building Together</span>
+            </motion.div>
+
+            <motion.h1
+              className="text-5xl md:text-7xl lg:text-8xl font-bold text-white mb-6 leading-tight"
+              initial={{ opacity: 0, y: 30 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: 0.4 }}
+            >
+              Get In{" "}
+              <span className="relative">
+                <span className="bg-gradient-to-r from-cyan-300 via-blue-300 to-purple-300 bg-clip-text text-transparent animate-gradient">
+                  Touch
+                </span>
+                <motion.div
+                  className="absolute -bottom-2 left-0 right-0 h-1 bg-gradient-to-r from-cyan-300 via-blue-300 to-purple-300 animate-gradient"
+                  initial={{ scaleX: 0 }}
+                  animate={{ scaleX: 1 }}
+                  transition={{ duration: 1, delay: 1 }}
+                />
+              </span>
+              <br />
+              Today
+            </motion.h1>
+
+            <motion.p
+              className="text-xl md:text-2xl text-white/90 max-w-4xl mx-auto leading-relaxed"
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: 0.6 }}
+            >
+              Ready to transform your business with top-tier developers? Let's discuss your vision 
+              and build something extraordinary together.
+            </motion.p>
+          </motion.div>
+
+          <motion.div
+            className="flex flex-col sm:flex-row gap-4 justify-center items-center"
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
+            transition={{ duration: 0.8, delay: 0.8 }}
           >
-            <h1 className="text-4xl md:text-5xl font-bold mb-6 gradient-text">
-              Get In Touch
-            </h1>
-            <p className="text-xl text-gray-600 dark:text-gray-400 max-w-3xl mx-auto">
-              Ready to build your dream tech team? Let's discuss your project requirements and find the perfect developers for your needs.
-            </p>
+            <motion.div
+              whileHover={{ scale: 1.05 }}
+              whileTap={{ scale: 0.95 }}
+            >
+              <Button
+                asChild
+                size="lg"
+                className="bg-white text-primary-900 hover:bg-white/90 px-8 py-6 text-lg font-semibold rounded-full shadow-xl hover:shadow-2xl transition-all duration-300"
+                data-testid="button-contact-form"
+              >
+                <Link href="#contact-form">
+                  <Send className="w-5 h-5 mr-2" />
+                  Send Message
+                </Link>
+              </Button>
+            </motion.div>
+            
+            <motion.div
+              whileHover={{ scale: 1.05 }}
+              whileTap={{ scale: 0.95 }}
+            >
+              <Button
+                asChild
+                variant="outline"
+                size="lg"
+                className="border-2 border-white text-white hover:bg-white hover:text-primary-900 px-8 py-6 text-lg font-semibold rounded-full backdrop-blur-sm transition-all duration-300"
+                data-testid="button-schedule-call"
+              >
+                <Link href="tel:+91-XXXXXXXXXX">
+                  <Phone className="w-5 h-5 mr-2" />
+                  Schedule Call
+                </Link>
+              </Button>
+            </motion.div>
+          </motion.div>
+
+          {/* Contact Promise */}
+          <motion.div
+            className="grid grid-cols-1 md:grid-cols-3 gap-6 mt-16 pt-8 border-t border-white/20"
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 1 }}
+          >
+            {[
+              { 
+                icon: Clock, 
+                title: "Quick Response", 
+                description: "Get a reply within 2 hours",
+                accent: "text-cyan-300"
+              },
+              { 
+                icon: CheckCircle, 
+                title: "Free Consultation", 
+                description: "No-obligation project discussion",
+                accent: "text-emerald-300"
+              },
+              { 
+                icon: Users, 
+                title: "Expert Matching", 
+                description: "Perfect developers for your needs",
+                accent: "text-purple-300"
+              }
+            ].map((promise, index) => (
+              <motion.div
+                key={index}
+                className="text-center"
+                initial={{ opacity: 0, scale: 0.8 }}
+                animate={{ opacity: 1, scale: 1 }}
+                transition={{ duration: 0.6, delay: 1.2 + index * 0.1 }}
+                whileHover={{ scale: 1.05 }}
+              >
+                <div className="flex justify-center mb-4">
+                  <div className="p-3 bg-white/10 rounded-full backdrop-blur-sm">
+                    <promise.icon className={`w-8 h-8 ${promise.accent}`} />
+                  </div>
+                </div>
+                <h3 className="text-lg font-semibold text-white mb-2">
+                  {promise.title}
+                </h3>
+                <p className="text-white/80 text-sm">
+                  {promise.description}
+                </p>
+              </motion.div>
+            ))}
           </motion.div>
         </div>
+
+        {/* Scroll Indicator */}
+        <motion.div
+          className="absolute bottom-8 left-1/2 transform -translate-x-1/2 text-white/60"
+          animate={{ y: [0, 10, 0] }}
+          transition={{ duration: 2, repeat: Infinity }}
+        >
+          <div className="flex flex-col items-center gap-2">
+            <span className="text-sm font-medium">Contact us below</span>
+            <div className="w-6 h-10 border-2 border-white/40 rounded-full flex justify-center">
+              <motion.div
+                className="w-1 h-3 bg-white/60 rounded-full mt-2"
+                animate={{ y: [0, 12, 0] }}
+                transition={{ duration: 2, repeat: Infinity }}
+              />
+            </div>
+          </div>
+        </motion.div>
       </section>
 
       {/* Contact Section */}
-      <section className="section-padding bg-white dark:bg-gray-800">
+      <section id="contact-form" className="section-padding bg-white dark:bg-gray-800">
         <div className="container mx-auto px-4">
           <div className="grid lg:grid-cols-2 gap-16">
             {/* Contact Form */}
