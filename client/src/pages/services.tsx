@@ -154,7 +154,7 @@ export default function Services() {
                             <service.icon className="text-white w-6 h-6 sm:w-8 sm:h-8" />
                           </div>
                           <div>
-                            <h3 className="text-xl sm:text-2xl font-bold text-gray-800 dark:text-white mb-1 sm:mb-2 leading-tight">
+                            <h3 className="text-xl sm:text-2xl font-bold text-white mb-1 sm:mb-2 leading-tight">
                               {service.title}
                             </h3>
                             <p className="text-primary-500 font-medium text-sm sm:text-base">
@@ -162,14 +162,14 @@ export default function Services() {
                             </p>
                           </div>
                         </div>
-                        <p className="text-gray-600 dark:text-gray-400 mb-6">
+                        <p className="text-gray-400 mb-6">
                           {service.description}
                         </p>
                       </div>
 
                       {/* Technologies */}
                       <div className="lg:col-span-1">
-                        <h4 className="font-semibold text-gray-800 dark:text-white mb-4">
+                        <h4 className="font-semibold text-white mb-4">
                           Skills & Technologies:
                         </h4>
                         <div className="flex flex-wrap gap-2 mb-6">
@@ -186,12 +186,12 @@ export default function Services() {
 
                       {/* Use Cases */}
                       <div className="lg:col-span-1">
-                        <h4 className="font-semibold text-gray-800 dark:text-white mb-4">
+                        <h4 className="font-semibold text-white mb-4">
                           Use Cases:
                         </h4>
                         <ul className="space-y-3">
                           {service.useCases.map((useCase, idx) => (
-                            <li key={idx} className="flex items-start text-gray-600 dark:text-gray-300">
+                            <li key={idx} className="flex items-start text-gray-300">
                               <Check className="text-accent-emerald mr-3 mt-0.5 flex-shrink-0 w-4 h-4" />
                               <span className="text-sm">{useCase}</span>
                             </li>
@@ -208,7 +208,7 @@ export default function Services() {
       </section>
 
       {/* Additional Roles Section */}
-      <section className="section-padding bg-gray-50 dark:bg-gray-900">
+      <section className="section-padding bg-gray-900">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
@@ -223,7 +223,7 @@ export default function Services() {
                     <Users className="text-white w-6 h-6 sm:w-8 sm:h-8" />
                   </div>
                   <div>
-                    <h3 className="text-xl sm:text-2xl font-bold text-gray-800 dark:text-white mb-1 sm:mb-2 leading-tight">
+                    <h3 className="text-xl sm:text-2xl font-bold text-white mb-1 sm:mb-2 leading-tight">
                       Additional Specialized Roles
                     </h3>
                     <p className="text-secondary-500 font-medium text-sm sm:text-base">
@@ -235,12 +235,12 @@ export default function Services() {
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6 sm:gap-8">
                   {additionalRoles.map((category, index) => (
                     <div key={index}>
-                      <h4 className="font-semibold text-gray-800 dark:text-white mb-4">
+                      <h4 className="font-semibold text-white mb-4">
                         {category.category}:
                       </h4>
                       <ul className="space-y-3">
                         {category.roles.map((role, idx) => (
-                          <li key={idx} className="flex items-center text-gray-600 dark:text-gray-300">
+                          <li key={idx} className="flex items-center text-gray-300">
                             <div className="w-2 h-2 bg-secondary-500 rounded-full mr-3 flex-shrink-0" />
                             <span className="text-sm">{role}</span>
                           </li>

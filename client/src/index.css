@@ -5,6 +5,11 @@
 @tailwind components;
 @tailwind utilities;
 
+/* Force dark theme globally */
+html {
+  @apply dark;
+}
+
 :root {
   --background: hsl(0, 0%, 100%);
   --foreground: hsl(210, 25%, 7.8431%);
