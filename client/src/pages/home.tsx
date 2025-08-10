@@ -123,7 +123,7 @@ export default function Home() {
   return (
     <div className="min-h-screen">
       {/* Revolutionary Hero Section */}
-      <section className="relative min-h-screen flex items-center justify-center overflow-hidden pt-20">
+      <section className="relative min-h-screen flex items-center justify-center overflow-hidden pt-16 sm:pt-20 px-4 sm:px-6 lg:px-8">
         {/* Spectacular Gradient Background */}
         <div className="absolute inset-0 bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900" />
         
@@ -142,10 +142,10 @@ export default function Home() {
         </div>
 
         {/* Advanced Particle System */}
-        <div className="absolute inset-0 pointer-events-none">
+        <div className="absolute inset-0 pointer-events-none hidden sm:block">
           {/* Large Floating Tech Orbs */}
           <motion.div
-            className="absolute top-1/5 left-1/6 w-32 h-32 rounded-full bg-gradient-to-r from-violet-500/30 to-purple-500/30 backdrop-blur-sm border border-violet-400/20"
+            className="absolute top-1/5 left-1/6 w-16 sm:w-24 lg:w-32 h-16 sm:h-24 lg:h-32 rounded-full bg-gradient-to-r from-violet-500/30 to-purple-500/30 backdrop-blur-sm border border-violet-400/20"
             animate={{ 
               y: [0, -30, 0],
               scale: [1, 1.1, 1],
@@ -154,7 +154,7 @@ export default function Home() {
             transition={{ duration: 10, repeat: Infinity, ease: "easeInOut" }}
           />
           <motion.div
-            className="absolute top-1/4 right-1/5 w-24 h-24 rounded-full bg-gradient-to-r from-indigo-500/30 to-blue-500/30 backdrop-blur-sm border border-indigo-400/20"
+            className="absolute top-1/4 right-1/5 w-12 sm:w-18 lg:w-24 h-12 sm:h-18 lg:h-24 rounded-full bg-gradient-to-r from-indigo-500/30 to-blue-500/30 backdrop-blur-sm border border-indigo-400/20"
             animate={{ 
               y: [0, 20, 0],
               scale: [1, 0.9, 1],
@@ -163,7 +163,7 @@ export default function Home() {
             transition={{ duration: 8, repeat: Infinity, ease: "easeInOut", delay: 2 }}
           />
           <motion.div
-            className="absolute bottom-1/4 left-1/4 w-28 h-28 rounded-full bg-gradient-to-r from-cyan-500/30 to-teal-500/30 backdrop-blur-sm border border-cyan-400/20"
+            className="absolute bottom-1/4 left-1/4 w-14 sm:w-20 lg:w-28 h-14 sm:h-20 lg:h-28 rounded-full bg-gradient-to-r from-cyan-500/30 to-teal-500/30 backdrop-blur-sm border border-cyan-400/20"
             animate={{ 
               y: [0, -15, 0],
               scale: [1, 1.2, 1],
@@ -174,44 +174,44 @@ export default function Home() {
 
           {/* Tech Icon Constellation */}
           <motion.div
-            className="absolute top-32 left-1/3 text-violet-400/40"
+            className="absolute top-32 left-1/3 text-violet-400/40 hidden md:block"
             animate={{ 
               rotate: [0, 360],
               scale: [1, 1.3, 1]
             }}
             transition={{ duration: 20, repeat: Infinity }}
           >
-            <SiReact className="w-12 h-12" />
+            <SiReact className="w-8 lg:w-12 h-8 lg:h-12" />
           </motion.div>
           <motion.div
-            className="absolute top-1/2 right-1/4 text-indigo-400/40"
+            className="absolute top-1/2 right-1/4 text-indigo-400/40 hidden md:block"
             animate={{ 
               rotate: [360, 0],
               scale: [1, 1.2, 1]
             }}
             transition={{ duration: 15, repeat: Infinity, delay: 3 }}
           >
-            <SiPython className="w-10 h-10" />
+            <SiPython className="w-6 lg:w-10 h-6 lg:h-10" />
           </motion.div>
           <motion.div
-            className="absolute bottom-1/3 left-1/5 text-cyan-400/40"
+            className="absolute bottom-1/3 left-1/5 text-cyan-400/40 hidden lg:block"
             animate={{ 
               y: [0, -20, 0],
               rotate: [0, 180, 360]
             }}
             transition={{ duration: 18, repeat: Infinity, delay: 6 }}
           >
-            <Coffee className="w-11 h-11" />
+            <Coffee className="w-8 lg:w-11 h-8 lg:h-11" />
           </motion.div>
           <motion.div
-            className="absolute bottom-48 right-1/3 text-teal-400/40"
+            className="absolute bottom-48 right-1/3 text-teal-400/40 hidden lg:block"
             animate={{ 
               scale: [1, 1.4, 1],
               rotate: [0, -360, 0]
             }}
             transition={{ duration: 25, repeat: Infinity, delay: 1 }}
           >
-            <SiMongodb className="w-9 h-9" />
+            <SiMongodb className="w-6 lg:w-9 h-6 lg:h-9" />
           </motion.div>
         </div>
 
@@ -227,7 +227,7 @@ export default function Home() {
         </div>
         
         {/* Main Hero Content */}
-        <div className="relative z-10 text-center max-w-7xl mx-auto px-4">
+        <div className="relative z-10 text-center max-w-7xl mx-auto w-full">
           <motion.div
             initial={{ opacity: 0, y: 50 }}
             animate={{ opacity: 1, y: 0 }}
@@ -235,19 +235,19 @@ export default function Home() {
           >
             {/* Premium Badge */}
             <motion.div
-              className="inline-flex items-center gap-3 bg-white/5 backdrop-blur-md border border-white/10 rounded-full px-8 py-4 mb-12"
+              className="inline-flex items-center gap-2 sm:gap-3 bg-white/5 backdrop-blur-md border border-white/10 rounded-full px-4 sm:px-8 py-3 sm:py-4 mb-6 sm:mb-8 lg:mb-12"
               initial={{ opacity: 0, scale: 0.8 }}
               animate={{ opacity: 1, scale: 1 }}
               transition={{ duration: 0.8, delay: 0.3 }}
             >
-              <div className="w-3 h-3 bg-emerald-400 rounded-full animate-pulse" />
-              <span className="text-white/90 text-sm font-medium tracking-wide">Trusted by 150+ Global Companies</span>
-              <Rocket className="w-5 h-5 text-violet-400" />
+              <div className="w-2 h-2 sm:w-3 sm:h-3 bg-emerald-400 rounded-full animate-pulse" />
+              <span className="text-white/90 text-xs sm:text-sm font-medium tracking-wide">Trusted by 150+ Global Companies</span>
+              <Rocket className="w-4 h-4 sm:w-5 sm:h-5 text-violet-400" />
             </motion.div>
 
             {/* Spectacular Main Headline */}
             <motion.h1
-              className="text-6xl md:text-8xl lg:text-9xl font-black text-black dark:text-white mb-8 leading-[0.85] tracking-tight"
+              className="text-3xl sm:text-4xl md:text-6xl lg:text-7xl xl:text-8xl 2xl:text-9xl font-black text-black dark:text-white mb-4 sm:mb-6 lg:mb-8 leading-[0.9] sm:leading-[0.85] tracking-tight"
               initial={{ opacity: 0, y: 40 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 1, delay: 0.5 }}
@@ -258,14 +258,14 @@ export default function Home() {
                   Dream Team
                 </span>
                 <motion.div
-                  className="absolute -bottom-6 left-0 right-0 h-3 bg-gradient-to-r from-blue-500 via-blue-600 to-blue-700 rounded-full"
+                  className="absolute -bottom-2 sm:-bottom-4 lg:-bottom-6 left-0 right-0 h-1 sm:h-2 lg:h-3 bg-gradient-to-r from-blue-500 via-blue-600 to-blue-700 rounded-full"
                   initial={{ scaleX: 0 }}
                   animate={{ scaleX: 1 }}
                   transition={{ duration: 1.5, delay: 1.5 }}
                 />
               </span>
               <br />
-              <span className="text-5xl md:text-7xl lg:text-8xl text-black/80 dark:text-white/80 font-light">
+              <span className="text-2xl sm:text-3xl md:text-5xl lg:text-6xl xl:text-7xl 2xl:text-8xl text-black/80 dark:text-white/80 font-light">
                 in{" "}
                 <span className="relative">
                   <span className="bg-gradient-to-r from-yellow-500 to-yellow-600 bg-clip-text text-transparent font-black">
@@ -277,7 +277,7 @@ export default function Home() {
 
             {/* Premium Subtitle */}
             <motion.p
-              className="text-xl md:text-3xl text-gray-700 dark:text-white/70 max-w-5xl mx-auto leading-relaxed mb-16 font-light"
+              className="text-sm sm:text-base md:text-lg lg:text-xl xl:text-2xl 2xl:text-3xl text-gray-700 dark:text-white/70 max-w-xs sm:max-w-2xl lg:max-w-4xl xl:max-w-5xl mx-auto leading-relaxed mb-8 sm:mb-12 lg:mb-16 font-light px-4 sm:px-0"
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 1, delay: 0.7 }}
@@ -290,7 +290,7 @@ export default function Home() {
 
             {/* Enhanced CTA Buttons */}
             <motion.div
-              className="flex flex-col sm:flex-row gap-8 justify-center items-center mb-20"
+              className="flex flex-col sm:flex-row gap-4 sm:gap-6 lg:gap-8 justify-center items-center mb-12 sm:mb-16 lg:mb-20 px-4 sm:px-0"
               initial={{ opacity: 0, y: 40 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 1, delay: 0.9 }}
@@ -299,11 +299,11 @@ export default function Home() {
                 <Button
                   asChild
                   size="lg"
-                  className="bg-gradient-to-r from-blue-500 to-blue-600 hover:from-blue-600 hover:to-blue-700 text-white px-12 py-8 text-xl font-bold rounded-2xl shadow-2xl hover:shadow-blue-500/30 transition-all duration-300"
+                  className="bg-gradient-to-r from-blue-500 to-blue-600 hover:from-blue-600 hover:to-blue-700 text-white px-6 sm:px-8 lg:px-12 py-4 sm:py-6 lg:py-8 text-base sm:text-lg lg:text-xl font-bold rounded-xl sm:rounded-2xl shadow-2xl hover:shadow-blue-500/30 transition-all duration-300 w-full sm:w-auto"
                   data-testid="button-get-quote"
                 >
                   <Link href="/quote">
-                    <Calculator className="w-6 h-6 mr-4" />
+                    <Calculator className="w-4 h-4 sm:w-5 sm:h-5 lg:w-6 lg:h-6 mr-2 sm:mr-3 lg:mr-4" />
                     Get Free Quote
                   </Link>
                 </Button>
@@ -314,11 +314,11 @@ export default function Home() {
                   asChild
                   variant="outline"
                   size="lg"
-                  className="border-2 border-yellow-500/70 text-yellow-500 hover:bg-yellow-500/10 backdrop-blur-sm px-12 py-8 text-xl font-semibold rounded-2xl transition-all duration-300"
+                  className="border-2 border-yellow-500/70 text-yellow-500 hover:bg-yellow-500/10 backdrop-blur-sm px-6 sm:px-8 lg:px-12 py-4 sm:py-6 lg:py-8 text-base sm:text-lg lg:text-xl font-semibold rounded-xl sm:rounded-2xl transition-all duration-300 w-full sm:w-auto"
                   data-testid="button-talk-expert"
                 >
                   <Link href="/contact">
-                    <MessageCircle className="w-6 h-6 mr-4" />
+                    <MessageCircle className="w-4 h-4 sm:w-5 sm:h-5 lg:w-6 lg:h-6 mr-2 sm:mr-3 lg:mr-4" />
                     Talk to Expert
                   </Link>
                 </Button>
@@ -327,7 +327,7 @@ export default function Home() {
 
             {/* Impressive Stats Grid */}
             <motion.div
-              className="grid grid-cols-2 md:grid-cols-4 gap-12 pt-12 border-t border-white/10"
+              className="grid grid-cols-2 md:grid-cols-4 gap-6 sm:gap-8 lg:gap-12 pt-8 sm:pt-10 lg:pt-12 border-t border-white/10 px-4 sm:px-0"
               initial={{ opacity: 0, y: 40 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 1, delay: 1.1 }}
@@ -346,10 +346,10 @@ export default function Home() {
                   transition={{ duration: 0.8, delay: 1.3 + index * 0.1 }}
                   whileHover={{ scale: 1.1 }}
                 >
-                  <div className={`text-4xl md:text-5xl font-black bg-gradient-to-r ${stat.color} bg-clip-text text-transparent mb-3`}>
+                  <div className={`text-2xl sm:text-3xl lg:text-4xl xl:text-5xl font-black bg-gradient-to-r ${stat.color} bg-clip-text text-transparent mb-2 sm:mb-3`}>
                     {stat.number}
                   </div>
-                  <div className="text-white/60 text-lg font-medium group-hover:text-white transition-colors duration-300">
+                  <div className="text-white/60 text-sm sm:text-base lg:text-lg font-medium group-hover:text-white transition-colors duration-300">
                     {stat.label}
                   </div>
                 </motion.div>
@@ -360,16 +360,16 @@ export default function Home() {
 
         {/* Advanced Scroll Indicator */}
         <motion.div
-          className="absolute bottom-12 left-1/2 transform -translate-x-1/2"
+          className="absolute bottom-8 sm:bottom-12 left-1/2 transform -translate-x-1/2"
           animate={{ y: [0, 15, 0] }}
           transition={{ duration: 2.5, repeat: Infinity }}
         >
-          <div className="flex flex-col items-center gap-4 text-white/50">
-            <span className="text-sm font-medium tracking-wider">Discover More</span>
-            <div className="w-8 h-14 border-2 border-white/30 rounded-full flex justify-center relative overflow-hidden">
+          <div className="flex flex-col items-center gap-2 sm:gap-4 text-white/50">
+            <span className="text-xs sm:text-sm font-medium tracking-wider">Discover More</span>
+            <div className="w-6 sm:w-8 h-10 sm:h-14 border-2 border-white/30 rounded-full flex justify-center relative overflow-hidden">
               <motion.div
-                className="w-1.5 h-4 bg-gradient-to-b from-violet-400 to-purple-400 rounded-full mt-3"
-                animate={{ y: [0, 20, 0] }}
+                className="w-1 sm:w-1.5 h-3 sm:h-4 bg-gradient-to-b from-blue-400 to-yellow-400 rounded-full mt-2 sm:mt-3"
+                animate={{ y: [0, 15, 0] }}
                 transition={{ duration: 2.5, repeat: Infinity }}
               />
             </div>
