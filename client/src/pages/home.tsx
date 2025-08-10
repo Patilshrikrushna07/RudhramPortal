@@ -265,6 +265,7 @@ export default function Home() {
                 />
               </span>
               <br />
+              <div className="h-2 sm:h-4 lg:h-6"></div>
               <span className="text-2xl sm:text-3xl md:text-5xl lg:text-6xl xl:text-7xl 2xl:text-8xl text-black/80 dark:text-white/80 font-light">
                 with{" "}
                 <span className="relative">
