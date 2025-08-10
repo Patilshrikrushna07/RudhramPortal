@@ -18,7 +18,8 @@ import {
   Smartphone,
   Settings,
   ChartLine,
-  ArrowUp
+  ArrowUp,
+  Rocket
 } from "lucide-react";
 import { SiPython } from "react-icons/si";
 

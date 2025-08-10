@@ -5,7 +5,13 @@ import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Label } from "@/components/ui/label";
 import { Checkbox } from "@/components/ui/checkbox";
-import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
+import {
+  Select,
+  SelectContent,
+  SelectItem,
+  SelectTrigger,
+  SelectValue,
+} from "@/components/ui/select";
 import { useForm, Controller } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { useMutation } from "@tanstack/react-query";
@@ -13,15 +19,15 @@ import { useToast } from "@/hooks/use-toast";
 import { apiRequest } from "@/lib/queryClient";
 import { insertQuoteSchema } from "@shared/schema";
 import { motion } from "framer-motion";
-import { 
-  Calculator, 
+import {
+  Calculator,
   Send,
   Clock,
   DollarSign,
   Users,
   FileText,
   CheckCircle,
-  ChevronDown
+  ChevronDown,
 } from "lucide-react";
 import type { InsertQuote } from "@shared/schema";
 
@@ -51,7 +57,8 @@ export default function Quote() {
     onSuccess: () => {
       toast({
         title: "Quote Request Submitted!",
-        description: "Your request has been received! Our team will contact you within 24 hours.",
+        description:
+          "Your request has been received! Our team will contact you within 24 hours.",
       });
       form.reset();
       setSelectedTechRoles([]);
@@ -77,7 +84,7 @@ export default function Quote() {
       });
       return;
     }
-    
+
     setIsSubmitting(true);
     quoteMutation.mutate({
       ...data,
@@ -86,23 +93,63 @@ export default function Quote() {
   };
 
   const techRoleOptions = [
-    { id: "mern-llm", label: "MERN + LLM Developers", description: "Full-stack with AI integration" },
-    { id: "java-fullstack", label: "Java Full Stack", description: "Enterprise solutions" },
-    { id: "python-llm", label: "Python + LLM", description: "AI-driven backend" },
-    { id: "devops", label: "DevOps Engineers", description: "CI/CD & cloud automation" },
-    { id: "mobile", label: "Mobile Developers", description: "iOS, Android, cross-platform" },
-    { id: "ai-ml", label: "AI/ML Engineers", description: "Machine learning & data science" },
-    { id: "frontend", label: "Frontend Developers", description: "React, Angular, Vue.js" },
-    { id: "backend", label: "Backend Developers", description: "Node.js, .NET, GoLang" },
-    { id: "qa", label: "QA Engineers", description: "Test automation & quality assurance" },
-    { id: "ui-ux", label: "UI/UX Designers", description: "User interface & experience design" },
+    {
+      id: "mern-llm",
+      label: "MERN + LLM Developers",
+      description: "Full-stack with AI integration",
+    },
+    {
+      id: "java-fullstack",
+      label: "Java Full Stack",
+      description: "Enterprise solutions",
+    },
+    {
+      id: "python-llm",
+      label: "Python + LLM",
+      description: "AI-driven backend",
+    },
+    {
+      id: "devops",
+      label: "DevOps Engineers",
+      description: "CI/CD & cloud automation",
+    },
+    {
+      id: "mobile",
+      label: "Mobile Developers",
+      description: "iOS, Android, cross-platform",
+    },
+    {
+      id: "ai-ml",
+      label: "AI/ML Engineers",
+      description: "Machine learning & data science",
+    },
+    {
+      id: "frontend",
+      label: "Frontend Developers",
+      description: "React, Angular, Vue.js",
+    },
+    {
+      id: "backend",
+      label: "Backend Developers",
+      description: "Node.js, .NET, GoLang",
+    },
+    {
+      id: "qa",
+      label: "QA Engineers",
+      description: "Test automation & quality assurance",
+    },
+    {
+      id: "ui-ux",
+      label: "UI/UX Designers",
+      description: "User interface & experience design",
+    },
   ];
 
   const handleTechRoleChange = (roleId: string, checked: boolean) => {
     if (checked) {
       setSelectedTechRoles([...selectedTechRoles, roleId]);
     } else {
-      setSelectedTechRoles(selectedTechRoles.filter(id => id !== roleId));
+      setSelectedTechRoles(selectedTechRoles.filter((id) => id !== roleId));
     }
   };
 
@@ -112,47 +159,60 @@ export default function Quote() {
       <section className="relative min-h-[80vh] flex items-center justify-center overflow-hidden pt-16 sm:pt-20">
         {/* Modern Gradient Background */}
         <div className="absolute inset-0 bg-gradient-to-br from-gray-900 via-blue-900 to-slate-900" />
-        
+
         {/* Animated Background Elements */}
         <div className="absolute inset-0">
-          <div className="absolute inset-0" style={{
-            backgroundImage: `
+          <div
+            className="absolute inset-0"
+            style={{
+              backgroundImage: `
               radial-gradient(circle at 20% 20%, rgba(59, 130, 246, 0.3) 0%, transparent 50%),
               radial-gradient(circle at 80% 80%, rgba(251, 191, 36, 0.2) 0%, transparent 50%),
               radial-gradient(circle at 40% 60%, rgba(59, 130, 246, 0.2) 0%, transparent 50%)
             `,
-            backgroundSize: '800px 800px, 600px 600px, 400px 400px',
-            animation: 'mesh-gradient 15s ease infinite'
-          }} />
+              backgroundSize: "800px 800px, 600px 600px, 400px 400px",
+              animation: "mesh-gradient 15s ease infinite",
+            }}
+          />
         </div>
 
         {/* Floating Elements */}
         <div className="absolute inset-0 pointer-events-none">
           <motion.div
             className="absolute top-1/4 left-1/6 w-20 h-20 rounded-full bg-gradient-to-r from-blue-500/30 to-blue-600/20 backdrop-blur-sm border border-blue-400/30"
-            animate={{ 
+            animate={{
               y: [0, -20, 0],
               scale: [1, 1.1, 1],
-              rotate: [0, 180, 360]
+              rotate: [0, 180, 360],
             }}
             transition={{ duration: 12, repeat: Infinity, ease: "easeInOut" }}
           />
           <motion.div
             className="absolute top-1/3 right-1/5 w-16 h-16 rounded-full bg-gradient-to-r from-yellow-500/30 to-yellow-600/20 backdrop-blur-sm border border-yellow-400/30"
-            animate={{ 
+            animate={{
               y: [0, 15, 0],
               scale: [1, 0.9, 1],
-              rotate: [360, 180, 0]
+              rotate: [360, 180, 0],
             }}
-            transition={{ duration: 10, repeat: Infinity, ease: "easeInOut", delay: 2 }}
+            transition={{
+              duration: 10,
+              repeat: Infinity,
+              ease: "easeInOut",
+              delay: 2,
+            }}
           />
           <motion.div
             className="absolute bottom-1/3 left-1/4 w-12 h-12 rounded-full bg-gradient-to-r from-blue-600/30 to-indigo-600/20 backdrop-blur-sm border border-blue-500/30"
-            animate={{ 
+            animate={{
               y: [0, -10, 0],
-              scale: [1, 1.2, 1]
+              scale: [1, 1.2, 1],
             }}
-            transition={{ duration: 8, repeat: Infinity, ease: "easeInOut", delay: 4 }}
+            transition={{
+              duration: 8,
+              repeat: Infinity,
+              ease: "easeInOut",
+              delay: 4,
+            }}
           />
         </div>
 
@@ -171,7 +231,9 @@ export default function Quote() {
               transition={{ duration: 0.8, delay: 0.3 }}
             >
               <div className="w-2 h-2 bg-yellow-400 rounded-full animate-pulse" />
-              <span className="text-white/90 text-sm font-medium">✨ Get Your Quote in 24 Hours</span>
+              <span className="text-white/90 text-sm font-medium">
+                ✨ Get Your Quote in 24 Hours
+              </span>
             </motion.div>
 
             {/* Main Headline */}
@@ -207,8 +269,10 @@ export default function Quote() {
               transition={{ duration: 1, delay: 0.6 }}
             >
               Tell us about your project requirements and we'll provide a{" "}
-              <span className="text-blue-400 font-semibold">detailed quote within 24 hours</span>.
-              Our expert team is ready to help you build your dream tech team.
+              <span className="text-blue-400 font-semibold">
+                detailed quote within 24 hours
+              </span>
+              . Our expert team is ready to help you build your dream tech team.
             </motion.p>
 
             {/* Features Grid */}
@@ -219,9 +283,21 @@ export default function Quote() {
               transition={{ duration: 1, delay: 0.8 }}
             >
               {[
-                { icon: "⚡", title: "24-Hour Response", desc: "Quick turnaround guaranteed" },
-                { icon: "🎯", title: "Tailored Solutions", desc: "Custom quotes for your needs" },
-                { icon: "💼", title: "Expert Matching", desc: "Perfect developers for your project" }
+                {
+                  icon: "⚡",
+                  title: "24-Hour Response",
+                  desc: "Quick turnaround guaranteed",
+                },
+                {
+                  icon: "🎯",
+                  title: "Tailored Solutions",
+                  desc: "Custom quotes for your needs",
+                },
+                {
+                  icon: "💼",
+                  title: "Expert Matching",
+                  desc: "Perfect developers for your project",
+                },
               ].map((feature, index) => (
                 <motion.div
                   key={index}
@@ -232,7 +308,9 @@ export default function Quote() {
                   whileHover={{ scale: 1.05, y: -5 }}
                 >
                   <div className="text-2xl mb-2">{feature.icon}</div>
-                  <h3 className="text-white font-semibold text-sm mb-1">{feature.title}</h3>
+                  <h3 className="text-white font-semibold text-sm mb-1">
+                    {feature.title}
+                  </h3>
                   <p className="text-white/70 text-xs">{feature.desc}</p>
                 </motion.div>
               ))}
@@ -300,17 +378,23 @@ export default function Quote() {
                   </CardTitle>
                 </CardHeader>
                 <CardContent className="p-8">
-                  <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-8">
+                  <form
+                    onSubmit={form.handleSubmit(onSubmit)}
+                    className="space-y-8"
+                  >
                     {/* Personal Information */}
                     <div className="space-y-6">
                       <h3 className="text-lg font-semibold text-white flex items-center">
                         <Users className="w-5 h-5 mr-2" />
                         Contact Information
                       </h3>
-                      
+
                       <div className="grid md:grid-cols-2 gap-6">
                         <div>
-                          <Label htmlFor="fullName" className="text-sm font-medium text-white mb-2 block">
+                          <Label
+                            htmlFor="fullName"
+                            className="text-sm font-medium text-white mb-2 block"
+                          >
                             Full Name *
                           </Label>
                           <Input
@@ -326,9 +410,12 @@ export default function Quote() {
                             </p>
                           )}
                         </div>
-                        
+
                         <div>
-                          <Label htmlFor="company" className="text-sm font-medium text-white mb-2 block">
+                          <Label
+                            htmlFor="company"
+                            className="text-sm font-medium text-white mb-2 block"
+                          >
                             Company Name *
                           </Label>
                           <Input
@@ -348,7 +435,10 @@ export default function Quote() {
 
                       <div className="grid md:grid-cols-2 gap-6">
                         <div>
-                          <Label htmlFor="email" className="text-sm font-medium text-white mb-2 block">
+                          <Label
+                            htmlFor="email"
+                            className="text-sm font-medium text-white mb-2 block"
+                          >
                             Email Address *
                           </Label>
                           <Input
@@ -364,9 +454,12 @@ export default function Quote() {
                             </p>
                           )}
                         </div>
-                        
+
                         <div>
-                          <Label htmlFor="phone" className="text-sm font-medium text-white mb-2 block">
+                          <Label
+                            htmlFor="phone"
+                            className="text-sm font-medium text-white mb-2 block"
+                          >
                             Phone Number *
                           </Label>
                           <Input
@@ -391,31 +484,42 @@ export default function Quote() {
                         <Users className="w-5 h-5 mr-2" />
                         Required Tech Roles (Select multiple) *
                       </h3>
-                      
+
                       <div className="grid md:grid-cols-2 gap-4">
                         {techRoleOptions.map((role) => (
-                          <div key={role.id} className="flex items-start space-x-3">
+                          <div
+                            key={role.id}
+                            className="flex items-start space-x-3"
+                          >
                             <Checkbox
                               id={role.id}
                               checked={selectedTechRoles.includes(role.id)}
-                              onCheckedChange={(checked) => handleTechRoleChange(role.id, !!checked)}
+                              onCheckedChange={(checked) =>
+                                handleTechRoleChange(role.id, !!checked)
+                              }
                               className="mt-1 border-white/30 data-[state=checked]:bg-accent-amber data-[state=checked]:border-accent-amber"
                             />
                             <div className="flex-1">
-                              <Label htmlFor={role.id} className="text-white font-medium cursor-pointer">
+                              <Label
+                                htmlFor={role.id}
+                                className="text-white font-medium cursor-pointer"
+                              >
                                 {role.label}
                               </Label>
-                              <p className="text-white/70 text-sm">{role.description}</p>
+                              <p className="text-white/70 text-sm">
+                                {role.description}
+                              </p>
                             </div>
                           </div>
                         ))}
                       </div>
-                      
-                      {selectedTechRoles.length === 0 && form.formState.isSubmitted && (
-                        <p className="text-sm text-red-300">
-                          Please select at least one tech role
-                        </p>
-                      )}
+
+                      {selectedTechRoles.length === 0 &&
+                        form.formState.isSubmitted && (
+                          <p className="text-sm text-red-300">
+                            Please select at least one tech role
+                          </p>
+                        )}
                     </div>
 
                     {/* Project Details */}
@@ -424,10 +528,13 @@ export default function Quote() {
                         <FileText className="w-5 h-5 mr-2" />
                         Project Details
                       </h3>
-                      
+
                       <div className="grid md:grid-cols-2 gap-6">
                         <div>
-                          <Label htmlFor="duration" className="text-sm font-medium text-white mb-2 block">
+                          <Label
+                            htmlFor="duration"
+                            className="text-sm font-medium text-white mb-2 block"
+                          >
                             <Clock className="w-4 h-4 inline mr-1" />
                             Project Duration *
                           </Label>
@@ -435,16 +542,29 @@ export default function Quote() {
                             name="duration"
                             control={form.control}
                             render={({ field }) => (
-                              <Select value={field.value} onValueChange={field.onChange}>
+                              <Select
+                                value={field.value}
+                                onValueChange={field.onChange}
+                              >
                                 <SelectTrigger className="bg-white/10 border-white/20 text-white">
                                   <SelectValue placeholder="Select project duration" />
                                 </SelectTrigger>
                                 <SelectContent>
-                                  <SelectItem value="1-3 months">1-3 months</SelectItem>
-                                  <SelectItem value="3-6 months">3-6 months</SelectItem>
-                                  <SelectItem value="6-12 months">6-12 months</SelectItem>
-                                  <SelectItem value="12+ months">12+ months</SelectItem>
-                                  <SelectItem value="Ongoing">Ongoing</SelectItem>
+                                  <SelectItem value="1-3 months">
+                                    1-3 months
+                                  </SelectItem>
+                                  <SelectItem value="3-6 months">
+                                    3-6 months
+                                  </SelectItem>
+                                  <SelectItem value="6-12 months">
+                                    6-12 months
+                                  </SelectItem>
+                                  <SelectItem value="12+ months">
+                                    12+ months
+                                  </SelectItem>
+                                  <SelectItem value="Ongoing">
+                                    Ongoing
+                                  </SelectItem>
                                 </SelectContent>
                               </Select>
                             )}
@@ -455,9 +575,12 @@ export default function Quote() {
                             </p>
                           )}
                         </div>
-                        
+
                         <div>
-                          <Label htmlFor="budget" className="text-sm font-medium text-white mb-2 block">
+                          <Label
+                            htmlFor="budget"
+                            className="text-sm font-medium text-white mb-2 block"
+                          >
                             <DollarSign className="w-4 h-4 inline mr-1" />
                             Budget Range *
                           </Label>
@@ -465,14 +588,23 @@ export default function Quote() {
                             name="budget"
                             control={form.control}
                             render={({ field }) => (
-                              <Select value={field.value} onValueChange={field.onChange}>
+                              <Select
+                                value={field.value}
+                                onValueChange={field.onChange}
+                              >
                                 <SelectTrigger className="bg-white/10 border-white/20 text-white">
                                   <SelectValue placeholder="Select budget range" />
                                 </SelectTrigger>
                                 <SelectContent>
-                                  <SelectItem value="$5k-15k">$5k - $15k</SelectItem>
-                                  <SelectItem value="$15k-50k">$15k - $50k</SelectItem>
-                                  <SelectItem value="$50k-100k">$50k - $100k</SelectItem>
+                                  <SelectItem value="$5k-15k">
+                                    $5k - $15k
+                                  </SelectItem>
+                                  <SelectItem value="$15k-50k">
+                                    $15k - $50k
+                                  </SelectItem>
+                                  <SelectItem value="$50k-100k">
+                                    $50k - $100k
+                                  </SelectItem>
                                   <SelectItem value="$100k+">$100k+</SelectItem>
                                 </SelectContent>
                               </Select>
@@ -487,7 +619,10 @@ export default function Quote() {
                       </div>
 
                       <div>
-                        <Label htmlFor="description" className="text-sm font-medium text-white mb-2 block">
+                        <Label
+                          htmlFor="description"
+                          className="text-sm font-medium text-white mb-2 block"
+                        >
                           Project Description *
                         </Label>
                         <Textarea
@@ -521,10 +656,11 @@ export default function Quote() {
                           </>
                         )}
                       </Button>
-                      
+
                       <p className="text-center text-sm text-white/80 mt-4">
                         <CheckCircle className="w-4 h-4 inline mr-1" />
-                        Our team will contact you within 24 hours with a detailed quote and next steps.
+                        Our team will contact you within 24 hours with a
+                        detailed quote and next steps.
                       </p>
                     </div>
                   </form>
@@ -564,28 +700,36 @@ export default function Quote() {
               {
                 step: "1",
                 title: "Quote Review",
-                description: "Our experts analyze your requirements and prepare a detailed proposal with timelines and costs.",
+                description:
+                  "Our experts analyze your requirements and prepare a detailed proposal with timelines and costs.",
                 icon: FileText,
-                color: "bg-primary-500"
+                color: "bg-primary-500",
               },
               {
-                step: "2", 
+                step: "2",
                 title: "Developer Matching",
-                description: "We match you with pre-vetted developers who have the exact skills and experience you need.",
+                description:
+                  "We match you with pre-vetted developers who have the exact skills and experience you need.",
                 icon: Users,
-                color: "bg-secondary-500"
+                color: "bg-secondary-500",
               },
               {
                 step: "3",
                 title: "Quick Onboarding",
-                description: "Start working with your new team members within days, not weeks. Full support throughout.",
+                description:
+                  "Start working with your new team members within days, not weeks. Full support throughout.",
                 icon: CheckCircle,
-                color: "bg-accent-emerald"
-              }
+                color: "bg-accent-emerald",
+              },
             ].map((step, index) => (
-              <Card key={index} className="text-center border-0 shadow-lg hover:shadow-xl transition-all">
+              <Card
+                key={index}
+                className="text-center border-0 shadow-lg hover:shadow-xl transition-all"
+              >
                 <CardContent className="p-8">
-                  <div className={`w-16 h-16 ${step.color} rounded-full flex items-center justify-center mx-auto mb-6`}>
+                  <div
+                    className={`w-16 h-16 ${step.color} rounded-full flex items-center justify-center mx-auto mb-6`}
+                  >
                     <step.icon className="text-white w-8 h-8" />
                   </div>
                   <div className="text-2xl font-bold text-gray-800 dark:text-white mb-2">
