@@ -264,9 +264,6 @@ export default function Home() {
         </motion.div>
       </section>
 
-      {/* Trusted Companies Section */}
-      <TrustedCompanies />
-
       {/* Why Choose Rudram Section */}
       <section className="section-padding bg-gray-50 dark:bg-gray-900">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
@@ -320,6 +317,9 @@ export default function Home() {
           </motion.div>
         </div>
       </section>
+
+      {/* Trusted Companies Section */}
+      <TrustedCompanies />
 
       {/* Tech Domains Section */}
       <section className="section-padding bg-white dark:bg-gray-800">
