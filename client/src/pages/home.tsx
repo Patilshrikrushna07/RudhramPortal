@@ -358,53 +358,7 @@ export default function Home() {
             </motion.div>
           </motion.div>
 
-          {/* Value Proposition Cards */}
-          <motion.div
-            className="grid grid-cols-1 sm:grid-cols-3 gap-4 sm:gap-6 mt-12 sm:mt-16 lg:mt-20 max-w-4xl mx-auto px-4 sm:px-0"
-            initial={{ opacity: 0, y: 50 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 1, delay: 1.8 }}
-          >
-            {[
-              { 
-                icon: Brain, 
-                title: "AI/ML Experts", 
-                desc: "LLM, ChatGPT, Computer Vision",
-                gradient: "from-blue-500/15 to-blue-600/15",
-                border: "border-blue-400/30",
-                iconColor: "text-blue-400"
-              },
-              { 
-                icon: Layers, 
-                title: "Full-Stack Masters", 
-                desc: "MERN, Java, Python ecosystems",
-                gradient: "from-yellow-500/15 to-yellow-600/15",
-                border: "border-yellow-400/30",
-                iconColor: "text-yellow-400"
-              },
-              { 
-                icon: Settings, 
-                title: "Cloud Architects", 
-                desc: "AWS, Azure, DevOps, Kubernetes",
-                gradient: "from-blue-600/15 to-blue-700/15",
-                border: "border-blue-500/30",
-                iconColor: "text-blue-500"
-              }
-            ].map((item, index) => (
-              <motion.div
-                key={index}
-                className={`bg-gradient-to-br ${item.gradient} backdrop-blur-sm border ${item.border} rounded-xl p-4 sm:p-6 text-center shadow-lg hover:shadow-xl transition-all duration-300`}
-                initial={{ opacity: 0, y: 30 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.8, delay: 2 + index * 0.2 }}
-                whileHover={{ scale: 1.05, y: -5 }}
-              >
-                <item.icon className={`w-8 h-8 sm:w-10 sm:h-10 ${item.iconColor} mx-auto mb-3 drop-shadow-lg`} />
-                <h3 className="text-white font-semibold text-sm sm:text-base mb-2">{item.title}</h3>
-                <p className="text-white/70 text-xs sm:text-sm">{item.desc}</p>
-              </motion.div>
-            ))}
-          </motion.div>
+
         </div>
 
         {/* Advanced Scroll Indicator */}
@@ -424,6 +378,134 @@ export default function Home() {
             </div>
           </div>
         </motion.div>
+      </section>
+
+      {/* Enhanced Developer Expertise Section */}
+      <section className="py-16 sm:py-20 lg:py-24 relative">
+        {/* Background */}
+        <div className="absolute inset-0 bg-gradient-to-br from-gray-900 via-slate-800 to-gray-900" />
+        
+        {/* Content */}
+        <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          {/* Section Header */}
+          <motion.div
+            className="text-center mb-12 sm:mb-16 lg:mb-20"
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            viewport={{ once: true }}
+          >
+            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-white mb-4 sm:mb-6">
+              Our <span className="bg-gradient-to-r from-blue-400 to-yellow-400 bg-clip-text text-transparent">Expert Developers</span>
+            </h2>
+            <p className="text-lg sm:text-xl text-gray-300 max-w-3xl mx-auto">
+              Access world-class talent across cutting-edge technologies
+            </p>
+          </motion.div>
+
+          {/* Enhanced Cards Grid */}
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 lg:gap-8">
+            {[
+              {
+                icon: Brain,
+                title: "AI/ML Experts",
+                description: "LLM, ChatGPT, Computer Vision",
+                gradient: "from-blue-500/20 to-blue-600/10",
+                borderGradient: "from-blue-500/40 to-blue-600/20",
+                iconBg: "from-blue-500 to-blue-600",
+                technologies: ["TensorFlow", "PyTorch", "OpenAI", "Hugging Face"],
+                bgPattern: "blue"
+              },
+              {
+                icon: Layers,
+                title: "Full-Stack Masters",
+                description: "MERN, Java, Python ecosystems",
+                gradient: "from-yellow-500/20 to-amber-600/10",
+                borderGradient: "from-yellow-500/40 to-amber-600/20",
+                iconBg: "from-yellow-500 to-amber-600",
+                technologies: ["React", "Node.js", "Spring Boot", "Django"],
+                bgPattern: "yellow"
+              },
+              {
+                icon: Settings,
+                title: "Cloud Architects",
+                description: "AWS, Azure, DevOps, Kubernetes",
+                gradient: "from-blue-600/20 to-indigo-600/10",
+                borderGradient: "from-blue-600/40 to-indigo-600/20",
+                iconBg: "from-blue-600 to-indigo-600",
+                technologies: ["AWS", "Azure", "Docker", "Terraform"],
+                bgPattern: "indigo"
+              }
+            ].map((card, index) => (
+              <motion.div
+                key={index}
+                className={`group relative overflow-hidden rounded-2xl bg-gradient-to-br ${card.gradient} backdrop-blur-sm border border-gray-700/50 hover:border-gray-600/50 transition-all duration-500 hover:scale-105 hover:shadow-2xl`}
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.8, delay: index * 0.2 }}
+                viewport={{ once: true }}
+                whileHover={{ y: -5 }}
+              >
+                {/* Gradient Border Effect */}
+                <div className={`absolute inset-0 bg-gradient-to-r ${card.borderGradient} rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-500 -z-10 blur-xl`} />
+                
+                {/* Card Content */}
+                <div className="relative p-6 sm:p-8 h-full flex flex-col">
+                  {/* Icon */}
+                  <div className={`w-16 h-16 sm:w-20 sm:h-20 rounded-2xl bg-gradient-to-r ${card.iconBg} flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300`}>
+                    <card.icon className="w-8 h-8 sm:w-10 sm:h-10 text-white" />
+                  </div>
+
+                  {/* Title */}
+                  <h3 className="text-xl sm:text-2xl font-bold text-white mb-3 group-hover:text-blue-300 transition-colors duration-300">
+                    {card.title}
+                  </h3>
+
+                  {/* Description */}
+                  <p className="text-gray-300 text-base sm:text-lg mb-6 flex-grow">
+                    {card.description}
+                  </p>
+
+                  {/* Technologies */}
+                  <div className="flex flex-wrap gap-2">
+                    {card.technologies.map((tech, techIndex) => (
+                      <span
+                        key={techIndex}
+                        className="px-3 py-1 text-xs sm:text-sm bg-white/10 backdrop-blur-sm rounded-full text-gray-200 border border-white/20 hover:bg-white/20 transition-colors duration-300"
+                      >
+                        {tech}
+                      </span>
+                    ))}
+                  </div>
+
+                  {/* Hover Effect Overlay */}
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none rounded-2xl" />
+                </div>
+              </motion.div>
+            ))}
+          </div>
+
+          {/* Bottom CTA */}
+          <motion.div
+            className="text-center mt-12 sm:mt-16"
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 0.6 }}
+            viewport={{ once: true }}
+          >
+            <p className="text-gray-400 mb-6">Ready to scale your team with expert developers?</p>
+            <Button
+              asChild
+              size="lg"
+              className="bg-gradient-to-r from-blue-500 to-yellow-500 hover:from-blue-600 hover:to-yellow-600 text-white px-8 py-4 text-lg font-semibold rounded-xl shadow-xl hover:shadow-2xl transition-all duration-300 transform hover:scale-105"
+            >
+              <Link href="/contact">
+                <MessageCircle className="w-5 h-5 mr-3" />
+                Start Your Project Today
+              </Link>
+            </Button>
+          </motion.div>
+        </div>
       </section>
 
       {/* Why Choose Rudram Section */}
