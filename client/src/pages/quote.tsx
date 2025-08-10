@@ -20,7 +20,8 @@ import {
   DollarSign,
   Users,
   FileText,
-  CheckCircle
+  CheckCircle,
+  ChevronDown
 } from "lucide-react";
 import type { InsertQuote } from "@shared/schema";
 
@@ -107,29 +108,178 @@ export default function Quote() {
 
   return (
     <div className="min-h-screen pt-16">
-      {/* Header Section */}
-      <section className="section-padding bg-gradient-to-br from-primary-600 to-secondary-600 text-white relative overflow-hidden">
-        <div className="absolute inset-0 opacity-10">
-          <div className="absolute top-20 left-20 w-32 h-32 border border-white/20 rounded-full animate-pulse-slow"></div>
-          <div className="absolute bottom-20 right-20 w-24 h-24 border border-white/20 rounded-full animate-float"></div>
-        </div>
+      {/* Enhanced Hero Section */}
+      <section className="relative min-h-[80vh] flex items-center justify-center overflow-hidden pt-16 sm:pt-20">
+        {/* Modern Gradient Background */}
+        <div className="absolute inset-0 bg-gradient-to-br from-gray-900 via-blue-900 to-slate-900" />
         
-        <div className="container mx-auto px-4 relative z-10">
+        {/* Animated Background Elements */}
+        <div className="absolute inset-0">
+          <div className="absolute inset-0" style={{
+            backgroundImage: `
+              radial-gradient(circle at 20% 20%, rgba(59, 130, 246, 0.3) 0%, transparent 50%),
+              radial-gradient(circle at 80% 80%, rgba(251, 191, 36, 0.2) 0%, transparent 50%),
+              radial-gradient(circle at 40% 60%, rgba(59, 130, 246, 0.2) 0%, transparent 50%)
+            `,
+            backgroundSize: '800px 800px, 600px 600px, 400px 400px',
+            animation: 'mesh-gradient 15s ease infinite'
+          }} />
+        </div>
+
+        {/* Floating Elements */}
+        <div className="absolute inset-0 pointer-events-none">
           <motion.div
-            className="text-center mb-16"
-            initial={{ opacity: 0, y: 30 }}
+            className="absolute top-1/4 left-1/6 w-20 h-20 rounded-full bg-gradient-to-r from-blue-500/30 to-blue-600/20 backdrop-blur-sm border border-blue-400/30"
+            animate={{ 
+              y: [0, -20, 0],
+              scale: [1, 1.1, 1],
+              rotate: [0, 180, 360]
+            }}
+            transition={{ duration: 12, repeat: Infinity, ease: "easeInOut" }}
+          />
+          <motion.div
+            className="absolute top-1/3 right-1/5 w-16 h-16 rounded-full bg-gradient-to-r from-yellow-500/30 to-yellow-600/20 backdrop-blur-sm border border-yellow-400/30"
+            animate={{ 
+              y: [0, 15, 0],
+              scale: [1, 0.9, 1],
+              rotate: [360, 180, 0]
+            }}
+            transition={{ duration: 10, repeat: Infinity, ease: "easeInOut", delay: 2 }}
+          />
+          <motion.div
+            className="absolute bottom-1/3 left-1/4 w-12 h-12 rounded-full bg-gradient-to-r from-blue-600/30 to-indigo-600/20 backdrop-blur-sm border border-blue-500/30"
+            animate={{ 
+              y: [0, -10, 0],
+              scale: [1, 1.2, 1]
+            }}
+            transition={{ duration: 8, repeat: Infinity, ease: "easeInOut", delay: 4 }}
+          />
+        </div>
+
+        {/* Main Content */}
+        <div className="relative z-10 text-center max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+          <motion.div
+            initial={{ opacity: 0, y: 50 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
+            transition={{ duration: 1 }}
           >
-            <h1 className="text-4xl md:text-5xl font-bold mb-6">
-              Get Your Custom Quote
-            </h1>
-            <p className="text-xl opacity-90 max-w-3xl mx-auto">
-              Tell us about your project requirements and we'll provide a detailed quote within 24 hours.
+            {/* Badge */}
+            <motion.div
+              className="inline-flex items-center gap-2 bg-gradient-to-r from-blue-500/15 to-yellow-500/15 backdrop-blur-md border border-blue-400/30 rounded-full px-4 py-2 mb-6 shadow-lg"
+              initial={{ opacity: 0, scale: 0.8 }}
+              animate={{ opacity: 1, scale: 1 }}
+              transition={{ duration: 0.8, delay: 0.3 }}
+            >
+              <div className="w-2 h-2 bg-yellow-400 rounded-full animate-pulse" />
+              <span className="text-white/90 text-sm font-medium">✨ Get Your Quote in 24 Hours</span>
+            </motion.div>
+
+            {/* Main Headline */}
+            <motion.h1
+              className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-black text-white mb-6 leading-tight"
+              initial={{ opacity: 0, y: 30 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 1, delay: 0.4 }}
+            >
+              Get Your{" "}
+              <span className="relative">
+                <span className="bg-gradient-to-r from-blue-400 to-blue-600 bg-clip-text text-transparent">
+                  Custom Quote
+                </span>
+                <motion.div
+                  className="absolute -bottom-2 left-0 right-0 h-1 bg-gradient-to-r from-blue-400 to-blue-600 rounded-full"
+                  initial={{ scaleX: 0 }}
+                  animate={{ scaleX: 1 }}
+                  transition={{ duration: 1.5, delay: 1.2 }}
+                />
+              </span>
+              <br />
+              <span className="bg-gradient-to-r from-yellow-400 to-yellow-600 bg-clip-text text-transparent">
+                For Your Dream Project
+              </span>
+            </motion.h1>
+
+            {/* Subtitle */}
+            <motion.p
+              className="text-lg sm:text-xl text-gray-300 max-w-3xl mx-auto leading-relaxed mb-8"
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 1, delay: 0.6 }}
+            >
+              Tell us about your project requirements and we'll provide a{" "}
+              <span className="text-blue-400 font-semibold">detailed quote within 24 hours</span>.
               Our expert team is ready to help you build your dream tech team.
-            </p>
+            </motion.p>
+
+            {/* Features Grid */}
+            <motion.div
+              className="grid grid-cols-1 sm:grid-cols-3 gap-4 sm:gap-6 max-w-4xl mx-auto mb-8"
+              initial={{ opacity: 0, y: 30 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 1, delay: 0.8 }}
+            >
+              {[
+                { icon: "⚡", title: "24-Hour Response", desc: "Quick turnaround guaranteed" },
+                { icon: "🎯", title: "Tailored Solutions", desc: "Custom quotes for your needs" },
+                { icon: "💼", title: "Expert Matching", desc: "Perfect developers for your project" }
+              ].map((feature, index) => (
+                <motion.div
+                  key={index}
+                  className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl p-4 text-center hover:bg-white/10 transition-all duration-300"
+                  initial={{ opacity: 0, y: 20 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.8, delay: 1 + index * 0.1 }}
+                  whileHover={{ scale: 1.05, y: -5 }}
+                >
+                  <div className="text-2xl mb-2">{feature.icon}</div>
+                  <h3 className="text-white font-semibold text-sm mb-1">{feature.title}</h3>
+                  <p className="text-white/70 text-xs">{feature.desc}</p>
+                </motion.div>
+              ))}
+            </motion.div>
+
+            {/* CTA Button */}
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 1, delay: 1.2 }}
+            >
+              <motion.div
+                className="inline-block"
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
+              >
+                <div className="bg-gradient-to-r from-blue-500 to-yellow-500 p-0.5 rounded-xl shadow-2xl">
+                  <div className="bg-gray-900 rounded-xl px-8 py-4 hover:bg-gray-800 transition-colors duration-300">
+                    <span className="text-white font-semibold flex items-center gap-2">
+                      <Calculator className="w-5 h-5" />
+                      Start Your Quote Below
+                      <ChevronDown className="w-4 h-4 animate-bounce" />
+                    </span>
+                  </div>
+                </div>
+              </motion.div>
+            </motion.div>
           </motion.div>
         </div>
+
+        {/* Scroll Indicator */}
+        <motion.div
+          className="absolute bottom-8 left-1/2 transform -translate-x-1/2 z-20"
+          animate={{ y: [0, 10, 0] }}
+          transition={{ duration: 2, repeat: Infinity }}
+        >
+          <div className="flex flex-col items-center gap-2 text-white/60">
+            <span className="text-xs font-medium">Scroll for Form</span>
+            <div className="w-6 h-10 border border-white/30 rounded-full flex justify-center">
+              <motion.div
+                className="w-1 h-3 bg-white/60 rounded-full mt-2"
+                animate={{ y: [0, 10, 0] }}
+                transition={{ duration: 2, repeat: Infinity }}
+              />
+            </div>
+          </div>
+        </motion.div>
       </section>
 
       {/* Quote Form Section */}
