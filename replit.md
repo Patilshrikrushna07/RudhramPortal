@@ -1,8 +1,8 @@
-# Rudhram Software Solutions - Staff Augmentation Website
+# Rudram Software Solutions - Staff Augmentation Website
 
 ## Overview
 
-This is a full-stack React application for Rudhram Software Solutions, a staff augmentation company specializing in providing skilled developers across emerging and traditional technologies. The website serves as the primary marketing platform and lead generation tool, showcasing services in MERN + LLM integration, Java Full Stack development, Python + LLM development, DevOps, mobile app development, and AI/data science expertise.
+This is a full-stack React application for Rudram Software Solutions, a staff augmentation company specializing in providing skilled developers across emerging and traditional technologies. The website serves as the primary marketing platform and lead generation tool, showcasing services in MERN + LLM integration, Java Full Stack development, Python + LLM development, DevOps, mobile app development, and AI/data science expertise.
 
 The application features a modern, responsive design with dedicated pages for services, case studies, company information, contact forms, and quote requests. It's built to convert visitors into leads through strategically placed call-to-action elements and comprehensive service presentations.
 

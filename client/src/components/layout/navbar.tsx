@@ -47,7 +47,7 @@ export function Navbar() {
               <span className="text-white font-bold text-lg">R</span>
             </div>
             <span className="text-xl font-bold text-white">
-              Rudhram
+              Rudram
             </span>
           </Link>
 

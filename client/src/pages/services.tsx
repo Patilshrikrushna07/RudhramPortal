@@ -126,7 +126,7 @@ export default function Services() {
               Staff Augmentation Services
             </h1>
             <p className="text-lg sm:text-xl text-gray-600 dark:text-gray-400 max-w-3xl mx-auto px-4 sm:px-0 leading-relaxed">
-              At The Rudhram Software Solutions, we deliver specialized staff augmentation services to help you scale your development capabilities instantly. Whether you need MERN + LLM, Java Full Stack, or Python + LLM experts, our talent pool covers every modern technology stack.
+              At The Rudram Software Solutions, we deliver specialized staff augmentation services to help you scale your development capabilities instantly. Whether you need MERN + LLM, Java Full Stack, or Python + LLM experts, our talent pool covers every modern technology stack.
             </p>
           </motion.div>
         </div>

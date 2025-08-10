@@ -7,7 +7,7 @@ export function forceDarkTheme() {
   document.documentElement.classList.remove('light');
   
   // Set theme in localStorage to maintain consistency
-  localStorage.setItem('rudhram-ui-theme', 'dark');
+  localStorage.setItem('rudram-ui-theme', 'dark');
 }
 
 // Initialize dark theme when the module loads

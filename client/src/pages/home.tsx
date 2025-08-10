@@ -18,6 +18,7 @@ import {
   ArrowUp
 } from "lucide-react";
 import { SiPython, SiJavascript, SiReact, SiMongodb } from "react-icons/si";
+import { TrustedCompanies } from "@/components/ui/trusted-companies";
 
 const containerVariants = {
   hidden: { opacity: 0 },
@@ -263,7 +264,10 @@ export default function Home() {
         </motion.div>
       </section>
 
-      {/* Why Choose Rudhram Section */}
+      {/* Trusted Companies Section */}
+      <TrustedCompanies />
+
+      {/* Why Choose Rudram Section */}
       <section className="section-padding bg-gray-50 dark:bg-gray-900">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
@@ -274,14 +278,14 @@ export default function Home() {
             transition={{ duration: 0.6 }}
           >
             <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold mb-4 sm:mb-6 gradient-text">
-              Why Choose Rudhram?
+              Why Choose Rudram?
             </h2>
             <p className="text-lg sm:text-xl text-gray-600 dark:text-gray-400 max-w-3xl mx-auto mb-6 sm:mb-8 px-4 sm:px-0">
               ✅ Global delivery with 24/7 support
             </p>
             <div className="bg-white dark:bg-gray-700 rounded-2xl p-6 sm:p-8 max-w-4xl mx-auto mb-8 sm:mb-12 shadow-lg mx-4 sm:mx-auto">
               <blockquote className="text-base sm:text-lg md:text-xl text-gray-700 dark:text-gray-300 italic text-center mb-4">
-                "Rudhram transformed our idea into a working AI-powered platform in record time. Their developers feel like an extension of our team."
+                "Rudram transformed our idea into a working AI-powered platform in record time. Their developers feel like an extension of our team."
               </blockquote>
               <div className="text-center">
                 <p className="font-semibold text-primary-500 text-sm sm:text-base">– CTO, US-based SaaS Startup</p>

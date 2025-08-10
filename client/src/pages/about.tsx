@@ -81,7 +81,7 @@ export default function About() {
             transition={{ duration: 0.6 }}
           >
             <h1 className="text-4xl md:text-5xl font-bold mb-6 gradient-text">
-              About Rudhram Software Solutions
+              About Rudram Software Solutions
             </h1>
             <p className="text-xl text-gray-600 dark:text-gray-400 max-w-3xl mx-auto">
               Empowering businesses worldwide with exceptional tech talent and innovative solutions.
@@ -104,7 +104,7 @@ export default function About() {
                 Who We Are
               </h2>
               <p className="text-xl text-gray-600 dark:text-gray-400 mb-8 leading-relaxed">
-                The Rudhram Software Solutions is your global partner for on-demand tech talent. We help businesses of all sizes scale their development capabilities with pre-vetted developers in modern and emerging technologies.
+                The Rudram Software Solutions is your global partner for on-demand tech talent. We help businesses of all sizes scale their development capabilities with pre-vetted developers in modern and emerging technologies.
               </p>
               <p className="text-lg text-gray-600 dark:text-gray-400 leading-relaxed">
                 Founded with the vision of bridging the gap between innovative businesses and exceptional talent, 
@@ -276,7 +276,7 @@ export default function About() {
             transition={{ duration: 0.6 }}
           >
             <h2 className="text-3xl md:text-4xl font-bold mb-6 gradient-text">
-              Why Choose Rudhram?
+              Why Choose Rudram?
             </h2>
             <p className="text-xl text-gray-600 dark:text-gray-400 max-w-3xl mx-auto">
               We combine deep technical expertise with a commitment to understanding your unique business needs.
