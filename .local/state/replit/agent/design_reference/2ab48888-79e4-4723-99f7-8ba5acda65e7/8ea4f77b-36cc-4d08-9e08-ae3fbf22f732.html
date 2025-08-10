@@ -1,0 +1,1172 @@
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rudhram Software Solutions - Scale Your Tech Team with World-Class Developers</title>
+    <meta name="description" content="Staff augmentation services for MERN + LLM, Java Full Stack, Python + LLM developers. Scale your tech team on-demand with pre-vetted senior developers.">
+    <meta name="keywords" content="staff augmentation, MERN developers, LLM integration, Java full stack, Python developers, tech talent, AI developers">
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: {
+                            50: '#eff6ff',
+                            500: '#3b82f6',
+                            600: '#2563eb',
+                            700: '#1d4ed8',
+                            900: '#1e3a8a'
+                        },
+                        secondary: {
+                            500: '#8b5cf6',
+                            600: '#7c3aed'
+                        },
+                        accent: {
+                            cyan: '#06b6d4',
+                            amber: '#f59e0b',
+                            emerald: '#10b981'
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'system-ui', 'sans-serif']
+                    },
+                    animation: {
+                        'fade-in': 'fadeIn 0.6s ease-out',
+                        'slide-up': 'slideUp 0.8s ease-out',
+                        'float': 'float 3s ease-in-out infinite',
+                        'pulse-slow': 'pulse 3s infinite'
+                    }
+                }
+            }
+        }
+    </script>
+    
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    
+    <style>
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        
+        @keyframes slideUp {
+            from { opacity: 0; transform: translateY(40px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        
+        @keyframes float {
+            0%, 100% { transform: translateY(0px); }
+            50% { transform: translateY(-10px); }
+        }
+        
+        .glass-card {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+        
+        .dark .glass-card {
+            background: rgba(0, 0, 0, 0.2);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        
+        .gradient-text {
+            background: linear-gradient(135deg, #3b82f6, #8b5cf6);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        
+        .hero-gradient {
+            background: linear-gradient(135deg, #1e3a8a 0%, #3b82f6 50%, #8b5cf6 100%);
+        }
+        
+        .section-padding { padding: 5rem 0; }
+        
+        @media (max-width: 768px) {
+            .section-padding { padding: 3rem 0; }
+        }
+    </style>
+</head>
+
+<body class="font-sans transition-colors duration-300" id="body">
+    <!-- Navigation -->
+    <nav class="fixed top-0 w-full z-50 transition-all duration-300" id="navbar">
+        <div class="container mx-auto px-4">
+            <div class="flex justify-between items-center h-16">
+                <div class="flex items-center space-x-2">
+                    <div class="w-10 h-10 bg-gradient-to-r from-primary-500 to-secondary-500 rounded-lg flex items-center justify-center">
+                        <span class="text-white font-bold text-lg">R</span>
+                    </div>
+                    <span class="text-xl font-bold text-gray-800 dark:text-white">Rudhram</span>
+                </div>
+                
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="#home" class="nav-link text-gray-700 dark:text-gray-300 hover:text-primary-500 transition-colors">Home</a>
+                    <a href="#services" class="nav-link text-gray-700 dark:text-gray-300 hover:text-primary-500 transition-colors">Services</a>
+                    <a href="#case-studies" class="nav-link text-gray-700 dark:text-gray-300 hover:text-primary-500 transition-colors">Case Studies</a>
+                    <a href="#about" class="nav-link text-gray-700 dark:text-gray-300 hover:text-primary-500 transition-colors">About</a>
+                    <a href="#contact" class="nav-link text-gray-700 dark:text-gray-300 hover:text-primary-500 transition-colors">Contact</a>
+                    
+                    <button id="theme-toggle" class="p-2 rounded-lg bg-gray-200 dark:bg-gray-700 hover:bg-gray-300 dark:hover:bg-gray-600 transition-colors">
+                        <i class="fas fa-sun dark:hidden"></i>
+                        <i class="fas fa-moon hidden dark:block"></i>
+                    </button>
+                    
+                    <a href="#quote" class="btn-primary px-6 py-2 bg-primary-500 text-white rounded-lg hover:bg-primary-600 transition-all transform hover:scale-105">
+                        Get Quote
+                    </a>
+                </div>
+                
+                <button id="mobile-menu-btn" class="md:hidden p-2">
+                    <i class="fas fa-bars text-gray-700 dark:text-gray-300"></i>
+                </button>
+            </div>
+        </div>
+        
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="md:hidden hidden bg-white dark:bg-gray-800 border-t border-gray-200 dark:border-gray-700">
+            <div class="px-4 py-2 space-y-1">
+                <a href="#home" class="block px-3 py-2 text-gray-700 dark:text-gray-300">Home</a>
+                <a href="#services" class="block px-3 py-2 text-gray-700 dark:text-gray-300">Services</a>
+                <a href="#case-studies" class="block px-3 py-2 text-gray-700 dark:text-gray-300">Case Studies</a>
+                <a href="#about" class="block px-3 py-2 text-gray-700 dark:text-gray-300">About</a>
+                <a href="#contact" class="block px-3 py-2 text-gray-700 dark:text-gray-300">Contact</a>
+                <a href="#quote" class="block px-3 py-2 text-primary-500 font-semibold">Get Quote</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero-gradient text-white section-padding pt-20 relative overflow-hidden">
+        <div class="absolute inset-0 opacity-10">
+            <!-- Abstract tech pattern background -->
+            <div class="absolute top-20 left-20 w-32 h-32 border border-white/20 rounded-full animate-pulse-slow"></div>
+            <div class="absolute bottom-20 right-20 w-24 h-24 border border-white/20 rounded-full animate-float"></div>
+            <div class="absolute top-1/2 left-10 w-16 h-16 border border-white/20 rounded-full"></div>
+        </div>
+        
+        <div class="container mx-auto px-4 relative z-10">
+            <div class="grid md:grid-cols-2 gap-12 items-center">
+                <div class="animate-fade-in">
+                    <h1 class="text-4xl md:text-6xl font-bold mb-6 leading-tight">
+                        Scale Your Tech Team with 
+                        <span class="text-accent-cyan">World-Class Developers</span>
+                        <span class="block text-2xl md:text-3xl font-medium mt-2 opacity-90">On Demand</span>
+                    </h1>
+                    <p class="text-xl md:text-2xl mb-8 opacity-90 leading-relaxed">
+                        From MERN + LLM experts to Java Full Stack and Python + LLM developers — we bring top tech talent to your doorstep.
+                    </p>
+                    <div class="flex flex-col sm:flex-row gap-4">
+                        <a href="#quote" class="btn-primary bg-accent-amber text-gray-900 px-8 py-4 rounded-xl font-semibold text-lg hover:bg-yellow-400 transition-all transform hover:scale-105 hover:shadow-lg">
+                            <i class="fas fa-calculator mr-2"></i>Get a Quote
+                        </a>
+                        <a href="#contact" class="btn-secondary bg-transparent border-2 border-white text-white px-8 py-4 rounded-xl font-semibold text-lg hover:bg-white hover:text-gray-900 transition-all">
+                            <i class="fas fa-comments mr-2"></i>Talk to an Expert
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="animate-slide-up">
+                    <!-- Modern office tech team working -->
+                    <img src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=600" 
+                         alt="Modern tech team collaborating in office" 
+                         class="rounded-2xl shadow-2xl w-full h-auto transform hover:scale-105 transition-transform duration-500" />
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Choose Rudhram Section -->
+    <section class="section-padding bg-gray-50 dark:bg-gray-900">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold mb-4 gradient-text">Why Choose Rudhram?</h2>
+                <p class="text-xl text-gray-600 dark:text-gray-400 max-w-3xl mx-auto">
+                    We provide world-class developers with cutting-edge expertise to accelerate your digital transformation.
+                </p>
+            </div>
+            
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <div class="glass-card rounded-2xl p-8 text-center transform hover:scale-105 transition-all duration-300 hover:shadow-xl">
+                    <div class="w-16 h-16 bg-primary-500 rounded-full flex items-center justify-center mx-auto mb-6">
+                        <i class="fas fa-user-check text-white text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-4 text-gray-800 dark:text-white">Pre-vetted Developers</h3>
+                    <p class="text-gray-600 dark:text-gray-400">Senior-level developers with proven expertise and track record</p>
+                </div>
+                
+                <div class="glass-card rounded-2xl p-8 text-center transform hover:scale-105 transition-all duration-300 hover:shadow-xl">
+                    <div class="w-16 h-16 bg-accent-emerald rounded-full flex items-center justify-center mx-auto mb-6">
+                        <i class="fas fa-rocket text-white text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-4 text-gray-800 dark:text-white">Fast Onboarding</h3>
+                    <p class="text-gray-600 dark:text-gray-400">Get your team up and running in days, not weeks</p>
+                </div>
+                
+                <div class="glass-card rounded-2xl p-8 text-center transform hover:scale-105 transition-all duration-300 hover:shadow-xl">
+                    <div class="w-16 h-16 bg-secondary-500 rounded-full flex items-center justify-center mx-auto mb-6">
+                        <i class="fas fa-clock text-white text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-4 text-gray-800 dark:text-white">Flexible Hiring</h3>
+                    <p class="text-gray-600 dark:text-gray-400">Hourly, monthly, or project-based engagement models</p>
+                </div>
+                
+                <div class="glass-card rounded-2xl p-8 text-center transform hover:scale-105 transition-all duration-300 hover:shadow-xl">
+                    <div class="w-16 h-16 bg-accent-cyan rounded-full flex items-center justify-center mx-auto mb-6">
+                        <i class="fas fa-brain text-white text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-4 text-gray-800 dark:text-white">AI & LLM Expertise</h3>
+                    <p class="text-gray-600 dark:text-gray-400">Cutting-edge AI integrations and LLM implementations</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Tech Domains Section -->
+    <section class="section-padding bg-white dark:bg-gray-800">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold mb-4 text-gray-800 dark:text-white">Tech Domains We Cover</h2>
+                <p class="text-xl text-gray-600 dark:text-gray-400 max-w-3xl mx-auto">
+                    Comprehensive expertise across modern technology stacks and emerging AI technologies.
+                </p>
+            </div>
+            
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- MERN + LLM -->
+                <div class="bg-gradient-to-br from-primary-50 to-primary-100 dark:from-gray-700 dark:to-gray-600 rounded-2xl p-8 transform hover:scale-105 transition-all duration-300 hover:shadow-xl">
+                    <div class="flex items-center mb-6">
+                        <div class="w-12 h-12 bg-primary-500 rounded-lg flex items-center justify-center mr-4">
+                            <i class="fas fa-layer-group text-white text-xl"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-gray-800 dark:text-white">MERN + LLM Developers</h3>
+                    </div>
+                    <p class="text-gray-600 dark:text-gray-300 mb-4">
+                        Full-stack web apps integrated with AI chatbots, content generators, and automation.
+                    </p>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="px-3 py-1 bg-primary-500 text-white text-sm rounded-full">MongoDB</span>
+                        <span class="px-3 py-1 bg-primary-500 text-white text-sm rounded-full">React</span>
+                        <span class="px-3 py-1 bg-primary-500 text-white text-sm rounded-full">Node.js</span>
+                        <span class="px-3 py-1 bg-primary-500 text-white text-sm rounded-full">LangChain</span>
+                    </div>
+                </div>
+                
+                <!-- Java Full Stack -->
+                <div class="bg-gradient-to-br from-accent-amber/20 to-accent-amber/30 dark:from-gray-700 dark:to-gray-600 rounded-2xl p-8 transform hover:scale-105 transition-all duration-300 hover:shadow-xl">
+                    <div class="flex items-center mb-6">
+                        <div class="w-12 h-12 bg-accent-amber rounded-lg flex items-center justify-center mr-4">
+                            <i class="fas fa-coffee text-white text-xl"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-gray-800 dark:text-white">Java Full Stack Developers</h3>
+                    </div>
+                    <p class="text-gray-600 dark:text-gray-300 mb-4">
+                        Enterprise-grade scalable solutions with modern Java frameworks.
+                    </p>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="px-3 py-1 bg-accent-amber text-white text-sm rounded-full">Spring Boot</span>
+                        <span class="px-3 py-1 bg-accent-amber text-white text-sm rounded-full">Hibernate</span>
+                        <span class="px-3 py-1 bg-accent-amber text-white text-sm rounded-full">Angular</span>
+                        <span class="px-3 py-1 bg-accent-amber text-white text-sm rounded-full">Microservices</span>
+                    </div>
+                </div>
+                
+                <!-- Python + LLM -->
+                <div class="bg-gradient-to-br from-accent-emerald/20 to-accent-emerald/30 dark:from-gray-700 dark:to-gray-600 rounded-2xl p-8 transform hover:scale-105 transition-all duration-300 hover:shadow-xl">
+                    <div class="flex items-center mb-6">
+                        <div class="w-12 h-12 bg-accent-emerald rounded-lg flex items-center justify-center mr-4">
+                            <i class="fab fa-python text-white text-xl"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-gray-800 dark:text-white">Python + LLM Developers</h3>
+                    </div>
+                    <p class="text-gray-600 dark:text-gray-300 mb-4">
+                        AI-driven backend systems, data pipelines, and natural language applications.
+                    </p>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="px-3 py-1 bg-accent-emerald text-white text-sm rounded-full">Django</span>
+                        <span class="px-3 py-1 bg-accent-emerald text-white text-sm rounded-full">Flask</span>
+                        <span class="px-3 py-1 bg-accent-emerald text-white text-sm rounded-full">Hugging Face</span>
+                        <span class="px-3 py-1 bg-accent-emerald text-white text-sm rounded-full">AI APIs</span>
+                    </div>
+                </div>
+                
+                <!-- DevOps -->
+                <div class="bg-gradient-to-br from-secondary-500/20 to-secondary-600/30 dark:from-gray-700 dark:to-gray-600 rounded-2xl p-8 transform hover:scale-105 transition-all duration-300 hover:shadow-xl">
+                    <div class="flex items-center mb-6">
+                        <div class="w-12 h-12 bg-secondary-500 rounded-lg flex items-center justify-center mr-4">
+                            <i class="fas fa-cogs text-white text-xl"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-gray-800 dark:text-white">DevOps Engineers</h3>
+                    </div>
+                    <p class="text-gray-600 dark:text-gray-300 mb-4">
+                        CI/CD pipelines, cloud automation, and performance monitoring.
+                    </p>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="px-3 py-1 bg-secondary-500 text-white text-sm rounded-full">AWS</span>
+                        <span class="px-3 py-1 bg-secondary-500 text-white text-sm rounded-full">Docker</span>
+                        <span class="px-3 py-1 bg-secondary-500 text-white text-sm rounded-full">Kubernetes</span>
+                    </div>
+                </div>
+                
+                <!-- Mobile -->
+                <div class="bg-gradient-to-br from-accent-cyan/20 to-accent-cyan/30 dark:from-gray-700 dark:to-gray-600 rounded-2xl p-8 transform hover:scale-105 transition-all duration-300 hover:shadow-xl">
+                    <div class="flex items-center mb-6">
+                        <div class="w-12 h-12 bg-accent-cyan rounded-lg flex items-center justify-center mr-4">
+                            <i class="fas fa-mobile-alt text-white text-xl"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-gray-800 dark:text-white">Mobile App Developers</h3>
+                    </div>
+                    <p class="text-gray-600 dark:text-gray-300 mb-4">
+                        Android, iOS, and cross-platform mobile applications.
+                    </p>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="px-3 py-1 bg-accent-cyan text-white text-sm rounded-full">React Native</span>
+                        <span class="px-3 py-1 bg-accent-cyan text-white text-sm rounded-full">Flutter</span>
+                        <span class="px-3 py-1 bg-accent-cyan text-white text-sm rounded-full">Swift</span>
+                    </div>
+                </div>
+                
+                <!-- AI & Data Science -->
+                <div class="bg-gradient-to-br from-purple-500/20 to-purple-600/30 dark:from-gray-700 dark:to-gray-600 rounded-2xl p-8 transform hover:scale-105 transition-all duration-300 hover:shadow-xl">
+                    <div class="flex items-center mb-6">
+                        <div class="w-12 h-12 bg-purple-500 rounded-lg flex items-center justify-center mr-4">
+                            <i class="fas fa-chart-line text-white text-xl"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-gray-800 dark:text-white">AI & Data Science Experts</h3>
+                    </div>
+                    <p class="text-gray-600 dark:text-gray-300 mb-4">
+                        ML models, AI APIs, predictive analytics, and data insights.
+                    </p>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="px-3 py-1 bg-purple-500 text-white text-sm rounded-full">TensorFlow</span>
+                        <span class="px-3 py-1 bg-purple-500 text-white text-sm rounded-full">PyTorch</span>
+                        <span class="px-3 py-1 bg-purple-500 text-white text-sm rounded-full">MLOps</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="section-padding bg-gray-50 dark:bg-gray-900">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold mb-4 gradient-text">Our Core Services</h2>
+                <p class="text-xl text-gray-600 dark:text-gray-400 max-w-3xl mx-auto">
+                    Comprehensive staff augmentation services tailored to your specific technology needs.
+                </p>
+            </div>
+            
+            <div class="grid lg:grid-cols-2 gap-12">
+                <!-- MERN + LLM Service -->
+                <div class="bg-white dark:bg-gray-800 rounded-2xl p-8 shadow-lg hover:shadow-xl transition-shadow">
+                    <div class="flex items-center mb-6">
+                        <div class="w-16 h-16 bg-gradient-to-r from-primary-500 to-primary-600 rounded-xl flex items-center justify-center mr-6">
+                            <i class="fas fa-layer-group text-white text-2xl"></i>
+                        </div>
+                        <div>
+                            <h3 class="text-2xl font-bold text-gray-800 dark:text-white">MERN + LLM Developer Augmentation</h3>
+                            <p class="text-primary-500 font-medium">Full-Stack AI Integration</p>
+                        </div>
+                    </div>
+                    
+                    <div class="mb-6">
+                        <h4 class="font-semibold text-gray-800 dark:text-white mb-3">Skills & Technologies:</h4>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="px-3 py-1 bg-primary-100 text-primary-700 dark:bg-primary-900 dark:text-primary-300 rounded-full text-sm">MongoDB</span>
+                            <span class="px-3 py-1 bg-primary-100 text-primary-700 dark:bg-primary-900 dark:text-primary-300 rounded-full text-sm">Express.js</span>
+                            <span class="px-3 py-1 bg-primary-100 text-primary-700 dark:bg-primary-900 dark:text-primary-300 rounded-full text-sm">React</span>
+                            <span class="px-3 py-1 bg-primary-100 text-primary-700 dark:bg-primary-900 dark:text-primary-300 rounded-full text-sm">Node.js</span>
+                            <span class="px-3 py-1 bg-primary-100 text-primary-700 dark:bg-primary-900 dark:text-primary-300 rounded-full text-sm">LangChain</span>
+                            <span class="px-3 py-1 bg-primary-100 text-primary-700 dark:bg-primary-900 dark:text-primary-300 rounded-full text-sm">OpenAI API</span>
+                            <span class="px-3 py-1 bg-primary-100 text-primary-700 dark:bg-primary-900 dark:text-primary-300 rounded-full text-sm">Vector Databases</span>
+                        </div>
+                    </div>
+                    
+                    <div class="mb-6">
+                        <h4 class="font-semibold text-gray-800 dark:text-white mb-3">Use Cases:</h4>
+                        <ul class="space-y-2">
+                            <li class="flex items-center text-gray-600 dark:text-gray-300">
+                                <i class="fas fa-check text-accent-emerald mr-3"></i>
+                                AI-powered web portals with intelligent content generation
+                            </li>
+                            <li class="flex items-center text-gray-600 dark:text-gray-300">
+                                <i class="fas fa-check text-accent-emerald mr-3"></i>
+                                Real-time chatbots with context-aware responses
+                            </li>
+                            <li class="flex items-center text-gray-600 dark:text-gray-300">
+                                <i class="fas fa-check text-accent-emerald mr-3"></i>
+                                Custom LLM integrations for domain-specific applications
+                            </li>
+                            <li class="flex items-center text-gray-600 dark:text-gray-300">
+                                <i class="fas fa-check text-accent-emerald mr-3"></i>
+                                AI recommendation engines and personalization systems
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <!-- Java Full Stack Service -->
+                <div class="bg-white dark:bg-gray-800 rounded-2xl p-8 shadow-lg hover:shadow-xl transition-shadow">
+                    <div class="flex items-center mb-6">
+                        <div class="w-16 h-16 bg-gradient-to-r from-accent-amber to-yellow-500 rounded-xl flex items-center justify-center mr-6">
+                            <i class="fab fa-java text-white text-2xl"></i>
+                        </div>
+                        <div>
+                            <h3 class="text-2xl font-bold text-gray-800 dark:text-white">Java Full Stack Developer Augmentation</h3>
+                            <p class="text-accent-amber font-medium">Enterprise Solutions</p>
+                        </div>
+                    </div>
+                    
+                    <div class="mb-6">
+                        <h4 class="font-semibold text-gray-800 dark:text-white mb-3">Skills & Technologies:</h4>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="px-3 py-1 bg-amber-100 text-amber-700 dark:bg-amber-900 dark:text-amber-300 rounded-full text-sm">Java</span>
+                            <span class="px-3 py-1 bg-amber-100 text-amber-700 dark:bg-amber-900 dark:text-amber-300 rounded-full text-sm">Spring Boot</span>
+                            <span class="px-3 py-1 bg-amber-100 text-amber-700 dark:bg-amber-900 dark:text-amber-300 rounded-full text-sm">Hibernate</span>
+                            <span class="px-3 py-1 bg-amber-100 text-amber-700 dark:bg-amber-900 dark:text-amber-300 rounded-full text-sm">Angular/React</span>
+                            <span class="px-3 py-1 bg-amber-100 text-amber-700 dark:bg-amber-900 dark:text-amber-300 rounded-full text-sm">REST APIs</span>
+                            <span class="px-3 py-1 bg-amber-100 text-amber-700 dark:bg-amber-900 dark:text-amber-300 rounded-full text-sm">Microservices</span>
+                        </div>
+                    </div>
+                    
+                    <div class="mb-6">
+                        <h4 class="font-semibold text-gray-800 dark:text-white mb-3">Use Cases:</h4>
+                        <ul class="space-y-2">
+                            <li class="flex items-center text-gray-600 dark:text-gray-300">
+                                <i class="fas fa-check text-accent-emerald mr-3"></i>
+                                Banking and financial services applications
+                            </li>
+                            <li class="flex items-center text-gray-600 dark:text-gray-300">
+                                <i class="fas fa-check text-accent-emerald mr-3"></i>
+                                Large-scale e-commerce platforms
+                            </li>
+                            <li class="flex items-center text-gray-600 dark:text-gray-300">
+                                <i class="fas fa-check text-accent-emerald mr-3"></i>
+                                Enterprise resource planning (ERP) systems
+                            </li>
+                            <li class="flex items-center text-gray-600 dark:text-gray-300">
+                                <i class="fas fa-check text-accent-emerald mr-3"></i>
+                                High-performance microservices architectures
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <!-- Python + LLM Service -->
+                <div class="bg-white dark:bg-gray-800 rounded-2xl p-8 shadow-lg hover:shadow-xl transition-shadow">
+                    <div class="flex items-center mb-6">
+                        <div class="w-16 h-16 bg-gradient-to-r from-accent-emerald to-green-500 rounded-xl flex items-center justify-center mr-6">
+                            <i class="fab fa-python text-white text-2xl"></i>
+                        </div>
+                        <div>
+                            <h3 class="text-2xl font-bold text-gray-800 dark:text-white">Python + LLM Developer Augmentation</h3>
+                            <p class="text-accent-emerald font-medium">AI-Driven Backend</p>
+                        </div>
+                    </div>
+                    
+                    <div class="mb-6">
+                        <h4 class="font-semibold text-gray-800 dark:text-white mb-3">Skills & Technologies:</h4>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="px-3 py-1 bg-emerald-100 text-emerald-700 dark:bg-emerald-900 dark:text-emerald-300 rounded-full text-sm">Python</span>
+                            <span class="px-3 py-1 bg-emerald-100 text-emerald-700 dark:bg-emerald-900 dark:text-emerald-300 rounded-full text-sm">Flask/Django</span>
+                            <span class="px-3 py-1 bg-emerald-100 text-emerald-700 dark:bg-emerald-900 dark:text-emerald-300 rounded-full text-sm">LangChain</span>
+                            <span class="px-3 py-1 bg-emerald-100 text-emerald-700 dark:bg-emerald-900 dark:text-emerald-300 rounded-full text-sm">Hugging Face</span>
+                            <span class="px-3 py-1 bg-emerald-100 text-emerald-700 dark:bg-emerald-900 dark:text-emerald-300 rounded-full text-sm">Data Engineering</span>
+                            <span class="px-3 py-1 bg-emerald-100 text-emerald-700 dark:bg-emerald-900 dark:text-emerald-300 rounded-full text-sm">AI APIs</span>
+                        </div>
+                    </div>
+                    
+                    <div class="mb-6">
+                        <h4 class="font-semibold text-gray-800 dark:text-white mb-3">Use Cases:</h4>
+                        <ul class="space-y-2">
+                            <li class="flex items-center text-gray-600 dark:text-gray-300">
+                                <i class="fas fa-check text-accent-emerald mr-3"></i>
+                                AI-powered SaaS products with intelligent automation
+                            </li>
+                            <li class="flex items-center text-gray-600 dark:text-gray-300">
+                                <i class="fas fa-check text-accent-emerald mr-3"></i>
+                                Natural language processing tools and applications
+                            </li>
+                            <li class="flex items-center text-gray-600 dark:text-gray-300">
+                                <i class="fas fa-check text-accent-emerald mr-3"></i>
+                                Custom GPT integrations for specialized domains
+                            </li>
+                            <li class="flex items-center text-gray-600 dark:text-gray-300">
+                                <i class="fas fa-check text-accent-emerald mr-3"></i>
+                                Data analytics platforms with ML capabilities
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <!-- Additional Roles -->
+                <div class="bg-white dark:bg-gray-800 rounded-2xl p-8 shadow-lg hover:shadow-xl transition-shadow">
+                    <div class="flex items-center mb-6">
+                        <div class="w-16 h-16 bg-gradient-to-r from-secondary-500 to-purple-600 rounded-xl flex items-center justify-center mr-6">
+                            <i class="fas fa-users text-white text-2xl"></i>
+                        </div>
+                        <div>
+                            <h3 class="text-2xl font-bold text-gray-800 dark:text-white">Additional Specialized Roles</h3>
+                            <p class="text-secondary-500 font-medium">Complete Tech Teams</p>
+                        </div>
+                    </div>
+                    
+                    <div class="grid md:grid-cols-2 gap-6">
+                        <div>
+                            <h4 class="font-semibold text-gray-800 dark:text-white mb-3">Frontend & Backend:</h4>
+                            <ul class="space-y-2 text-sm">
+                                <li class="flex items-center text-gray-600 dark:text-gray-300">
+                                    <i class="fas fa-dot-circle text-secondary-500 mr-2 text-xs"></i>
+                                    Frontend Developers (React, Angular, Vue.js)
+                                </li>
+                                <li class="flex items-center text-gray-600 dark:text-gray-300">
+                                    <i class="fas fa-dot-circle text-secondary-500 mr-2 text-xs"></i>
+                                    Backend Developers (Node.js, .NET, GoLang)
+                                </li>
+                                <li class="flex items-center text-gray-600 dark:text-gray-300">
+                                    <i class="fas fa-dot-circle text-secondary-500 mr-2 text-xs"></i>
+                                    Mobile Developers (Flutter, React Native)
+                                </li>
+                                <li class="flex items-center text-gray-600 dark:text-gray-300">
+                                    <i class="fas fa-dot-circle text-secondary-500 mr-2 text-xs"></i>
+                                    UI/UX Designers
+                                </li>
+                            </ul>
+                        </div>
+                        <div>
+                            <h4 class="font-semibold text-gray-800 dark:text-white mb-3">Infrastructure & QA:</h4>
+                            <ul class="space-y-2 text-sm">
+                                <li class="flex items-center text-gray-600 dark:text-gray-300">
+                                    <i class="fas fa-dot-circle text-secondary-500 mr-2 text-xs"></i>
+                                    DevOps & Cloud Engineers (AWS, Azure, GCP)
+                                </li>
+                                <li class="flex items-center text-gray-600 dark:text-gray-300">
+                                    <i class="fas fa-dot-circle text-secondary-500 mr-2 text-xs"></i>
+                                    QA Automation Engineers (Selenium, Cypress)
+                                </li>
+                                <li class="flex items-center text-gray-600 dark:text-gray-300">
+                                    <i class="fas fa-dot-circle text-secondary-500 mr-2 text-xs"></i>
+                                    AI/ML Engineers (Machine Learning, Deep Learning)
+                                </li>
+                                <li class="flex items-center text-gray-600 dark:text-gray-300">
+                                    <i class="fas fa-dot-circle text-secondary-500 mr-2 text-xs"></i>
+                                    Data Engineers (ETL pipelines, Big Data)
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Case Studies Section -->
+    <section id="case-studies" class="section-padding bg-white dark:bg-gray-800">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold mb-4 gradient-text">Success Stories</h2>
+                <p class="text-xl text-gray-600 dark:text-gray-400 max-w-3xl mx-auto">
+                    Real results from real clients who scaled their tech teams with Rudhram.
+                </p>
+            </div>
+            
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Case Study 1 -->
+                <div class="bg-gray-50 dark:bg-gray-700 rounded-2xl p-8 hover:shadow-xl transition-shadow">
+                    <div class="mb-6">
+                        <!-- US EdTech startup team working -->
+                        <img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=400" 
+                             alt="EdTech startup team collaborating on AI learning platform" 
+                             class="rounded-xl w-full h-48 object-cover" />
+                    </div>
+                    <div class="mb-4">
+                        <span class="px-3 py-1 bg-primary-100 text-primary-700 dark:bg-primary-900 dark:text-primary-300 rounded-full text-sm font-medium">EdTech</span>
+                    </div>
+                    <h3 class="text-xl font-bold mb-4 text-gray-800 dark:text-white">AI-Powered Learning Management System</h3>
+                    <div class="mb-4">
+                        <h4 class="font-semibold text-gray-700 dark:text-gray-300 mb-2">Challenge:</h4>
+                        <p class="text-gray-600 dark:text-gray-400 text-sm">US-based EdTech startup needed an AI-powered LMS with automated tutoring in 4 months.</p>
+                    </div>
+                    <div class="mb-4">
+                        <h4 class="font-semibold text-gray-700 dark:text-gray-300 mb-2">Solution:</h4>
+                        <p class="text-gray-600 dark:text-gray-400 text-sm">Provided a team of MERN + LLM developers integrating ChatGPT for personalized learning paths.</p>
+                    </div>
+                    <div class="mb-6">
+                        <h4 class="font-semibold text-gray-700 dark:text-gray-300 mb-2">Impact:</h4>
+                        <ul class="text-sm space-y-1">
+                            <li class="flex items-center text-accent-emerald">
+                                <i class="fas fa-arrow-up mr-2"></i>
+                                70% reduction in content creation time
+                            </li>
+                            <li class="flex items-center text-accent-emerald">
+                                <i class="fas fa-arrow-up mr-2"></i>
+                                45% boost in student engagement
+                            </li>
+                        </ul>
+                    </div>
+                    <blockquote class="border-l-4 border-primary-500 pl-4 italic text-gray-600 dark:text-gray-400">
+                        "Rudhram's developers were game changers for our AI journey. They delivered beyond expectations."
+                    </blockquote>
+                </div>
+                
+                <!-- Case Study 2 -->
+                <div class="bg-gray-50 dark:bg-gray-700 rounded-2xl p-8 hover:shadow-xl transition-shadow">
+                    <div class="mb-6">
+                        <!-- Financial services team working on banking app -->
+                        <img src="https://images.unsplash.com/photo-1560472354-b33ff0c44a43?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=400" 
+                             alt="Financial services team developing banking application" 
+                             class="rounded-xl w-full h-48 object-cover" />
+                    </div>
+                    <div class="mb-4">
+                        <span class="px-3 py-1 bg-accent-amber/20 text-amber-700 dark:bg-amber-900 dark:text-amber-300 rounded-full text-sm font-medium">FinTech</span>
+                    </div>
+                    <h3 class="text-xl font-bold mb-4 text-gray-800 dark:text-white">Enterprise Banking Platform</h3>
+                    <div class="mb-4">
+                        <h4 class="font-semibold text-gray-700 dark:text-gray-300 mb-2">Challenge:</h4>
+                        <p class="text-gray-600 dark:text-gray-400 text-sm">Regional bank needed to modernize their core banking system with microservices architecture.</p>
+                    </div>
+                    <div class="mb-4">
+                        <h4 class="font-semibold text-gray-700 dark:text-gray-300 mb-2">Solution:</h4>
+                        <p class="text-gray-600 dark:text-gray-400 text-sm">Deployed Java Full Stack team with Spring Boot expertise for scalable, secure banking solutions.</p>
+                    </div>
+                    <div class="mb-6">
+                        <h4 class="font-semibold text-gray-700 dark:text-gray-300 mb-2">Impact:</h4>
+                        <ul class="text-sm space-y-1">
+                            <li class="flex items-center text-accent-emerald">
+                                <i class="fas fa-arrow-up mr-2"></i>
+                                300% improvement in transaction processing
+                            </li>
+                            <li class="flex items-center text-accent-emerald">
+                                <i class="fas fa-arrow-up mr-2"></i>
+                                60% reduction in system downtime
+                            </li>
+                        </ul>
+                    </div>
+                    <blockquote class="border-l-4 border-accent-amber pl-4 italic text-gray-600 dark:text-gray-400">
+                        "The Java expertise delivered by Rudhram transformed our entire banking infrastructure."
+                    </blockquote>
+                </div>
+                
+                <!-- Case Study 3 -->
+                <div class="bg-gray-50 dark:bg-gray-700 rounded-2xl p-8 hover:shadow-xl transition-shadow">
+                    <div class="mb-6">
+                        <!-- Healthcare AI development team -->
+                        <img src="https://images.unsplash.com/photo-1559757148-5c350d0d3c56?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=400" 
+                             alt="Healthcare AI development team working on medical data analysis" 
+                             class="rounded-xl w-full h-48 object-cover" />
+                    </div>
+                    <div class="mb-4">
+                        <span class="px-3 py-1 bg-accent-emerald/20 text-emerald-700 dark:bg-emerald-900 dark:text-emerald-300 rounded-full text-sm font-medium">HealthTech</span>
+                    </div>
+                    <h3 class="text-xl font-bold mb-4 text-gray-800 dark:text-white">AI Medical Diagnosis Assistant</h3>
+                    <div class="mb-4">
+                        <h4 class="font-semibold text-gray-700 dark:text-gray-300 mb-2">Challenge:</h4>
+                        <p class="text-gray-600 dark:text-gray-400 text-sm">Healthcare startup required AI system for analyzing medical reports and providing diagnostic insights.</p>
+                    </div>
+                    <div class="mb-4">
+                        <h4 class="font-semibold text-gray-700 dark:text-gray-300 mb-2">Solution:</h4>
+                        <p class="text-gray-600 dark:text-gray-400 text-sm">Python + LLM specialists built NLP models for medical text analysis with HIPAA compliance.</p>
+                    </div>
+                    <div class="mb-6">
+                        <h4 class="font-semibold text-gray-700 dark:text-gray-300 mb-2">Impact:</h4>
+                        <ul class="text-sm space-y-1">
+                            <li class="flex items-center text-accent-emerald">
+                                <i class="fas fa-arrow-up mr-2"></i>
+                                85% accuracy in preliminary diagnosis
+                            </li>
+                            <li class="flex items-center text-accent-emerald">
+                                <i class="fas fa-arrow-up mr-2"></i>
+                                50% faster report processing
+                            </li>
+                        </ul>
+                    </div>
+                    <blockquote class="border-l-4 border-accent-emerald pl-4 italic text-gray-600 dark:text-gray-400">
+                        "Rudhram's AI expertise helped us revolutionize healthcare diagnostics with cutting-edge technology."
+                    </blockquote>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Us Section -->
+    <section id="about" class="section-padding bg-gray-50 dark:bg-gray-900">
+        <div class="container mx-auto px-4">
+            <div class="grid lg:grid-cols-2 gap-16 items-center">
+                <div>
+                    <h2 class="text-3xl md:text-4xl font-bold mb-6 gradient-text">About Rudhram Software Solutions</h2>
+                    <p class="text-xl text-gray-600 dark:text-gray-400 mb-8 leading-relaxed">
+                        We are a global tech talent provider, enabling businesses to scale instantly with specialized staff augmentation services in emerging and traditional technologies.
+                    </p>
+                    
+                    <div class="space-y-8">
+                        <div>
+                            <h3 class="text-xl font-bold text-gray-800 dark:text-white mb-3 flex items-center">
+                                <i class="fas fa-bullseye text-primary-500 mr-3"></i>
+                                Our Mission
+                            </h3>
+                            <p class="text-gray-600 dark:text-gray-400">
+                                To empower businesses with world-class developers in emerging and traditional technologies, enabling rapid scaling and digital transformation.
+                            </p>
+                        </div>
+                        
+                        <div>
+                            <h3 class="text-xl font-bold text-gray-800 dark:text-white mb-3 flex items-center">
+                                <i class="fas fa-eye text-secondary-500 mr-3"></i>
+                                Our Vision
+                            </h3>
+                            <p class="text-gray-600 dark:text-gray-400">
+                                To be the go-to global partner for AI-driven and full-stack development teams, setting the standard for tech talent excellence.
+                            </p>
+                        </div>
+                        
+                        <div>
+                            <h3 class="text-xl font-bold text-gray-800 dark:text-white mb-3 flex items-center">
+                                <i class="fas fa-heart text-accent-emerald mr-3"></i>
+                                Our Values
+                            </h3>
+                            <div class="grid grid-cols-2 gap-4">
+                                <div class="flex items-center">
+                                    <i class="fas fa-shield-alt text-primary-500 mr-2"></i>
+                                    <span class="text-gray-600 dark:text-gray-400">Integrity</span>
+                                </div>
+                                <div class="flex items-center">
+                                    <i class="fas fa-graduation-cap text-secondary-500 mr-2"></i>
+                                    <span class="text-gray-600 dark:text-gray-400">Expertise</span>
+                                </div>
+                                <div class="flex items-center">
+                                    <i class="fas fa-bolt text-accent-amber mr-2"></i>
+                                    <span class="text-gray-600 dark:text-gray-400">Agility</span>
+                                </div>
+                                <div class="flex items-center">
+                                    <i class="fas fa-lightbulb text-accent-cyan mr-2"></i>
+                                    <span class="text-gray-600 dark:text-gray-400">Innovation</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div>
+                    <!-- Modern tech office environment -->
+                    <img src="https://images.unsplash.com/photo-1497366216548-37526070297c?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=600" 
+                         alt="Modern tech office environment with diverse team collaboration" 
+                         class="rounded-2xl shadow-2xl w-full h-auto" />
+                </div>
+            </div>
+            
+            <!-- Stats Section -->
+            <div class="mt-20 grid md:grid-cols-4 gap-8">
+                <div class="text-center">
+                    <div class="text-4xl font-bold text-primary-500 mb-2">500+</div>
+                    <div class="text-gray-600 dark:text-gray-400">Skilled Developers</div>
+                </div>
+                <div class="text-center">
+                    <div class="text-4xl font-bold text-secondary-500 mb-2">150+</div>
+                    <div class="text-gray-600 dark:text-gray-400">Successful Projects</div>
+                </div>
+                <div class="text-center">
+                    <div class="text-4xl font-bold text-accent-emerald mb-2">50+</div>
+                    <div class="text-gray-600 dark:text-gray-400">Global Clients</div>
+                </div>
+                <div class="text-center">
+                    <div class="text-4xl font-bold text-accent-amber mb-2">99%</div>
+                    <div class="text-gray-600 dark:text-gray-400">Client Satisfaction</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="section-padding bg-white dark:bg-gray-800">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold mb-4 gradient-text">Get In Touch</h2>
+                <p class="text-xl text-gray-600 dark:text-gray-400 max-w-3xl mx-auto">
+                    Ready to scale your tech team? Let's discuss your project requirements and find the perfect developers for your needs.
+                </p>
+            </div>
+            
+            <div class="grid lg:grid-cols-2 gap-16">
+                <!-- Contact Form -->
+                <div class="bg-gray-50 dark:bg-gray-700 rounded-2xl p-8">
+                    <h3 class="text-2xl font-bold mb-6 text-gray-800 dark:text-white">Send us a Message</h3>
+                    <form id="contactForm" class="space-y-6">
+                        <div class="grid md:grid-cols-2 gap-6">
+                            <div>
+                                <label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">Name *</label>
+                                <input type="text" name="name" required 
+                                       class="w-full px-4 py-3 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-transparent bg-white dark:bg-gray-800 text-gray-900 dark:text-white">
+                            </div>
+                            <div>
+                                <label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">Email *</label>
+                                <input type="email" name="email" required 
+                                       class="w-full px-4 py-3 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-transparent bg-white dark:bg-gray-800 text-gray-900 dark:text-white">
+                            </div>
+                        </div>
+                        
+                        <div>
+                            <label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">Phone</label>
+                            <input type="tel" name="phone" 
+                                   class="w-full px-4 py-3 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-transparent bg-white dark:bg-gray-800 text-gray-900 dark:text-white">
+                        </div>
+                        
+                        <div>
+                            <label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">Message *</label>
+                            <textarea name="message" rows="5" required 
+                                      class="w-full px-4 py-3 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-transparent bg-white dark:bg-gray-800 text-gray-900 dark:text-white" 
+                                      placeholder="Tell us about your project requirements..."></textarea>
+                        </div>
+                        
+                        <button type="submit" 
+                                class="w-full bg-primary-500 text-white py-3 px-6 rounded-lg hover:bg-primary-600 transition-colors font-semibold text-lg">
+                            <i class="fas fa-paper-plane mr-2"></i>
+                            Send Message
+                        </button>
+                    </form>
+                </div>
+                
+                <!-- Contact Info -->
+                <div class="space-y-8">
+                    <div>
+                        <h3 class="text-2xl font-bold mb-6 text-gray-800 dark:text-white">Contact Information</h3>
+                        
+                        <div class="space-y-6">
+                            <div class="flex items-start">
+                                <div class="w-12 h-12 bg-primary-500 rounded-lg flex items-center justify-center mr-4 mt-1">
+                                    <i class="fas fa-envelope text-white"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-semibold text-gray-800 dark:text-white">Email</h4>
+                                    <p class="text-gray-600 dark:text-gray-400">contact@rudhramsoft.com</p>
+                                </div>
+                            </div>
+                            
+                            <div class="flex items-start">
+                                <div class="w-12 h-12 bg-secondary-500 rounded-lg flex items-center justify-center mr-4 mt-1">
+                                    <i class="fas fa-phone text-white"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-semibold text-gray-800 dark:text-white">Phone</h4>
+                                    <p class="text-gray-600 dark:text-gray-400">+91-XXXXXXXXXX</p>
+                                </div>
+                            </div>
+                            
+                            <div class="flex items-start">
+                                <div class="w-12 h-12 bg-accent-emerald rounded-lg flex items-center justify-center mr-4 mt-1">
+                                    <i class="fas fa-map-marker-alt text-white"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-semibold text-gray-800 dark:text-white">Office</h4>
+                                    <p class="text-gray-600 dark:text-gray-400">
+                                        Tech Park, Innovation District<br>
+                                        Bangalore, Karnataka, India
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Map Placeholder -->
+                    <div class="bg-gray-200 dark:bg-gray-600 rounded-2xl h-64 flex items-center justify-center">
+                        <div class="text-center">
+                            <i class="fas fa-map text-4xl text-gray-400 dark:text-gray-500 mb-4"></i>
+                            <p class="text-gray-500 dark:text-gray-400">Interactive Map</p>
+                            <p class="text-sm text-gray-400 dark:text-gray-500">Location: Bangalore, India</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Get Quote Section -->
+    <section id="quote" class="section-padding bg-gradient-to-br from-primary-600 to-secondary-600 text-white">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold mb-4">Get Your Custom Quote</h2>
+                <p class="text-xl opacity-90 max-w-3xl mx-auto">
+                    Tell us about your project requirements and we'll provide a detailed quote within 24 hours.
+                </p>
+            </div>
+            
+            <div class="max-w-4xl mx-auto">
+                <div class="glass-card rounded-2xl p-8">
+                    <form id="quoteForm" class="space-y-6">
+                        <div class="grid md:grid-cols-2 gap-6">
+                            <div>
+                                <label class="block text-sm font-medium text-white mb-2">Full Name *</label>
+                                <input type="text" name="fullName" required 
+                                       class="w-full px-4 py-3 border border-white/20 rounded-lg focus:ring-2 focus:ring-white focus:border-transparent bg-white/10 text-white placeholder-white/70">
+                            </div>
+                            <div>
+                                <label class="block text-sm font-medium text-white mb-2">Company Name *</label>
+                                <input type="text" name="company" required 
+                                       class="w-full px-4 py-3 border border-white/20 rounded-lg focus:ring-2 focus:ring-white focus:border-transparent bg-white/10 text-white placeholder-white/70">
+                            </div>
+                        </div>
+                        
+                        <div class="grid md:grid-cols-2 gap-6">
+                            <div>
+                                <label class="block text-sm font-medium text-white mb-2">Email *</label>
+                                <input type="email" name="email" required 
+                                       class="w-full px-4 py-3 border border-white/20 rounded-lg focus:ring-2 focus:ring-white focus:border-transparent bg-white/10 text-white placeholder-white/70">
+                            </div>
+                            <div>
+                                <label class="block text-sm font-medium text-white mb-2">Phone *</label>
+                                <input type="tel" name="phone" required 
+                                       class="w-full px-4 py-3 border border-white/20 rounded-lg focus:ring-2 focus:ring-white focus:border-transparent bg-white/10 text-white placeholder-white/70">
+                            </div>
+                        </div>
+                        
+                        <div>
+                            <label class="block text-sm font-medium text-white mb-2">Required Tech Roles (Select multiple) *</label>
+                            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-3">
+                                <label class="flex items-center">
+                                    <input type="checkbox" name="techRoles" value="MERN + LLM" class="mr-2 rounded">
+                                    <span class="text-sm">MERN + LLM Developers</span>
+                                </label>
+                                <label class="flex items-center">
+                                    <input type="checkbox" name="techRoles" value="Java Full Stack" class="mr-2 rounded">
+                                    <span class="text-sm">Java Full Stack</span>
+                                </label>
+                                <label class="flex items-center">
+                                    <input type="checkbox" name="techRoles" value="Python + LLM" class="mr-2 rounded">
+                                    <span class="text-sm">Python + LLM</span>
+                                </label>
+                                <label class="flex items-center">
+                                    <input type="checkbox" name="techRoles" value="DevOps" class="mr-2 rounded">
+                                    <span class="text-sm">DevOps Engineers</span>
+                                </label>
+                                <label class="flex items-center">
+                                    <input type="checkbox" name="techRoles" value="Mobile" class="mr-2 rounded">
+                                    <span class="text-sm">Mobile Developers</span>
+                                </label>
+                                <label class="flex items-center">
+                                    <input type="checkbox" name="techRoles" value="AI/ML" class="mr-2 rounded">
+                                    <span class="text-sm">AI/ML Engineers</span>
+                                </label>
+                            </div>
+                        </div>
+                        
+                        <div class="grid md:grid-cols-2 gap-6">
+                            <div>
+                                <label class="block text-sm font-medium text-white mb-2">Project Duration *</label>
+                                <select name="duration" required 
+                                        class="w-full px-4 py-3 border border-white/20 rounded-lg focus:ring-2 focus:ring-white focus:border-transparent bg-white/10 text-white">
+                                    <option value="">Select Duration</option>
+                                    <option value="1-3 months">1-3 months</option>
+                                    <option value="3-6 months">3-6 months</option>
+                                    <option value="6-12 months">6-12 months</option>
+                                    <option value="12+ months">12+ months</option>
+                                    <option value="Ongoing">Ongoing</option>
+                                </select>
+                            </div>
+                            <div>
+                                <label class="block text-sm font-medium text-white mb-2">Budget Range *</label>
+                                <select name="budget" required 
+                                        class="w-full px-4 py-3 border border-white/20 rounded-lg focus:ring-2 focus:ring-white focus:border-transparent bg-white/10 text-white">
+                                    <option value="">Select Budget</option>
+                                    <option value="$5k-15k">$5k - $15k</option>
+                                    <option value="$15k-50k">$15k - $50k</option>
+                                    <option value="$50k-100k">$50k - $100k</option>
+                                    <option value="$100k+">$100k+</option>
+                                </select>
+                            </div>
+                        </div>
+                        
+                        <div>
+                            <label class="block text-sm font-medium text-white mb-2">Project Description *</label>
+                            <textarea name="description" rows="5" required 
+                                      class="w-full px-4 py-3 border border-white/20 rounded-lg focus:ring-2 focus:ring-white focus:border-transparent bg-white/10 text-white placeholder-white/70" 
+                                      placeholder="Describe your project requirements, timeline, and any specific technical needs..."></textarea>
+                        </div>
+                        
+                        <button type="submit" 
+                                class="w-full bg-accent-amber text-gray-900 py-4 px-6 rounded-lg hover:bg-yellow-400 transition-colors font-semibold text-lg">
+                            <i class="fas fa-paper-plane mr-2"></i>
+                            Get My Custom Quote
+                        </button>
+                        
+                        <p class="text-center text-sm opacity-80">
+                            Our team will contact you within 24 hours with a detailed quote and next steps.
+                        </p>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white section-padding">
+        <div class="container mx-auto px-4">
+            <div class="grid md:grid-cols-4 gap-8 mb-12">
+                <div class="md:col-span-2">
+                    <div class="flex items-center space-x-2 mb-6">
+                        <div class="w-10 h-10 bg-gradient-to-r from-primary-500 to-secondary-500 rounded-lg flex items-center justify-center">
+                            <span class="text-white font-bold text-lg">R</span>
+                        </div>
+                        <span class="text-xl font-bold">Rudhram Software Solutions</span>
+                    </div>
+                    <p class="text-gray-400 mb-6 max-w-md">
+                        Empowering businesses with world-class developers in emerging and traditional technologies. Scale your tech team instantly with our expert staff augmentation services.
+                    </p>
+                    <div class="flex space-x-4">
+                        <a href="#" class="w-10 h-10 bg-gray-800 hover:bg-primary-500 rounded-lg flex items-center justify-center transition-colors">
+                            <i class="fab fa-linkedin"></i>
+                        </a>
+                        <a href="#" class="w-10 h-10 bg-gray-800 hover:bg-primary-500 rounded-lg flex items-center justify-center transition-colors">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                        <a href="#" class="w-10 h-10 bg-gray-800 hover:bg-primary-500 rounded-lg flex items-center justify-center transition-colors">
+                            <i class="fab fa-github"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <div>
+                    <h3 class="text-lg font-semibold mb-6">Services</h3>
+                    <ul class="space-y-3 text-gray-400">
+                        <li><a href="#services" class="hover:text-white transition-colors">MERN + LLM Developers</a></li>
+                        <li><a href="#services" class="hover:text-white transition-colors">Java Full Stack</a></li>
+                        <li><a href="#services" class="hover:text-white transition-colors">Python + LLM</a></li>
+                        <li><a href="#services" class="hover:text-white transition-colors">DevOps Engineers</a></li>
+                        <li><a href="#services" class="hover:text-white transition-colors">AI/ML Specialists</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h3 class="text-lg font-semibold mb-6">Company</h3>
+                    <ul class="space-y-3 text-gray-400">
+                        <li><a href="#about" class="hover:text-white transition-colors">About Us</a></li>
+                        <li><a href="#case-studies" class="hover:text-white transition-colors">Case Studies</a></li>
+                        <li><a href="#contact" class="hover:text-white transition-colors">Contact</a></li>
+                        <li><a href="#quote" class="hover:text-white transition-colors">Get Quote</a></li>
+                        <li><a href="#" class="hover:text-white transition-colors">Careers</a></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="border-t border-gray-800 pt-8 flex flex-col md:flex-row justify-between items-center">
+                <p class="text-gray-400 text-sm">
+                    © 2024 Rudhram Software Solutions. All rights reserved.
+                </p>
+                <div class="flex space-x-6 mt-4 md:mt-0">
+                    <a href="#" class="text-gray-400 hover:text-white text-sm transition-colors">Privacy Policy</a>
+                    <a href="#" class="text-gray-400 hover:text-white text-sm transition-colors">Terms of Service</a>
+                    <a href="#" class="text-gray-400 hover:text-white text-sm transition-colors">Cookie Policy</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script>
+        (function() {
+            // Theme Toggle
+            const themeToggle = document.getElementById('theme-toggle');
+            const body = document.getElementById('body');
+            
+            // Check for saved theme preference or default to 'light'
+            const currentTheme = localStorage.getItem('theme') || 'light';
+            if (currentTheme === 'dark') {
+                body.classList.add('dark');
+            }
+            
+            themeToggle.addEventListener('click', function() {
+                body.classList.toggle('dark');
+                const theme = body.classList.contains('dark') ? 'dark' : 'light';
+                localStorage.setItem('theme', theme);
+            });
+            
+            // Mobile Menu Toggle
+            const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+            const mobileMenu = document.getElementById('mobile-menu');
+            
+            mobileMenuBtn.addEventListener('click', function() {
+                mobileMenu.classList.toggle('hidden');
+            });
+            
+            // Navbar Scroll Effect
+            const navbar = document.getElementById('navbar');
+            
+            window.addEventListener('scroll', function() {
+                if (window.scrollY > 50) {
+                    navbar.classList.add('bg-white/95', 'dark:bg-gray-800/95', 'backdrop-blur-md', 'shadow-lg');
+                } else {
+                    navbar.classList.remove('bg-white/95', 'dark:bg-gray-800/95', 'backdrop-blur-md', 'shadow-lg');
+                }
+            });
+            
+            // Smooth Scrolling for Navigation Links
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function (e) {
+                    e.preventDefault();
+                    const target = document.querySelector(this.getAttribute('href'));
+                    if (target) {
+                        target.scrollIntoView({
+                            behavior: 'smooth',
+                            block: 'start'
+                        });
+                        // Close mobile menu if open
+                        mobileMenu.classList.add('hidden');
+                    }
+                });
+            });
+            
+            // Form Handling
+            const contactForm = document.getElementById('contactForm');
+            const quoteForm = document.getElementById('quoteForm');
+            
+            function handleFormSubmission(form, successMessage) {
+                form.addEventListener('submit', function(e) {
+                    e.preventDefault();
+                    
+                    // Basic form validation
+                    const formData = new FormData(form);
+                    const data = Object.fromEntries(formData.entries());
+                    
+                    // TODO: Implement actual form submission logic
+                    // This would typically send data to a server endpoint
+                    
+                    // Show success message (mock)
+                    alert(successMessage);
+                    form.reset();
+                });
+            }
+            
+            if (contactForm) {
+                handleFormSubmission(contactForm, 'Thank you for your message! We will get back to you soon.');
+            }
+            
+            if (quoteForm) {
+                handleFormSubmission(quoteForm, 'Your quote request has been received! Our team will contact you within 24 hours.');
+            }
+            
+            // Intersection Observer for Animations
+            const observerOptions = {
+                threshold: 0.1,
+                rootMargin: '0px 0px -50px 0px'
+            };
+            
+            const observer = new IntersectionObserver(function(entries) {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('animate-fade-in');
+                    }
+                });
+            }, observerOptions);
+            
+            // Observe elements for animation
+            document.querySelectorAll('.glass-card, .bg-gray-50, .bg-white').forEach(el => {
+                observer.observe(el);
+            });
+            
+        })();
+    </script>
+</body>
+</html>
