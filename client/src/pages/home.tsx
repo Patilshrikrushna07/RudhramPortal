@@ -122,144 +122,257 @@ export default function Home() {
 
   return (
     <div className="min-h-screen">
-      {/* Hero Section */}
-      <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-gradient-to-br from-primary-900 via-primary-800 to-secondary-900">
-        {/* Enhanced Animated Background */}
-        <div className="absolute inset-0 opacity-20">
-          <div className="absolute top-10 left-4 md:left-10 w-48 md:w-72 h-48 md:h-72 border-2 border-white/20 rounded-full animate-pulse-slow"></div>
-          <div className="absolute top-20 right-4 md:right-20 w-32 md:w-48 h-32 md:h-48 bg-gradient-to-r from-accent-amber/20 to-accent-cyan/20 rounded-full animate-float blur-xl"></div>
-          <div className="absolute bottom-20 left-4 md:left-20 w-40 md:w-64 h-40 md:h-64 border border-white/10 rounded-full animate-bounce-slow"></div>
-          <div className="absolute bottom-10 right-4 md:right-10 w-64 md:w-96 h-64 md:h-96 bg-gradient-to-l from-secondary-500/10 to-primary-500/10 rounded-full animate-float blur-2xl"></div>
-          
-          {/* Tech Icon Animations - Hidden on mobile for cleaner look */}
-          <div className="hidden md:block absolute top-32 left-1/4 opacity-30">
-            <SiReact className="w-8 h-8 text-accent-cyan animate-spin-slow" />
-          </div>
-          <div className="hidden md:block absolute top-64 right-1/4 opacity-30">
-            <SiPython className="w-8 h-8 text-accent-emerald animate-float" />
-          </div>
-          <div className="hidden md:block absolute bottom-64 left-1/3 opacity-30">
-            <Coffee className="w-8 h-8 text-accent-amber animate-bounce-slow" />
-          </div>
-          <div className="hidden md:block absolute bottom-32 right-1/3 opacity-30">
-            <SiMongodb className="w-8 h-8 text-accent-emerald animate-pulse-slow" />
-          </div>
+      {/* Revolutionary Hero Section */}
+      <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
+        {/* Spectacular Gradient Background */}
+        <div className="absolute inset-0 bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900" />
+        
+        {/* Dynamic Mesh Gradient Overlay */}
+        <div className="absolute inset-0">
+          <div className="absolute inset-0" style={{
+            backgroundImage: `
+              radial-gradient(circle at 20% 20%, rgba(124, 58, 237, 0.6) 0%, transparent 50%),
+              radial-gradient(circle at 80% 80%, rgba(79, 70, 229, 0.6) 0%, transparent 50%),
+              radial-gradient(circle at 40% 60%, rgba(168, 85, 247, 0.4) 0%, transparent 50%),
+              radial-gradient(circle at 60% 40%, rgba(139, 92, 246, 0.4) 0%, transparent 50%)
+            `,
+            backgroundSize: '800px 800px, 600px 600px, 400px 400px, 500px 500px',
+            animation: 'mesh-gradient 15s ease infinite'
+          }} />
         </div>
 
-        {/* Gradient Overlay */}
-        <div className="absolute inset-0 bg-gradient-to-t from-black/20 via-transparent to-black/10"></div>
+        {/* Advanced Particle System */}
+        <div className="absolute inset-0 pointer-events-none">
+          {/* Large Floating Tech Orbs */}
+          <motion.div
+            className="absolute top-1/5 left-1/6 w-32 h-32 rounded-full bg-gradient-to-r from-violet-500/30 to-purple-500/30 backdrop-blur-sm border border-violet-400/20"
+            animate={{ 
+              y: [0, -30, 0],
+              scale: [1, 1.1, 1],
+              rotate: [0, 180, 360]
+            }}
+            transition={{ duration: 10, repeat: Infinity, ease: "easeInOut" }}
+          />
+          <motion.div
+            className="absolute top-1/4 right-1/5 w-24 h-24 rounded-full bg-gradient-to-r from-indigo-500/30 to-blue-500/30 backdrop-blur-sm border border-indigo-400/20"
+            animate={{ 
+              y: [0, 20, 0],
+              scale: [1, 0.9, 1],
+              rotate: [360, 180, 0]
+            }}
+            transition={{ duration: 8, repeat: Infinity, ease: "easeInOut", delay: 2 }}
+          />
+          <motion.div
+            className="absolute bottom-1/4 left-1/4 w-28 h-28 rounded-full bg-gradient-to-r from-cyan-500/30 to-teal-500/30 backdrop-blur-sm border border-cyan-400/20"
+            animate={{ 
+              y: [0, -15, 0],
+              scale: [1, 1.2, 1],
+              rotate: [0, 360, 0]
+            }}
+            transition={{ duration: 12, repeat: Infinity, ease: "easeInOut", delay: 4 }}
+          />
+
+          {/* Tech Icon Constellation */}
+          <motion.div
+            className="absolute top-32 left-1/3 text-violet-400/40"
+            animate={{ 
+              rotate: [0, 360],
+              scale: [1, 1.3, 1]
+            }}
+            transition={{ duration: 20, repeat: Infinity }}
+          >
+            <SiReact className="w-12 h-12" />
+          </motion.div>
+          <motion.div
+            className="absolute top-1/2 right-1/4 text-indigo-400/40"
+            animate={{ 
+              rotate: [360, 0],
+              scale: [1, 1.2, 1]
+            }}
+            transition={{ duration: 15, repeat: Infinity, delay: 3 }}
+          >
+            <SiPython className="w-10 h-10" />
+          </motion.div>
+          <motion.div
+            className="absolute bottom-1/3 left-1/5 text-cyan-400/40"
+            animate={{ 
+              y: [0, -20, 0],
+              rotate: [0, 180, 360]
+            }}
+            transition={{ duration: 18, repeat: Infinity, delay: 6 }}
+          >
+            <Coffee className="w-11 h-11" />
+          </motion.div>
+          <motion.div
+            className="absolute bottom-48 right-1/3 text-teal-400/40"
+            animate={{ 
+              scale: [1, 1.4, 1],
+              rotate: [0, -360, 0]
+            }}
+            transition={{ duration: 25, repeat: Infinity, delay: 1 }}
+          >
+            <SiMongodb className="w-9 h-9" />
+          </motion.div>
+        </div>
+
+        {/* Subtle Grid Pattern */}
+        <div className="absolute inset-0 opacity-10">
+          <div className="absolute inset-0" style={{
+            backgroundImage: `
+              linear-gradient(90deg, rgba(255,255,255,0.1) 1px, transparent 1px),
+              linear-gradient(0deg, rgba(255,255,255,0.1) 1px, transparent 1px)
+            `,
+            backgroundSize: '100px 100px'
+          }} />
+        </div>
         
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center text-white">
+        {/* Main Hero Content */}
+        <div className="relative z-10 text-center max-w-7xl mx-auto px-4">
           <motion.div
             initial={{ opacity: 0, y: 50 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 1, ease: "easeOut" }}
-            className="max-w-6xl mx-auto"
+            transition={{ duration: 1.2 }}
           >
-            {/* Badge */}
+            {/* Premium Badge */}
             <motion.div
+              className="inline-flex items-center gap-3 bg-white/5 backdrop-blur-md border border-white/10 rounded-full px-8 py-4 mb-12"
               initial={{ opacity: 0, scale: 0.8 }}
               animate={{ opacity: 1, scale: 1 }}
-              transition={{ duration: 0.6, delay: 0.2 }}
-              className="mb-6 sm:mb-8"
-            >
-              <Badge className="bg-accent-amber/20 text-accent-amber border-accent-amber/30 px-4 sm:px-6 py-2 text-xs sm:text-sm font-semibold backdrop-blur-sm">
-                🚀 Trusted by 50+ Companies Worldwide
-              </Badge>
-            </motion.div>
-
-            {/* Main Headline */}
-            <motion.h1 
-              className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold mb-4 sm:mb-6 leading-tight px-2 sm:px-0"
-              initial={{ opacity: 0, y: 30 }}
-              animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.3 }}
             >
-              Build Your Dream
-              <br />
-              <span className="bg-gradient-to-r from-accent-amber via-accent-cyan to-accent-emerald bg-clip-text text-transparent animate-gradient">
-                Tech Team
-              </span>
-              <br />
-              <span className="text-xl sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl text-white/90 font-light">
-                in Days, Not Months
-              </span>
-            </motion.h1>
-            
-            {/* Subtitle */}
-            <motion.p 
-              className="text-base sm:text-lg md:text-xl lg:text-2xl mb-8 sm:mb-10 opacity-90 max-w-4xl mx-auto leading-relaxed font-light px-4 sm:px-0"
-              initial={{ opacity: 0, y: 30 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, delay: 0.5 }}
-            >
-              Access <span className="text-accent-amber font-semibold">pre-vetted developers</span> in MERN+LLM, Java, Python, DevOps, Mobile & AI. 
-              <br className="hidden sm:block" />
-              <span className="text-accent-cyan font-semibold">Onboard in 5-7 days</span> with flexible engagement models.
-            </motion.p>
-            
-            {/* CTA Buttons */}
-            <motion.div 
-              className="flex flex-col sm:flex-row gap-3 sm:gap-6 justify-center mb-12 sm:mb-16 px-4 sm:px-0"
-              initial={{ opacity: 0, y: 30 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, delay: 0.7 }}
-            >
-              <Link href="/quote" className="w-full sm:w-auto">
-                <Button className="bg-gradient-to-r from-accent-amber to-yellow-400 hover:from-yellow-400 hover:to-accent-amber text-gray-900 px-6 sm:px-8 py-3 sm:py-4 text-base sm:text-lg font-bold shadow-2xl hover:shadow-accent-amber/25 transition-all transform hover:scale-105 w-full sm:w-auto">
-                  <Calculator className="w-4 h-4 sm:w-5 sm:h-5 mr-2" />
-                  Get Free Quote Today
-                </Button>
-              </Link>
-              
-              <Link href="/contact" className="w-full sm:w-auto">
-                <Button 
-                  variant="outline" 
-                  className="border-2 border-white/60 text-white px-6 sm:px-8 py-3 sm:py-4 text-base sm:text-lg font-semibold hover:bg-white hover:text-gray-900 transition-all backdrop-blur-sm hover:shadow-xl transform hover:scale-105 w-full sm:w-auto"
-                >
-                  <MessageCircle className="w-4 h-4 sm:w-5 sm:h-5 mr-2" />
-                  Talk to Expert
-                </Button>
-              </Link>
+              <div className="w-3 h-3 bg-emerald-400 rounded-full animate-pulse" />
+              <span className="text-white/90 text-sm font-medium tracking-wide">Trusted by 150+ Global Companies</span>
+              <Rocket className="w-5 h-5 text-violet-400" />
             </motion.div>
 
-            {/* Key Stats */}
-            <motion.div
+            {/* Spectacular Main Headline */}
+            <motion.h1
+              className="text-6xl md:text-8xl lg:text-9xl font-black text-white mb-8 leading-[0.85] tracking-tight"
+              initial={{ opacity: 0, y: 40 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 1, delay: 0.5 }}
+            >
+              Build Your{" "}
+              <span className="relative inline-block">
+                <span className="bg-gradient-to-r from-violet-400 via-purple-400 to-indigo-400 bg-clip-text text-transparent">
+                  Dream Team
+                </span>
+                <motion.div
+                  className="absolute -bottom-6 left-0 right-0 h-3 bg-gradient-to-r from-violet-400 via-purple-400 to-indigo-400 rounded-full"
+                  initial={{ scaleX: 0 }}
+                  animate={{ scaleX: 1 }}
+                  transition={{ duration: 1.5, delay: 1.5 }}
+                />
+              </span>
+              <br />
+              <span className="text-5xl md:text-7xl lg:text-8xl text-white/80 font-light">
+                in{" "}
+                <span className="relative">
+                  <span className="bg-gradient-to-r from-cyan-400 to-teal-400 bg-clip-text text-transparent font-black">
+                    5 Days
+                  </span>
+                </span>
+              </span>
+            </motion.h1>
+
+            {/* Premium Subtitle */}
+            <motion.p
+              className="text-xl md:text-3xl text-white/70 max-w-5xl mx-auto leading-relaxed mb-16 font-light"
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, delay: 0.9 }}
-              className="grid grid-cols-1 sm:grid-cols-3 gap-4 sm:gap-6 md:gap-8 max-w-4xl mx-auto px-4 sm:px-0"
+              transition={{ duration: 1, delay: 0.7 }}
+            >
+              Get <span className="text-violet-400 font-semibold">world-class developers</span> in 
+              MERN+AI, Java, Python, DevOps & Mobile.{" "}
+              <span className="text-cyan-400 font-semibold">Skip months of hiring</span> —
+              start building tomorrow.
+            </motion.p>
+
+            {/* Enhanced CTA Buttons */}
+            <motion.div
+              className="flex flex-col sm:flex-row gap-8 justify-center items-center mb-20"
+              initial={{ opacity: 0, y: 40 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 1, delay: 0.9 }}
+            >
+              <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
+                <Button
+                  asChild
+                  size="lg"
+                  className="bg-gradient-to-r from-violet-500 to-purple-600 hover:from-violet-600 hover:to-purple-700 text-white px-12 py-8 text-xl font-bold rounded-2xl shadow-2xl hover:shadow-violet-500/30 transition-all duration-300"
+                  data-testid="button-get-quote"
+                >
+                  <Link href="/quote">
+                    <Calculator className="w-6 h-6 mr-4" />
+                    Get Free Quote
+                  </Link>
+                </Button>
+              </motion.div>
+              
+              <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
+                <Button
+                  asChild
+                  variant="outline"
+                  size="lg"
+                  className="border-2 border-white/30 text-white hover:bg-white/10 backdrop-blur-sm px-12 py-8 text-xl font-semibold rounded-2xl transition-all duration-300"
+                  data-testid="button-talk-expert"
+                >
+                  <Link href="/contact">
+                    <MessageCircle className="w-6 h-6 mr-4" />
+                    Talk to Expert
+                  </Link>
+                </Button>
+              </motion.div>
+            </motion.div>
+
+            {/* Impressive Stats Grid */}
+            <motion.div
+              className="grid grid-cols-2 md:grid-cols-4 gap-12 pt-12 border-t border-white/10"
+              initial={{ opacity: 0, y: 40 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 1, delay: 1.1 }}
             >
               {[
-                { number: "500+", label: "Expert Developers", icon: UserCheck },
-                { number: "5-7", label: "Days to Onboard", icon: Clock },
-                { number: "98%", label: "Client Satisfaction", icon: ArrowUp }
+                { number: "500+", label: "Expert Developers", color: "from-violet-400 to-purple-400" },
+                { number: "5-7", label: "Days to Onboard", color: "from-indigo-400 to-cyan-400" },
+                { number: "150+", label: "Projects Delivered", color: "from-cyan-400 to-teal-400" },
+                { number: "99%", label: "Client Satisfaction", color: "from-teal-400 to-emerald-400" }
               ].map((stat, index) => (
                 <motion.div
                   key={index}
+                  className="text-center group"
                   initial={{ opacity: 0, scale: 0.8 }}
                   animate={{ opacity: 1, scale: 1 }}
-                  transition={{ duration: 0.6, delay: 1 + index * 0.1 }}
-                  className="text-center p-4 sm:p-6 rounded-2xl bg-white/10 backdrop-blur-sm border border-white/20 hover:bg-white/15 transition-all"
+                  transition={{ duration: 0.8, delay: 1.3 + index * 0.1 }}
+                  whileHover={{ scale: 1.1 }}
                 >
-                  <stat.icon className="w-6 h-6 sm:w-8 sm:h-8 mx-auto mb-2 sm:mb-3 text-accent-amber" />
-                  <div className="text-xl sm:text-2xl md:text-3xl font-bold text-white mb-1">{stat.number}</div>
-                  <div className="text-xs sm:text-sm md:text-base text-white/80 font-medium">{stat.label}</div>
+                  <div className={`text-4xl md:text-5xl font-black bg-gradient-to-r ${stat.color} bg-clip-text text-transparent mb-3`}>
+                    {stat.number}
+                  </div>
+                  <div className="text-white/60 text-lg font-medium group-hover:text-white transition-colors duration-300">
+                    {stat.label}
+                  </div>
                 </motion.div>
               ))}
             </motion.div>
           </motion.div>
         </div>
 
-        {/* Scroll Indicator - Hidden on mobile */}
+        {/* Advanced Scroll Indicator */}
         <motion.div
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ duration: 1, delay: 1.5 }}
-          className="hidden sm:block absolute bottom-8 left-1/2 transform -translate-x-1/2 text-white/60"
+          className="absolute bottom-12 left-1/2 transform -translate-x-1/2"
+          animate={{ y: [0, 15, 0] }}
+          transition={{ duration: 2.5, repeat: Infinity }}
         >
-          <div className="animate-bounce">
-            <ArrowUp className="w-6 h-6 rotate-180" />
+          <div className="flex flex-col items-center gap-4 text-white/50">
+            <span className="text-sm font-medium tracking-wider">Discover More</span>
+            <div className="w-8 h-14 border-2 border-white/30 rounded-full flex justify-center relative overflow-hidden">
+              <motion.div
+                className="w-1.5 h-4 bg-gradient-to-b from-violet-400 to-purple-400 rounded-full mt-3"
+                animate={{ y: [0, 20, 0] }}
+                transition={{ duration: 2.5, repeat: Infinity }}
+              />
+            </div>
           </div>
         </motion.div>
       </section>
