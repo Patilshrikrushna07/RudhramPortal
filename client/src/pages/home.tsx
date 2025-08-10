@@ -123,7 +123,7 @@ export default function Home() {
   return (
     <div className="min-h-screen">
       {/* Revolutionary Hero Section */}
-      <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
+      <section className="relative min-h-screen flex items-center justify-center overflow-hidden pt-20">
         {/* Spectacular Gradient Background */}
         <div className="absolute inset-0 bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900" />
         
@@ -247,28 +247,28 @@ export default function Home() {
 
             {/* Spectacular Main Headline */}
             <motion.h1
-              className="text-6xl md:text-8xl lg:text-9xl font-black text-white mb-8 leading-[0.85] tracking-tight"
+              className="text-6xl md:text-8xl lg:text-9xl font-black text-black dark:text-white mb-8 leading-[0.85] tracking-tight"
               initial={{ opacity: 0, y: 40 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 1, delay: 0.5 }}
             >
               Build Your{" "}
               <span className="relative inline-block">
-                <span className="bg-gradient-to-r from-violet-400 via-purple-400 to-indigo-400 bg-clip-text text-transparent">
+                <span className="bg-gradient-to-r from-blue-500 via-blue-600 to-blue-700 bg-clip-text text-transparent">
                   Dream Team
                 </span>
                 <motion.div
-                  className="absolute -bottom-6 left-0 right-0 h-3 bg-gradient-to-r from-violet-400 via-purple-400 to-indigo-400 rounded-full"
+                  className="absolute -bottom-6 left-0 right-0 h-3 bg-gradient-to-r from-blue-500 via-blue-600 to-blue-700 rounded-full"
                   initial={{ scaleX: 0 }}
                   animate={{ scaleX: 1 }}
                   transition={{ duration: 1.5, delay: 1.5 }}
                 />
               </span>
               <br />
-              <span className="text-5xl md:text-7xl lg:text-8xl text-white/80 font-light">
+              <span className="text-5xl md:text-7xl lg:text-8xl text-black/80 dark:text-white/80 font-light">
                 in{" "}
                 <span className="relative">
-                  <span className="bg-gradient-to-r from-cyan-400 to-teal-400 bg-clip-text text-transparent font-black">
+                  <span className="bg-gradient-to-r from-yellow-500 to-yellow-600 bg-clip-text text-transparent font-black">
                     5 Days
                   </span>
                 </span>
@@ -277,14 +277,14 @@ export default function Home() {
 
             {/* Premium Subtitle */}
             <motion.p
-              className="text-xl md:text-3xl text-white/70 max-w-5xl mx-auto leading-relaxed mb-16 font-light"
+              className="text-xl md:text-3xl text-gray-700 dark:text-white/70 max-w-5xl mx-auto leading-relaxed mb-16 font-light"
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 1, delay: 0.7 }}
             >
-              Get <span className="text-violet-400 font-semibold">world-class developers</span> in 
+              Get <span className="text-blue-600 dark:text-blue-400 font-semibold">world-class developers</span> in 
               MERN+AI, Java, Python, DevOps & Mobile.{" "}
-              <span className="text-cyan-400 font-semibold">Skip months of hiring</span> —
+              <span className="text-yellow-600 dark:text-yellow-400 font-semibold">Skip months of hiring</span> —
               start building tomorrow.
             </motion.p>
 
@@ -299,7 +299,7 @@ export default function Home() {
                 <Button
                   asChild
                   size="lg"
-                  className="bg-gradient-to-r from-violet-500 to-purple-600 hover:from-violet-600 hover:to-purple-700 text-white px-12 py-8 text-xl font-bold rounded-2xl shadow-2xl hover:shadow-violet-500/30 transition-all duration-300"
+                  className="bg-gradient-to-r from-blue-500 to-blue-600 hover:from-blue-600 hover:to-blue-700 text-white px-12 py-8 text-xl font-bold rounded-2xl shadow-2xl hover:shadow-blue-500/30 transition-all duration-300"
                   data-testid="button-get-quote"
                 >
                   <Link href="/quote">
@@ -314,7 +314,7 @@ export default function Home() {
                   asChild
                   variant="outline"
                   size="lg"
-                  className="border-2 border-white/30 text-white hover:bg-white/10 backdrop-blur-sm px-12 py-8 text-xl font-semibold rounded-2xl transition-all duration-300"
+                  className="border-2 border-yellow-500/70 text-yellow-500 hover:bg-yellow-500/10 backdrop-blur-sm px-12 py-8 text-xl font-semibold rounded-2xl transition-all duration-300"
                   data-testid="button-talk-expert"
                 >
                   <Link href="/contact">
@@ -333,10 +333,10 @@ export default function Home() {
               transition={{ duration: 1, delay: 1.1 }}
             >
               {[
-                { number: "500+", label: "Expert Developers", color: "from-violet-400 to-purple-400" },
-                { number: "5-7", label: "Days to Onboard", color: "from-indigo-400 to-cyan-400" },
-                { number: "150+", label: "Projects Delivered", color: "from-cyan-400 to-teal-400" },
-                { number: "99%", label: "Client Satisfaction", color: "from-teal-400 to-emerald-400" }
+                { number: "500+", label: "Expert Developers", color: "from-blue-500 to-blue-600" },
+                { number: "5-7", label: "Days to Onboard", color: "from-yellow-500 to-yellow-600" },
+                { number: "150+", label: "Projects Delivered", color: "from-blue-600 to-blue-700" },
+                { number: "99%", label: "Client Satisfaction", color: "from-yellow-600 to-yellow-700" }
               ].map((stat, index) => (
                 <motion.div
                   key={index}
