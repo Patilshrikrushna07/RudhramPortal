@@ -98,7 +98,7 @@ export default function Contact() {
               Get In Touch
             </h1>
             <p className="text-xl text-gray-600 dark:text-gray-400 max-w-3xl mx-auto">
-              Ready to scale your tech team? Let's discuss your project requirements and find the perfect developers for your needs.
+              Ready to build your dream tech team? Let's discuss your project requirements and find the perfect developers for your needs.
             </p>
           </motion.div>
         </div>

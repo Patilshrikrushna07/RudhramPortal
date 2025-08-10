@@ -39,16 +39,16 @@ export default function Services() {
       icon: Layers,
       title: "MERN + LLM Developer Augmentation",
       subtitle: "Full-Stack AI Integration",
-      description: "Complete web application development with intelligent AI capabilities",
+      description: "MongoDB, Express.js, React, Node.js, LangChain, OpenAI API, Vector Databases",
       technologies: [
         "MongoDB", "Express.js", "React", "Node.js", 
         "LangChain", "OpenAI API", "Vector Databases"
       ],
       useCases: [
-        "AI-powered web portals with intelligent content generation",
-        "Real-time chatbots with context-aware responses",
-        "Custom LLM integrations for domain-specific applications",
-        "AI recommendation engines and personalization systems"
+        "AI-powered web platforms",
+        "Custom LLM integrations", 
+        "Smart automation tools",
+        "Real-time chat systems"
       ],
       gradient: "from-primary-500 to-primary-600",
       badgeColors: "bg-primary-100 text-primary-700 dark:bg-primary-900 dark:text-primary-300"
@@ -57,16 +57,16 @@ export default function Services() {
       icon: Coffee,
       title: "Java Full Stack Developer Augmentation", 
       subtitle: "Enterprise Solutions",
-      description: "Scalable enterprise applications with modern Java frameworks",
+      description: "Java, Spring Boot, Hibernate, Angular/React, REST APIs, Microservices",
       technologies: [
         "Java", "Spring Boot", "Hibernate", "Angular/React", 
         "REST APIs", "Microservices"
       ],
       useCases: [
-        "Banking and financial services applications",
-        "Large-scale e-commerce platforms",
-        "Enterprise resource planning (ERP) systems",
-        "High-performance microservices architectures"
+        "Enterprise-grade software",
+        "Scalable backend systems",
+        "Secure, high-performance web apps",
+        "Cloud-ready architecture"
       ],
       gradient: "from-accent-amber to-yellow-500",
       badgeColors: "bg-amber-100 text-amber-700 dark:bg-amber-900 dark:text-amber-300"
@@ -75,16 +75,16 @@ export default function Services() {
       icon: SiPython,
       title: "Python + LLM Developer Augmentation",
       subtitle: "AI-Driven Backend",
-      description: "Intelligent backend systems powered by advanced AI technologies",
+      description: "Python, Flask/Django, LangChain, Hugging Face, AI APIs",
       technologies: [
         "Python", "Flask/Django", "LangChain", "Hugging Face", 
         "Data Engineering", "AI APIs"
       ],
       useCases: [
-        "AI-powered SaaS products with intelligent automation",
-        "Natural language processing tools and applications", 
-        "Custom GPT integrations for specialized domains",
-        "Data analytics platforms with ML capabilities"
+        "AI-enabled SaaS platforms",
+        "NLP-driven search engines", 
+        "Automated data analysis systems",
+        "Chatbot & AI assistant development"
       ],
       gradient: "from-accent-emerald to-green-500",
       badgeColors: "bg-emerald-100 text-emerald-700 dark:bg-emerald-900 dark:text-emerald-300"
@@ -95,19 +95,18 @@ export default function Services() {
     {
       category: "Frontend & Backend",
       roles: [
-        "Frontend Developers (React, Angular, Vue.js)",
-        "Backend Developers (Node.js, .NET, GoLang)",
-        "Mobile Developers (Flutter, React Native)",
+        "Frontend Developers: React, Angular, Vue.js",
+        "Backend Developers: Node.js, .NET, GoLang", 
+        "Mobile App Developers: Flutter, React Native, Swift, Kotlin",
         "UI/UX Designers"
       ]
     },
     {
       category: "Infrastructure & QA", 
       roles: [
-        "DevOps & Cloud Engineers (AWS, Azure, GCP)",
-        "QA Automation Engineers (Selenium, Cypress)",
-        "AI/ML Engineers (Machine Learning, Deep Learning)",
-        "Data Engineers (ETL pipelines, Big Data)"
+        "DevOps & Cloud Engineers: AWS, Azure, GCP",
+        "QA Automation Engineers: Selenium, Cypress",
+        "Data Engineers & Data Scientists"
       ]
     }
   ];
@@ -124,11 +123,10 @@ export default function Services() {
             transition={{ duration: 0.6 }}
           >
             <h1 className="text-4xl md:text-5xl font-bold mb-6 gradient-text">
-              Our Core Services
+              Staff Augmentation Services
             </h1>
             <p className="text-xl text-gray-600 dark:text-gray-400 max-w-3xl mx-auto">
-              Comprehensive staff augmentation services tailored to your specific technology needs. 
-              Scale your development team with pre-vetted experts in cutting-edge technologies.
+              At The Rudhram Software Solutions, we deliver specialized staff augmentation services to help you scale your development capabilities instantly. Whether you need MERN + LLM, Java Full Stack, or Python + LLM experts, our talent pool covers every modern technology stack.
             </p>
           </motion.div>
         </div>
@@ -267,7 +265,7 @@ export default function Services() {
             transition={{ duration: 0.6 }}
           >
             <h2 className="text-3xl md:text-4xl font-bold mb-6">
-              Ready to Build Your Dream Team?
+              Let's build your team – faster, better, smarter.
             </h2>
             <p className="text-xl mb-8 opacity-90 max-w-2xl mx-auto">
               Let's discuss your specific requirements and match you with the perfect developers for your project.

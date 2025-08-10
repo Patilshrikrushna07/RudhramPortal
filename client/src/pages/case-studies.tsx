@@ -31,29 +31,29 @@ export default function CaseStudies() {
     {
       id: 1,
       industry: "EdTech",
-      title: "AI-Powered Learning Management System",
+      title: "AI-Powered Learning Platform",
       image: "https://images.unsplash.com/photo-1522202176988-66273c2fd55f?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=400",
       alt: "EdTech startup team collaborating on AI learning platform",
-      challenge: "US-based EdTech startup needed an AI-powered LMS with automated tutoring in 4 months.",
-      solution: "Provided a team of MERN + LLM developers integrating ChatGPT for personalized learning paths.",
+      challenge: "Build an AI-driven LMS with chatbot tutors in 4 months.",
+      solution: "Deployed 3 MERN + LLM developers within 6 days. Integrated OpenAI APIs for automated tutoring. Built real-time messaging and progress tracking.",
       impact: [
-        { metric: "70% reduction in content creation time", icon: ArrowUp },
-        { metric: "45% boost in student engagement", icon: ArrowUp }
+        { metric: "70% faster content creation", icon: ArrowUp },
+        { metric: "45% increase in student engagement", icon: ArrowUp }
       ],
-      testimonial: "Rudhram's developers were game changers for our AI journey. They delivered beyond expectations.",
+      testimonial: "The Rudhram team was proactive, skilled, and worked as part of our company from day one.",
       badgeColor: "bg-primary-100 text-primary-700 dark:bg-primary-900 dark:text-primary-300"
     },
     {
       id: 2,
       industry: "FinTech", 
-      title: "Enterprise Banking Platform",
+      title: "Banking Digital Transformation",
       image: "https://images.unsplash.com/photo-1560472354-b33ff0c44a43?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=400",
       alt: "Financial services team developing banking application",
-      challenge: "Regional bank needed to modernize their core banking system with microservices architecture.",
-      solution: "Deployed Java Full Stack team with Spring Boot expertise for scalable, secure banking solutions.",
+      challenge: "Modernize legacy systems to cloud-based Java microservices.",
+      solution: "Provided 5 Java Full Stack developers with cloud expertise. Migrated 20+ applications without downtime.",
       impact: [
-        { metric: "300% improvement in transaction processing", icon: ArrowUp },
-        { metric: "60% reduction in system downtime", icon: ArrowUp }
+        { metric: "Reduced operational costs by 30%", icon: ArrowUp },
+        { metric: "Improved transaction speed by 40%", icon: ArrowUp }
       ],
       testimonial: "The Java expertise delivered by Rudhram transformed our entire banking infrastructure.",
       badgeColor: "bg-amber-100 text-amber-700 dark:bg-amber-900 dark:text-amber-300"
@@ -132,11 +132,10 @@ export default function CaseStudies() {
             transition={{ duration: 0.6 }}
           >
             <h1 className="text-4xl md:text-5xl font-bold mb-6 gradient-text">
-              Success Stories
+              Client Case Studies
             </h1>
             <p className="text-xl text-gray-600 dark:text-gray-400 max-w-3xl mx-auto">
-              Real results from real clients who scaled their tech teams with Rudhram. 
-              Discover how we've helped businesses transform their operations with world-class developers.
+              Our clients trust us to deliver not just developers, but solutions. Here's how we've helped businesses scale quickly and efficiently.
             </p>
           </motion.div>
         </div>

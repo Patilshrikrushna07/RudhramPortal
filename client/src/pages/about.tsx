@@ -39,25 +39,25 @@ export default function About() {
     {
       icon: Shield,
       title: "Integrity",
-      description: "We maintain the highest standards of honesty and transparency in all our interactions.",
+      description: "We build trust in every engagement.",
       color: "text-primary-500"
     },
     {
       icon: GraduationCap,
       title: "Expertise", 
-      description: "Our team consists of highly skilled professionals with deep technical knowledge.",
+      description: "Only the top 3% of talent.",
       color: "text-secondary-500"
     },
     {
       icon: Zap,
       title: "Agility",
-      description: "We adapt quickly to changing requirements and deliver solutions with speed.",
+      description: "Rapid response to client needs.",
       color: "text-accent-amber"
     },
     {
       icon: Lightbulb,
       title: "Innovation",
-      description: "We embrace new technologies and creative approaches to solve complex problems.",
+      description: "Pushing the boundaries of tech solutions.",
       color: "text-accent-cyan"
     }
   ];
@@ -104,8 +104,7 @@ export default function About() {
                 Who We Are
               </h2>
               <p className="text-xl text-gray-600 dark:text-gray-400 mb-8 leading-relaxed">
-                Rudhram Software Solutions is a global tech talent provider, enabling businesses to scale instantly 
-                with specialized staff augmentation services in emerging and traditional technologies.
+                The Rudhram Software Solutions is your global partner for on-demand tech talent. We help businesses of all sizes scale their development capabilities with pre-vetted developers in modern and emerging technologies.
               </p>
               <p className="text-lg text-gray-600 dark:text-gray-400 leading-relaxed">
                 Founded with the vision of bridging the gap between innovative businesses and exceptional talent, 
@@ -151,8 +150,7 @@ export default function About() {
                     </h3>
                   </div>
                   <p className="text-gray-600 dark:text-gray-400 leading-relaxed">
-                    To empower businesses with world-class developers in emerging and traditional technologies, 
-                    enabling rapid scaling and digital transformation through exceptional staff augmentation services.
+                    To empower businesses with specialized tech professionals who deliver excellence in every project.
                   </p>
                 </CardContent>
               </Card>
@@ -169,8 +167,7 @@ export default function About() {
                     </h3>
                   </div>
                   <p className="text-gray-600 dark:text-gray-400 leading-relaxed">
-                    To be the go-to global partner for AI-driven and full-stack development teams, 
-                    setting the standard for tech talent excellence and innovation in staff augmentation.
+                    To be recognized worldwide as the go-to partner for AI-driven and full-stack development teams.
                   </p>
                 </CardContent>
               </Card>
@@ -340,7 +337,7 @@ export default function About() {
             transition={{ duration: 0.6 }}
           >
             <h2 className="text-3xl md:text-4xl font-bold mb-6">
-              Ready to Partner with Us?
+              Ready to Build Your Dream Tech Team?
             </h2>
             <p className="text-xl mb-8 opacity-90 max-w-2xl mx-auto">
               Let's discuss how our expert developers can help accelerate your projects and achieve your business goals.

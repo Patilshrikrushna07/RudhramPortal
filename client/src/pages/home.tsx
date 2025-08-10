@@ -44,26 +44,26 @@ export default function Home() {
   const whyChooseFeatures = [
     {
       icon: UserCheck,
-      title: "Pre-vetted Developers",
-      description: "Senior-level developers with proven expertise and track record",
+      title: "Pre-vetted, senior-level tech professionals",
+      description: "Only the top 3% of talent with proven expertise and track record",
       color: "bg-primary-500",
     },
     {
       icon: Rocket,
-      title: "Fast Onboarding",
-      description: "Get your team up and running in days, not weeks",
+      title: "Onboard in 5–7 days",
+      description: "Get your team up and running faster than traditional hiring",
       color: "bg-accent-emerald",
     },
     {
       icon: Clock,
-      title: "Flexible Hiring",
-      description: "Hourly, monthly, or project-based engagement models",
+      title: "Flexible hiring: hourly, monthly, or project-based",
+      description: "Scalable engagement models that adapt to your needs",
       color: "bg-secondary-500",
     },
     {
       icon: Brain,
-      title: "AI & LLM Expertise",
-      description: "Cutting-edge AI integrations and LLM implementations",
+      title: "Specialized in AI, LLM, and modern full-stack development",
+      description: "Cutting-edge expertise in emerging technologies",
       color: "bg-accent-cyan",
     },
   ];
@@ -72,48 +72,48 @@ export default function Home() {
     {
       icon: Layers,
       title: "MERN + LLM Developers",
-      description: "Full-stack web apps integrated with AI chatbots, content generators, and automation.",
-      technologies: ["MongoDB", "React", "Node.js", "LangChain"],
+      description: "Full-stack web apps + AI chatbot integrations",
+      technologies: ["MongoDB", "Express.js", "React", "Node.js", "LangChain", "OpenAI API"],
       gradient: "from-primary-50 to-primary-100",
       badgeColor: "bg-primary-500",
     },
     {
       icon: Coffee,
       title: "Java Full Stack Developers",
-      description: "Enterprise-grade scalable solutions with modern Java frameworks.",
-      technologies: ["Spring Boot", "Hibernate", "Angular", "Microservices"],
+      description: "Scalable enterprise apps with microservices",
+      technologies: ["Java", "Spring Boot", "Hibernate", "Angular/React", "REST APIs"],
       gradient: "from-amber-50 to-amber-100",
       badgeColor: "bg-accent-amber",
     },
     {
       icon: SiPython,
       title: "Python + LLM Developers",
-      description: "AI-driven backend systems, data pipelines, and natural language applications.",
-      technologies: ["Django", "Flask", "Hugging Face", "AI APIs"],
+      description: "AI-driven backend systems and NLP solutions",
+      technologies: ["Python", "Flask/Django", "LangChain", "Hugging Face", "AI APIs"],
       gradient: "from-emerald-50 to-emerald-100",
       badgeColor: "bg-accent-emerald",
     },
     {
       icon: Settings,
       title: "DevOps Engineers",
-      description: "CI/CD pipelines, cloud automation, and performance monitoring.",
-      technologies: ["AWS", "Docker", "Kubernetes"],
+      description: "Cloud infrastructure, CI/CD automation",
+      technologies: ["AWS", "Azure", "GCP", "Docker", "Kubernetes"],
       gradient: "from-purple-50 to-purple-100",
       badgeColor: "bg-secondary-500",
     },
     {
       icon: Smartphone,
       title: "Mobile App Developers",
-      description: "Android, iOS, and cross-platform mobile applications.",
-      technologies: ["React Native", "Flutter", "Swift"],
+      description: "iOS, Android, cross-platform solutions",
+      technologies: ["Flutter", "React Native", "Swift", "Kotlin"],
       gradient: "from-cyan-50 to-cyan-100",
       badgeColor: "bg-accent-cyan",
     },
     {
       icon: ChartLine,
       title: "AI & Data Science Experts",
-      description: "ML models, AI APIs, predictive analytics, and data insights.",
-      technologies: ["TensorFlow", "PyTorch", "MLOps"],
+      description: "Predictive analytics and model deployment",
+      technologies: ["TensorFlow", "PyTorch", "MLOps", "Data Engineering"],
       gradient: "from-purple-50 to-purple-100",
       badgeColor: "bg-purple-500",
     },
@@ -137,15 +137,12 @@ export default function Home() {
               transition={{ duration: 0.8 }}
             >
               <h1 className="text-4xl md:text-6xl font-bold mb-6 leading-tight">
-                Scale Your Tech Team with{" "}
-                <span className="text-accent-cyan">World-Class Developers</span>
-                <span className="block text-2xl md:text-3xl font-medium mt-2 opacity-90">
-                  On Demand
-                </span>
+                Build Your Dream Tech Team in{" "}
+                <span className="text-accent-cyan">Days – Not Months</span>
               </h1>
               <p className="text-xl md:text-2xl mb-8 opacity-90 leading-relaxed">
-                From MERN + LLM experts to Java Full Stack and Python + LLM developers — 
-                we bring top tech talent to your doorstep.
+                From MERN + LLM experts to Java Full Stack and Python + LLM developers – 
+                hire top talent, on demand, with The Rudhram Software Solutions.
               </p>
               <div className="flex flex-col sm:flex-row gap-4">
                 <Link href="/quote">
@@ -194,9 +191,17 @@ export default function Home() {
             <h2 className="text-3xl md:text-4xl font-bold mb-4 gradient-text">
               Why Choose Rudhram?
             </h2>
-            <p className="text-xl text-gray-600 dark:text-gray-400 max-w-3xl mx-auto">
-              We provide world-class developers with cutting-edge expertise to accelerate your digital transformation.
+            <p className="text-xl text-gray-600 dark:text-gray-400 max-w-3xl mx-auto mb-8">
+              ✅ Global delivery with 24/7 support
             </p>
+            <div className="bg-white dark:bg-gray-700 rounded-2xl p-8 max-w-4xl mx-auto mb-12 shadow-lg">
+              <blockquote className="text-lg md:text-xl text-gray-700 dark:text-gray-300 italic text-center mb-4">
+                "Rudhram transformed our idea into a working AI-powered platform in record time. Their developers feel like an extension of our team."
+              </blockquote>
+              <div className="text-center">
+                <p className="font-semibold text-primary-500">– CTO, US-based SaaS Startup</p>
+              </div>
+            </div>
           </motion.div>
 
           <motion.div

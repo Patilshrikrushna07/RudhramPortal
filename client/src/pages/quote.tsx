@@ -126,7 +126,7 @@ export default function Quote() {
             </h1>
             <p className="text-xl opacity-90 max-w-3xl mx-auto">
               Tell us about your project requirements and we'll provide a detailed quote within 24 hours.
-              Our expert team is ready to help you scale your development capacity.
+              Our expert team is ready to help you build your dream tech team.
             </p>
           </motion.div>
         </div>
