@@ -124,17 +124,17 @@ export default function Home() {
     <div className="min-h-screen">
       {/* Revolutionary Hero Section */}
       <section className="relative min-h-screen flex items-center justify-center overflow-hidden pt-16 sm:pt-20 px-4 sm:px-6 lg:px-8">
-        {/* Spectacular Gradient Background */}
-        <div className="absolute inset-0 bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900" />
+        {/* Modern Gradient Background */}
+        <div className="absolute inset-0 bg-gradient-to-br from-gray-900 via-blue-900 to-gray-900" />
         
         {/* Dynamic Mesh Gradient Overlay */}
         <div className="absolute inset-0">
           <div className="absolute inset-0" style={{
             backgroundImage: `
-              radial-gradient(circle at 20% 20%, rgba(124, 58, 237, 0.6) 0%, transparent 50%),
-              radial-gradient(circle at 80% 80%, rgba(79, 70, 229, 0.6) 0%, transparent 50%),
-              radial-gradient(circle at 40% 60%, rgba(168, 85, 247, 0.4) 0%, transparent 50%),
-              radial-gradient(circle at 60% 40%, rgba(139, 92, 246, 0.4) 0%, transparent 50%)
+              radial-gradient(circle at 20% 20%, rgba(59, 130, 246, 0.5) 0%, transparent 50%),
+              radial-gradient(circle at 80% 80%, rgba(234, 179, 8, 0.4) 0%, transparent 50%),
+              radial-gradient(circle at 40% 60%, rgba(37, 99, 235, 0.3) 0%, transparent 50%),
+              radial-gradient(circle at 60% 40%, rgba(250, 204, 21, 0.3) 0%, transparent 50%)
             `,
             backgroundSize: '800px 800px, 600px 600px, 400px 400px, 500px 500px',
             animation: 'mesh-gradient 15s ease infinite'
@@ -145,7 +145,7 @@ export default function Home() {
         <div className="absolute inset-0 pointer-events-none hidden sm:block">
           {/* Large Floating Tech Orbs */}
           <motion.div
-            className="absolute top-1/5 left-1/6 w-16 sm:w-24 lg:w-32 h-16 sm:h-24 lg:h-32 rounded-full bg-gradient-to-r from-violet-500/30 to-purple-500/30 backdrop-blur-sm border border-violet-400/20"
+            className="absolute top-1/5 left-1/6 w-16 sm:w-24 lg:w-32 h-16 sm:h-24 lg:h-32 rounded-full bg-gradient-to-r from-blue-500/30 to-blue-600/30 backdrop-blur-sm border border-blue-400/20"
             animate={{ 
               y: [0, -30, 0],
               scale: [1, 1.1, 1],
@@ -154,7 +154,7 @@ export default function Home() {
             transition={{ duration: 10, repeat: Infinity, ease: "easeInOut" }}
           />
           <motion.div
-            className="absolute top-1/4 right-1/5 w-12 sm:w-18 lg:w-24 h-12 sm:h-18 lg:h-24 rounded-full bg-gradient-to-r from-indigo-500/30 to-blue-500/30 backdrop-blur-sm border border-indigo-400/20"
+            className="absolute top-1/4 right-1/5 w-12 sm:w-18 lg:w-24 h-12 sm:h-18 lg:h-24 rounded-full bg-gradient-to-r from-yellow-500/30 to-yellow-600/30 backdrop-blur-sm border border-yellow-400/20"
             animate={{ 
               y: [0, 20, 0],
               scale: [1, 0.9, 1],
@@ -163,7 +163,7 @@ export default function Home() {
             transition={{ duration: 8, repeat: Infinity, ease: "easeInOut", delay: 2 }}
           />
           <motion.div
-            className="absolute bottom-1/4 left-1/4 w-14 sm:w-20 lg:w-28 h-14 sm:h-20 lg:h-28 rounded-full bg-gradient-to-r from-cyan-500/30 to-teal-500/30 backdrop-blur-sm border border-cyan-400/20"
+            className="absolute bottom-1/4 left-1/4 w-14 sm:w-20 lg:w-28 h-14 sm:h-20 lg:h-28 rounded-full bg-gradient-to-r from-blue-600/30 to-blue-700/30 backdrop-blur-sm border border-blue-500/20"
             animate={{ 
               y: [0, -15, 0],
               scale: [1, 1.2, 1],
@@ -174,7 +174,7 @@ export default function Home() {
 
           {/* Tech Icon Constellation */}
           <motion.div
-            className="absolute top-32 left-1/3 text-violet-400/40 hidden md:block"
+            className="absolute top-32 left-1/3 text-blue-400/50 hidden md:block"
             animate={{ 
               rotate: [0, 360],
               scale: [1, 1.3, 1]
@@ -184,7 +184,7 @@ export default function Home() {
             <SiReact className="w-8 lg:w-12 h-8 lg:h-12" />
           </motion.div>
           <motion.div
-            className="absolute top-1/2 right-1/4 text-indigo-400/40 hidden md:block"
+            className="absolute top-1/2 right-1/4 text-yellow-400/50 hidden md:block"
             animate={{ 
               rotate: [360, 0],
               scale: [1, 1.2, 1]
@@ -194,7 +194,7 @@ export default function Home() {
             <SiPython className="w-6 lg:w-10 h-6 lg:h-10" />
           </motion.div>
           <motion.div
-            className="absolute bottom-1/3 left-1/5 text-cyan-400/40 hidden lg:block"
+            className="absolute bottom-1/3 left-1/5 text-blue-300/50 hidden lg:block"
             animate={{ 
               y: [0, -20, 0],
               rotate: [0, 180, 360]
@@ -204,7 +204,7 @@ export default function Home() {
             <Coffee className="w-8 lg:w-11 h-8 lg:h-11" />
           </motion.div>
           <motion.div
-            className="absolute bottom-48 right-1/3 text-teal-400/40 hidden lg:block"
+            className="absolute bottom-48 right-1/3 text-yellow-300/50 hidden lg:block"
             animate={{ 
               scale: [1, 1.4, 1],
               rotate: [0, -360, 0]
@@ -235,14 +235,14 @@ export default function Home() {
           >
             {/* Premium Badge */}
             <motion.div
-              className="inline-flex items-center gap-2 sm:gap-3 bg-white/5 backdrop-blur-md border border-white/10 rounded-full px-4 sm:px-8 py-3 sm:py-4 mb-6 sm:mb-8 lg:mb-12"
+              className="inline-flex items-center gap-2 sm:gap-3 bg-gradient-to-r from-blue-500/10 to-yellow-500/10 backdrop-blur-md border border-blue-400/20 rounded-full px-4 sm:px-8 py-3 sm:py-4 mb-6 sm:mb-8 lg:mb-12"
               initial={{ opacity: 0, scale: 0.8 }}
               animate={{ opacity: 1, scale: 1 }}
               transition={{ duration: 0.8, delay: 0.3 }}
             >
               <div className="w-2 h-2 sm:w-3 sm:h-3 bg-emerald-400 rounded-full animate-pulse" />
-              <span className="text-white/90 text-xs sm:text-sm font-medium tracking-wide">Trusted by 150+ Global Companies</span>
-              <Rocket className="w-4 h-4 sm:w-5 sm:h-5 text-violet-400" />
+              <span className="text-white/90 text-xs sm:text-sm font-medium tracking-wide">🚀 Trusted by 200+ Tech Companies Worldwide</span>
+              <div className="text-xs sm:text-sm bg-yellow-500/20 text-yellow-300 px-2 py-1 rounded-full">NEW</div>
             </motion.div>
 
             {/* Spectacular Main Headline */}
@@ -252,10 +252,10 @@ export default function Home() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 1, delay: 0.5 }}
             >
-              Build Your{" "}
+              Scale Your{" "}
               <span className="relative inline-block">
                 <span className="bg-gradient-to-r from-blue-500 via-blue-600 to-blue-700 bg-clip-text text-transparent">
-                  Dream Team
+                  Tech Team
                 </span>
                 <motion.div
                   className="absolute -bottom-2 sm:-bottom-4 lg:-bottom-6 left-0 right-0 h-1 sm:h-2 lg:h-3 bg-gradient-to-r from-blue-500 via-blue-600 to-blue-700 rounded-full"
@@ -266,10 +266,10 @@ export default function Home() {
               </span>
               <br />
               <span className="text-2xl sm:text-3xl md:text-5xl lg:text-6xl xl:text-7xl 2xl:text-8xl text-black/80 dark:text-white/80 font-light">
-                in{" "}
+                with{" "}
                 <span className="relative">
                   <span className="bg-gradient-to-r from-yellow-500 to-yellow-600 bg-clip-text text-transparent font-black">
-                    5 Days
+                    Elite Developers
                   </span>
                 </span>
               </span>
@@ -282,10 +282,10 @@ export default function Home() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 1, delay: 0.7 }}
             >
-              Get <span className="text-blue-600 dark:text-blue-400 font-semibold">world-class developers</span> in 
-              MERN+AI, Java, Python, DevOps & Mobile.{" "}
-              <span className="text-yellow-600 dark:text-yellow-400 font-semibold">Skip months of hiring</span> —
-              start building tomorrow.
+              Access <span className="text-blue-600 dark:text-blue-400 font-semibold">pre-vetted senior developers</span> in 
+              AI/ML, Full-Stack, Cloud & Mobile technologies.{" "}
+              <span className="text-yellow-600 dark:text-yellow-400 font-semibold">From interview to deployment in 5-7 days</span> — 
+              no lengthy hiring processes.
             </motion.p>
 
             {/* Enhanced CTA Buttons */}
@@ -303,8 +303,8 @@ export default function Home() {
                   data-testid="button-get-quote"
                 >
                   <Link href="/quote">
-                    <Calculator className="w-4 h-4 sm:w-5 sm:h-5 lg:w-6 lg:h-6 mr-2 sm:mr-3 lg:mr-4" />
-                    Get Free Quote
+                    <Rocket className="w-4 h-4 sm:w-5 sm:h-5 lg:w-6 lg:h-6 mr-2 sm:mr-3 lg:mr-4" />
+                    Start Hiring Now
                   </Link>
                 </Button>
               </motion.div>
@@ -318,8 +318,8 @@ export default function Home() {
                   data-testid="button-talk-expert"
                 >
                   <Link href="/contact">
-                    <MessageCircle className="w-4 h-4 sm:w-5 sm:h-5 lg:w-6 lg:h-6 mr-2 sm:mr-3 lg:mr-4" />
-                    Talk to Expert
+                    <UserCheck className="w-4 h-4 sm:w-5 sm:h-5 lg:w-6 lg:h-6 mr-2 sm:mr-3 lg:mr-4" />
+                    Book Consultation
                   </Link>
                 </Button>
               </motion.div>
@@ -333,10 +333,10 @@ export default function Home() {
               transition={{ duration: 1, delay: 1.1 }}
             >
               {[
-                { number: "500+", label: "Expert Developers", color: "from-blue-500 to-blue-600" },
-                { number: "5-7", label: "Days to Onboard", color: "from-yellow-500 to-yellow-600" },
-                { number: "150+", label: "Projects Delivered", color: "from-blue-600 to-blue-700" },
-                { number: "99%", label: "Client Satisfaction", color: "from-yellow-600 to-yellow-700" }
+                { number: "800+", label: "Elite Developers", color: "from-blue-500 to-blue-600" },
+                { number: "5-7", label: "Days to Deploy", color: "from-yellow-500 to-yellow-600" },
+                { number: "250+", label: "Projects Delivered", color: "from-blue-600 to-blue-700" },
+                { number: "98%", label: "Client Retention", color: "from-yellow-600 to-yellow-700" }
               ].map((stat, index) => (
                 <motion.div
                   key={index}
@@ -355,6 +355,51 @@ export default function Home() {
                 </motion.div>
               ))}
             </motion.div>
+          </motion.div>
+
+          {/* Value Proposition Cards */}
+          <motion.div
+            className="grid grid-cols-1 sm:grid-cols-3 gap-4 sm:gap-6 mt-12 sm:mt-16 lg:mt-20 max-w-4xl mx-auto px-4 sm:px-0"
+            initial={{ opacity: 0, y: 50 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 1, delay: 1.8 }}
+          >
+            {[
+              { 
+                icon: Brain, 
+                title: "AI/ML Experts", 
+                desc: "LLM, ChatGPT, Computer Vision",
+                gradient: "from-blue-500/10 to-blue-600/10",
+                border: "border-blue-500/20"
+              },
+              { 
+                icon: Layers, 
+                title: "Full-Stack Masters", 
+                desc: "MERN, Java, Python ecosystems",
+                gradient: "from-yellow-500/10 to-yellow-600/10",
+                border: "border-yellow-500/20"
+              },
+              { 
+                icon: Settings, 
+                title: "Cloud Architects", 
+                desc: "AWS, Azure, DevOps, Kubernetes",
+                gradient: "from-blue-600/10 to-blue-700/10",
+                border: "border-blue-600/20"
+              }
+            ].map((item, index) => (
+              <motion.div
+                key={index}
+                className={`bg-gradient-to-br ${item.gradient} backdrop-blur-sm border ${item.border} rounded-xl p-4 sm:p-6 text-center`}
+                initial={{ opacity: 0, y: 30 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.8, delay: 2 + index * 0.2 }}
+                whileHover={{ scale: 1.05, y: -5 }}
+              >
+                <item.icon className="w-8 h-8 sm:w-10 sm:h-10 text-blue-400 mx-auto mb-3" />
+                <h3 className="text-white font-semibold text-sm sm:text-base mb-2">{item.title}</h3>
+                <p className="text-white/70 text-xs sm:text-sm">{item.desc}</p>
+              </motion.div>
+            ))}
           </motion.div>
         </div>
 
