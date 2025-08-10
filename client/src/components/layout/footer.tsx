@@ -121,6 +121,26 @@ export function Footer() {
             </a>
           </div>
         </div>
+
+        {/* DevionX Technologies Credit */}
+        <div className="border-t border-gray-800/50 mt-6 pt-6 text-center">
+          <div className="flex items-center justify-center gap-2 text-gray-500 text-sm">
+            <span>Designed and Developed by</span>
+            <a 
+              href="https://www.devionx.com" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-2 text-orange-400 hover:text-orange-300 transition-colors font-medium"
+            >
+              <img 
+                src="/attached_assets/logo XBB png-01-01_1754836313988.jpg" 
+                alt="DevionX Technologies" 
+                className="w-5 h-5 object-contain"
+              />
+              @DevionX Technologies
+            </a>
+          </div>
+        </div>
       </div>
     </footer>
   );
