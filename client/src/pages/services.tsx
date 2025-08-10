@@ -1,0 +1,296 @@
+import { Card, CardContent, CardHeader } from "@/components/ui/card";
+import { Badge } from "@/components/ui/badge";
+import { Button } from "@/components/ui/button";
+import { Link } from "wouter";
+import { motion } from "framer-motion";
+import { 
+  Layers, 
+  Coffee, 
+  Users,
+  Check,
+  Calculator
+} from "lucide-react";
+import { SiPython } from "react-icons/si";
+
+const containerVariants = {
+  hidden: { opacity: 0 },
+  visible: {
+    opacity: 1,
+    transition: {
+      staggerChildren: 0.1,
+    },
+  },
+};
+
+const itemVariants = {
+  hidden: { opacity: 0, y: 20 },
+  visible: {
+    opacity: 1,
+    y: 0,
+    transition: {
+      duration: 0.5,
+    },
+  },
+};
+
+export default function Services() {
+  const coreServices = [
+    {
+      icon: Layers,
+      title: "MERN + LLM Developer Augmentation",
+      subtitle: "Full-Stack AI Integration",
+      description: "Complete web application development with intelligent AI capabilities",
+      technologies: [
+        "MongoDB", "Express.js", "React", "Node.js", 
+        "LangChain", "OpenAI API", "Vector Databases"
+      ],
+      useCases: [
+        "AI-powered web portals with intelligent content generation",
+        "Real-time chatbots with context-aware responses",
+        "Custom LLM integrations for domain-specific applications",
+        "AI recommendation engines and personalization systems"
+      ],
+      gradient: "from-primary-500 to-primary-600",
+      badgeColors: "bg-primary-100 text-primary-700 dark:bg-primary-900 dark:text-primary-300"
+    },
+    {
+      icon: Coffee,
+      title: "Java Full Stack Developer Augmentation", 
+      subtitle: "Enterprise Solutions",
+      description: "Scalable enterprise applications with modern Java frameworks",
+      technologies: [
+        "Java", "Spring Boot", "Hibernate", "Angular/React", 
+        "REST APIs", "Microservices"
+      ],
+      useCases: [
+        "Banking and financial services applications",
+        "Large-scale e-commerce platforms",
+        "Enterprise resource planning (ERP) systems",
+        "High-performance microservices architectures"
+      ],
+      gradient: "from-accent-amber to-yellow-500",
+      badgeColors: "bg-amber-100 text-amber-700 dark:bg-amber-900 dark:text-amber-300"
+    },
+    {
+      icon: SiPython,
+      title: "Python + LLM Developer Augmentation",
+      subtitle: "AI-Driven Backend",
+      description: "Intelligent backend systems powered by advanced AI technologies",
+      technologies: [
+        "Python", "Flask/Django", "LangChain", "Hugging Face", 
+        "Data Engineering", "AI APIs"
+      ],
+      useCases: [
+        "AI-powered SaaS products with intelligent automation",
+        "Natural language processing tools and applications", 
+        "Custom GPT integrations for specialized domains",
+        "Data analytics platforms with ML capabilities"
+      ],
+      gradient: "from-accent-emerald to-green-500",
+      badgeColors: "bg-emerald-100 text-emerald-700 dark:bg-emerald-900 dark:text-emerald-300"
+    }
+  ];
+
+  const additionalRoles = [
+    {
+      category: "Frontend & Backend",
+      roles: [
+        "Frontend Developers (React, Angular, Vue.js)",
+        "Backend Developers (Node.js, .NET, GoLang)",
+        "Mobile Developers (Flutter, React Native)",
+        "UI/UX Designers"
+      ]
+    },
+    {
+      category: "Infrastructure & QA", 
+      roles: [
+        "DevOps & Cloud Engineers (AWS, Azure, GCP)",
+        "QA Automation Engineers (Selenium, Cypress)",
+        "AI/ML Engineers (Machine Learning, Deep Learning)",
+        "Data Engineers (ETL pipelines, Big Data)"
+      ]
+    }
+  ];
+
+  return (
+    <div className="min-h-screen pt-16">
+      {/* Header Section */}
+      <section className="section-padding bg-gradient-to-br from-gray-50 to-white dark:from-gray-900 dark:to-gray-800">
+        <div className="container mx-auto px-4">
+          <motion.div
+            className="text-center mb-16"
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6 }}
+          >
+            <h1 className="text-4xl md:text-5xl font-bold mb-6 gradient-text">
+              Our Core Services
+            </h1>
+            <p className="text-xl text-gray-600 dark:text-gray-400 max-w-3xl mx-auto">
+              Comprehensive staff augmentation services tailored to your specific technology needs. 
+              Scale your development team with pre-vetted experts in cutting-edge technologies.
+            </p>
+          </motion.div>
+        </div>
+      </section>
+
+      {/* Core Services Section */}
+      <section className="section-padding bg-white dark:bg-gray-800">
+        <div className="container mx-auto px-4">
+          <motion.div
+            className="space-y-12"
+            variants={containerVariants}
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true }}
+          >
+            {coreServices.map((service, index) => (
+              <motion.div key={index} variants={itemVariants}>
+                <Card className="shadow-lg hover:shadow-xl transition-shadow border-0">
+                  <CardContent className="p-8">
+                    <div className="grid lg:grid-cols-3 gap-8">
+                      {/* Service Header */}
+                      <div className="lg:col-span-1">
+                        <div className="flex items-center mb-6">
+                          <div className={`w-16 h-16 bg-gradient-to-r ${service.gradient} rounded-xl flex items-center justify-center mr-6`}>
+                            <service.icon className="text-white text-2xl w-8 h-8" />
+                          </div>
+                          <div>
+                            <h3 className="text-2xl font-bold text-gray-800 dark:text-white mb-2">
+                              {service.title}
+                            </h3>
+                            <p className="text-primary-500 font-medium">
+                              {service.subtitle}
+                            </p>
+                          </div>
+                        </div>
+                        <p className="text-gray-600 dark:text-gray-400 mb-6">
+                          {service.description}
+                        </p>
+                      </div>
+
+                      {/* Technologies */}
+                      <div className="lg:col-span-1">
+                        <h4 className="font-semibold text-gray-800 dark:text-white mb-4">
+                          Skills & Technologies:
+                        </h4>
+                        <div className="flex flex-wrap gap-2 mb-6">
+                          {service.technologies.map((tech) => (
+                            <Badge
+                              key={tech}
+                              className={`${service.badgeColors} rounded-full text-sm`}
+                            >
+                              {tech}
+                            </Badge>
+                          ))}
+                        </div>
+                      </div>
+
+                      {/* Use Cases */}
+                      <div className="lg:col-span-1">
+                        <h4 className="font-semibold text-gray-800 dark:text-white mb-4">
+                          Use Cases:
+                        </h4>
+                        <ul className="space-y-3">
+                          {service.useCases.map((useCase, idx) => (
+                            <li key={idx} className="flex items-start text-gray-600 dark:text-gray-300">
+                              <Check className="text-accent-emerald mr-3 mt-0.5 flex-shrink-0 w-4 h-4" />
+                              <span className="text-sm">{useCase}</span>
+                            </li>
+                          ))}
+                        </ul>
+                      </div>
+                    </div>
+                  </CardContent>
+                </Card>
+              </motion.div>
+            ))}
+          </motion.div>
+        </div>
+      </section>
+
+      {/* Additional Roles Section */}
+      <section className="section-padding bg-gray-50 dark:bg-gray-900">
+        <div className="container mx-auto px-4">
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6 }}
+          >
+            <Card className="shadow-lg border-0">
+              <CardContent className="p-8">
+                <div className="flex items-center mb-8">
+                  <div className="w-16 h-16 bg-gradient-to-r from-secondary-500 to-purple-600 rounded-xl flex items-center justify-center mr-6">
+                    <Users className="text-white text-2xl w-8 h-8" />
+                  </div>
+                  <div>
+                    <h3 className="text-2xl font-bold text-gray-800 dark:text-white mb-2">
+                      Additional Specialized Roles
+                    </h3>
+                    <p className="text-secondary-500 font-medium">
+                      Complete Tech Teams
+                    </p>
+                  </div>
+                </div>
+
+                <div className="grid md:grid-cols-2 gap-8">
+                  {additionalRoles.map((category, index) => (
+                    <div key={index}>
+                      <h4 className="font-semibold text-gray-800 dark:text-white mb-4">
+                        {category.category}:
+                      </h4>
+                      <ul className="space-y-3">
+                        {category.roles.map((role, idx) => (
+                          <li key={idx} className="flex items-center text-gray-600 dark:text-gray-300">
+                            <div className="w-2 h-2 bg-secondary-500 rounded-full mr-3 flex-shrink-0" />
+                            <span className="text-sm">{role}</span>
+                          </li>
+                        ))}
+                      </ul>
+                    </div>
+                  ))}
+                </div>
+              </CardContent>
+            </Card>
+          </motion.div>
+        </div>
+      </section>
+
+      {/* CTA Section */}
+      <section className="section-padding bg-gradient-to-br from-primary-600 to-secondary-600 text-white">
+        <div className="container mx-auto px-4 text-center">
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6 }}
+          >
+            <h2 className="text-3xl md:text-4xl font-bold mb-6">
+              Ready to Build Your Dream Team?
+            </h2>
+            <p className="text-xl mb-8 opacity-90 max-w-2xl mx-auto">
+              Let's discuss your specific requirements and match you with the perfect developers for your project.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <Link href="/quote">
+                <Button className="bg-accent-amber hover:bg-yellow-400 text-gray-900 px-8 py-4 text-lg font-semibold">
+                  <Calculator className="w-5 h-5 mr-2" />
+                  Get Custom Quote
+                </Button>
+              </Link>
+              <Link href="/contact">
+                <Button
+                  variant="outline"
+                  className="border-2 border-white text-white px-8 py-4 text-lg font-semibold hover:bg-white hover:text-gray-900"
+                >
+                  Schedule Consultation
+                </Button>
+              </Link>
+            </div>
+          </motion.div>
+        </div>
+      </section>
+    </div>
+  );
+}
