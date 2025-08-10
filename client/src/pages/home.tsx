@@ -235,19 +235,19 @@ export default function Home() {
           >
             {/* Premium Badge */}
             <motion.div
-              className="inline-flex items-center gap-2 sm:gap-3 bg-gradient-to-r from-blue-500/15 to-yellow-500/15 backdrop-blur-md border border-blue-400/30 rounded-full px-4 sm:px-8 py-3 sm:py-4 mb-6 sm:mb-8 lg:mb-12 shadow-lg shadow-blue-500/20"
+              className="inline-flex items-center gap-2 bg-gradient-to-r from-blue-500/15 to-yellow-500/15 backdrop-blur-md border border-blue-400/30 rounded-full px-3 sm:px-6 py-2 sm:py-3 mb-4 sm:mb-6 lg:mb-8 shadow-lg shadow-blue-500/20"
               initial={{ opacity: 0, scale: 0.8 }}
               animate={{ opacity: 1, scale: 1 }}
               transition={{ duration: 0.8, delay: 0.3 }}
             >
-              <div className="w-2 h-2 sm:w-3 sm:h-3 bg-yellow-400 rounded-full animate-pulse" />
-              <span className="text-white/90 text-xs sm:text-sm font-medium tracking-wide">🚀 Trusted by 200+ Tech Companies Worldwide</span>
-              <div className="text-xs sm:text-sm bg-yellow-500/80 text-slate-900 px-2 py-1 rounded-full font-bold">LIVE</div>
+              <div className="w-2 h-2 bg-yellow-400 rounded-full animate-pulse" />
+              <span className="text-white/90 text-xs font-medium tracking-wide">🚀 Trusted by 200+ Tech Companies Worldwide</span>
+              <div className="text-xs bg-yellow-500/80 text-slate-900 px-2 py-1 rounded-full font-bold">LIVE</div>
             </motion.div>
 
             {/* Spectacular Main Headline */}
             <motion.h1
-              className="text-3xl sm:text-4xl md:text-6xl lg:text-7xl xl:text-8xl 2xl:text-9xl font-black text-black dark:text-white mb-4 sm:mb-6 lg:mb-8 leading-[0.9] sm:leading-[0.85] tracking-tight px-2 sm:px-4 lg:px-6"
+              className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-black text-black dark:text-white mb-3 sm:mb-4 lg:mb-6 leading-[0.9] sm:leading-[0.85] tracking-tight px-2 sm:px-4 lg:px-6"
               initial={{ opacity: 0, y: 40 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 1, delay: 0.5 }}
@@ -265,8 +265,8 @@ export default function Home() {
                 />
               </span>
               <br />
-              <div className="h-2 sm:h-4 lg:h-6"></div>
-              <span className="text-2xl sm:text-3xl md:text-5xl lg:text-6xl xl:text-7xl 2xl:text-8xl text-black/80 dark:text-white/80 font-light">
+              <div className="h-1 sm:h-2 lg:h-3"></div>
+              <span className="text-xl sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl text-black/80 dark:text-white/80 font-light">
                 with{" "}
                 <span className="relative">
                   <span className="bg-gradient-to-r from-yellow-400 to-yellow-600 bg-clip-text text-transparent font-black">
@@ -278,7 +278,7 @@ export default function Home() {
 
             {/* Premium Subtitle */}
             <motion.p
-              className="text-sm sm:text-base md:text-lg lg:text-xl xl:text-2xl 2xl:text-3xl text-gray-700 dark:text-white/70 max-w-xs sm:max-w-2xl lg:max-w-4xl xl:max-w-5xl mx-auto leading-relaxed mb-8 sm:mb-12 lg:mb-16 font-light px-6 sm:px-8 lg:px-4"
+              className="text-sm sm:text-base md:text-lg lg:text-xl text-gray-700 dark:text-white/70 max-w-xs sm:max-w-2xl lg:max-w-3xl mx-auto leading-relaxed mb-6 sm:mb-8 lg:mb-10 font-light px-6 sm:px-8 lg:px-4"
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 1, delay: 0.7 }}
@@ -291,7 +291,7 @@ export default function Home() {
 
             {/* Enhanced CTA Buttons */}
             <motion.div
-              className="flex flex-col sm:flex-row gap-4 sm:gap-6 lg:gap-8 justify-center items-center mb-12 sm:mb-16 lg:mb-20 px-4 sm:px-0"
+              className="flex flex-col sm:flex-row gap-3 sm:gap-4 lg:gap-6 justify-center items-center mb-8 sm:mb-10 lg:mb-12 px-4 sm:px-0"
               initial={{ opacity: 0, y: 40 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 1, delay: 0.9 }}
@@ -300,11 +300,11 @@ export default function Home() {
                 <Button
                   asChild
                   size="lg"
-                  className="bg-gradient-to-r from-blue-500 to-blue-600 hover:from-blue-600 hover:to-blue-700 text-white px-6 sm:px-8 lg:px-12 py-4 sm:py-6 lg:py-8 text-base sm:text-lg lg:text-xl font-bold rounded-xl sm:rounded-2xl shadow-2xl shadow-blue-500/30 hover:shadow-blue-600/40 transition-all duration-300 w-full sm:w-auto transform hover:scale-105"
+                  className="bg-gradient-to-r from-blue-500 to-blue-600 hover:from-blue-600 hover:to-blue-700 text-white px-4 sm:px-6 lg:px-8 py-2 sm:py-3 lg:py-4 text-sm sm:text-base lg:text-lg font-bold rounded-lg sm:rounded-xl shadow-xl shadow-blue-500/30 hover:shadow-blue-600/40 transition-all duration-300 w-full sm:w-auto transform hover:scale-105"
                   data-testid="button-get-quote"
                 >
                   <Link href="/quote">
-                    <Rocket className="w-4 h-4 sm:w-5 sm:h-5 lg:w-6 lg:h-6 mr-2 sm:mr-3 lg:mr-4" />
+                    <Rocket className="w-4 h-4 mr-2" />
                     Start Hiring Now
                   </Link>
                 </Button>
@@ -315,11 +315,11 @@ export default function Home() {
                   asChild
                   variant="outline"
                   size="lg"
-                  className="border-2 border-yellow-400/70 text-yellow-400 hover:bg-yellow-500/10 backdrop-blur-sm px-6 sm:px-8 lg:px-12 py-4 sm:py-6 lg:py-8 text-base sm:text-lg lg:text-xl font-semibold rounded-xl sm:rounded-2xl transition-all duration-300 w-full sm:w-auto transform hover:scale-105 shadow-lg shadow-yellow-500/20"
+                  className="border-2 border-yellow-400/70 text-yellow-400 hover:bg-yellow-500/10 backdrop-blur-sm px-4 sm:px-6 lg:px-8 py-2 sm:py-3 lg:py-4 text-sm sm:text-base lg:text-lg font-semibold rounded-lg sm:rounded-xl transition-all duration-300 w-full sm:w-auto transform hover:scale-105 shadow-lg shadow-yellow-500/20"
                   data-testid="button-talk-expert"
                 >
                   <Link href="/contact">
-                    <UserCheck className="w-4 h-4 sm:w-5 sm:h-5 lg:w-6 lg:h-6 mr-2 sm:mr-3 lg:mr-4" />
+                    <UserCheck className="w-4 h-4 mr-2" />
                     Book Consultation
                   </Link>
                 </Button>
@@ -332,23 +332,24 @@ export default function Home() {
 
         </div>
 
-        {/* Centered Discover More Button */}
-        <motion.div
-          className="absolute bottom-8 sm:bottom-12 left-1/2 transform -translate-x-1/2 z-20"
-          animate={{ y: [0, 15, 0] }}
-          transition={{ duration: 2.5, repeat: Infinity }}
-        >
-          <div className="flex flex-col items-center gap-3 sm:gap-4 text-white/70 hover:text-white transition-colors duration-300">
-            <span className="text-sm sm:text-base font-medium tracking-wider">Discover More</span>
-            <div className="w-8 sm:w-10 h-12 sm:h-16 border-2 border-blue-400/60 hover:border-blue-300 rounded-full flex justify-center relative overflow-hidden shadow-lg shadow-blue-500/30 transition-all duration-300 hover:shadow-blue-400/40">
+        {/* Properly Centered Discover More Button */}
+        <div className="absolute bottom-0 left-0 right-0 flex justify-center pb-6 sm:pb-8 z-20">
+          <motion.div
+            className="flex flex-col items-center gap-2 sm:gap-3 text-white/80 hover:text-white transition-colors duration-300 cursor-pointer"
+            animate={{ y: [0, 8, 0] }}
+            transition={{ duration: 2.5, repeat: Infinity }}
+            whileHover={{ scale: 1.1 }}
+          >
+            <span className="text-xs sm:text-sm font-medium tracking-wider">Discover More</span>
+            <div className="w-6 sm:w-8 h-10 sm:h-12 border-2 border-blue-400/70 hover:border-blue-300 rounded-full flex justify-center relative overflow-hidden shadow-lg shadow-blue-500/30 transition-all duration-300 hover:shadow-blue-400/50">
               <motion.div
-                className="w-1.5 sm:w-2 h-4 sm:h-5 bg-gradient-to-b from-blue-400 to-yellow-400 rounded-full mt-3 sm:mt-4"
-                animate={{ y: [0, 15, 0] }}
+                className="w-1 sm:w-1.5 h-3 sm:h-4 bg-gradient-to-b from-blue-400 to-yellow-400 rounded-full mt-2 sm:mt-3"
+                animate={{ y: [0, 12, 0] }}
                 transition={{ duration: 2.5, repeat: Infinity }}
               />
             </div>
-          </div>
-        </motion.div>
+          </motion.div>
+        </div>
       </section>
 
       {/* Enhanced Developer Expertise Section */}
