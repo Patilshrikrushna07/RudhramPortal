@@ -8,7 +8,17 @@ import {
   Coffee, 
   Users,
   Check,
-  Calculator
+  Calculator,
+  Code,
+  Database,
+  Globe,
+  MessageCircle,
+  Zap,
+  Brain,
+  Smartphone,
+  Settings,
+  ChartLine,
+  ArrowUp
 } from "lucide-react";
 import { SiPython } from "react-icons/si";
 
@@ -114,22 +124,219 @@ export default function Services() {
   return (
     <div className="min-h-screen pt-16">
       {/* Header Section */}
-      <section className="section-padding bg-gradient-to-br from-gray-50 to-white dark:from-gray-900 dark:to-gray-800">
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+      <section className="relative min-h-screen flex items-center bg-gradient-to-br from-gray-900 via-blue-900 to-purple-900 overflow-hidden">
+        {/* Animated Background Elements */}
+        <div className="absolute inset-0 opacity-20">
+          <div className="absolute top-20 left-10 w-32 h-32 bg-blue-500 rounded-full blur-xl animate-pulse"></div>
+          <div className="absolute top-40 right-20 w-24 h-24 bg-purple-500 rounded-full blur-lg animate-float"></div>
+          <div className="absolute bottom-32 left-1/4 w-40 h-40 bg-cyan-500 rounded-full blur-2xl animate-pulse-slow"></div>
+          <div className="absolute bottom-20 right-1/3 w-28 h-28 bg-pink-500 rounded-full blur-xl animate-float"></div>
+          
+          {/* Grid Pattern */}
+          <div className="absolute inset-0 bg-grid-pattern opacity-10"></div>
+          
+          {/* Floating Tech Icons */}
           <motion.div
-            className="text-center mb-12 sm:mb-16"
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
+            className="absolute top-1/4 left-1/6 text-blue-400"
+            animate={{ y: [-10, 10, -10] }}
+            transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
           >
-            <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mb-4 sm:mb-6 gradient-text px-4 sm:px-0">
-              Staff Augmentation Services
-            </h1>
-            <p className="text-lg sm:text-xl text-gray-600 dark:text-gray-400 max-w-3xl mx-auto px-4 sm:px-0 leading-relaxed">
-              At The Rudram Software Solutions, we deliver specialized staff augmentation services to help you scale your development capabilities instantly. Whether you need MERN + LLM, Java Full Stack, or Python + LLM experts, our talent pool covers every modern technology stack.
-            </p>
+            <Code className="w-8 h-8" />
+          </motion.div>
+          <motion.div
+            className="absolute top-1/3 right-1/4 text-purple-400"
+            animate={{ y: [10, -10, 10] }}
+            transition={{ duration: 3, repeat: Infinity, ease: "easeInOut", delay: 1 }}
+          >
+            <Database className="w-6 h-6" />
+          </motion.div>
+          <motion.div
+            className="absolute bottom-1/3 left-1/5 text-cyan-400"
+            animate={{ y: [-15, 15, -15] }}
+            transition={{ duration: 5, repeat: Infinity, ease: "easeInOut", delay: 2 }}
+          >
+            <Globe className="w-7 h-7" />
           </motion.div>
         </div>
+
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+          <div className="grid lg:grid-cols-2 gap-12 items-center">
+            {/* Left Content */}
+            <motion.div
+              initial={{ opacity: 0, x: -50 }}
+              animate={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.8 }}
+              className="text-left"
+            >
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: 0.2 }}
+                className="mb-6"
+              >
+                <Badge className="bg-gradient-to-r from-blue-500 to-purple-500 text-white px-4 py-2 text-sm font-medium mb-4">
+                  🚀 Premium Staff Augmentation
+                </Badge>
+              </motion.div>
+
+              <motion.h1
+                initial={{ opacity: 0, y: 30 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.8, delay: 0.3 }}
+                className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold mb-6 text-white leading-tight"
+              >
+                Build Your 
+                <span className="block bg-gradient-to-r from-blue-400 via-purple-400 to-cyan-400 bg-clip-text text-transparent">
+                  Dream Tech Team
+                </span>
+                <span className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-normal text-gray-300 block mt-2">
+                  in Days, Not Months
+                </span>
+              </motion.h1>
+
+              <motion.p
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: 0.5 }}
+                className="text-lg sm:text-xl text-gray-300 mb-8 leading-relaxed max-w-2xl"
+              >
+                Access world-class developers specializing in <span className="text-blue-400 font-semibold">MERN + LLM</span>, 
+                <span className="text-purple-400 font-semibold"> Java Full Stack</span>, and 
+                <span className="text-cyan-400 font-semibold"> Python + AI</span>. 
+                Scale your development capabilities with pre-vetted talent that integrates seamlessly with your team.
+              </motion.p>
+
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: 0.7 }}
+                className="flex flex-col sm:flex-row gap-4 mb-8"
+              >
+                <Link href="/quote" className="flex-1 sm:flex-none">
+                  <Button className="w-full sm:w-auto bg-gradient-to-r from-blue-500 to-purple-500 hover:from-blue-600 hover:to-purple-600 text-white px-8 py-4 text-lg font-semibold rounded-xl transition-all transform hover:scale-105 shadow-lg">
+                    <Calculator className="w-5 h-5 mr-2" />
+                    Get Custom Quote
+                  </Button>
+                </Link>
+                <Link href="/contact" className="flex-1 sm:flex-none">
+                  <Button 
+                    variant="outline" 
+                    className="w-full sm:w-auto border-2 border-white/30 text-white px-8 py-4 text-lg font-semibold rounded-xl hover:bg-white/10 transition-all transform hover:scale-105"
+                  >
+                    <MessageCircle className="w-5 h-5 mr-2" />
+                    Talk to Expert
+                  </Button>
+                </Link>
+              </motion.div>
+
+              {/* Quick Stats */}
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: 0.9 }}
+                className="grid grid-cols-3 gap-6"
+              >
+                {[
+                  { number: "500+", label: "Expert Developers" },
+                  { number: "5-7", label: "Days Onboarding" },
+                  { number: "150+", label: "Projects Delivered" }
+                ].map((stat, index) => (
+                  <div key={index} className="text-center">
+                    <div className="text-2xl sm:text-3xl font-bold text-white mb-1">{stat.number}</div>
+                    <div className="text-sm text-gray-400">{stat.label}</div>
+                  </div>
+                ))}
+              </motion.div>
+            </motion.div>
+
+            {/* Right Content - Visual Elements */}
+            <motion.div
+              initial={{ opacity: 0, x: 50 }}
+              animate={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.8, delay: 0.4 }}
+              className="relative hidden lg:block"
+            >
+              {/* Main Tech Stack Visual */}
+              <div className="relative w-full h-96">
+                {/* Central Hub */}
+                <motion.div
+                  animate={{ rotate: 360 }}
+                  transition={{ duration: 20, repeat: Infinity, ease: "linear" }}
+                  className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-24 h-24 bg-gradient-to-r from-blue-500 to-purple-500 rounded-full flex items-center justify-center shadow-2xl"
+                >
+                  <Zap className="w-12 h-12 text-white" />
+                </motion.div>
+
+                {/* Orbiting Tech Icons */}
+                {[
+                  { icon: Brain, color: "from-blue-400 to-cyan-400", delay: 0 },
+                  { icon: Database, color: "from-purple-400 to-pink-400", delay: 1 },
+                  { icon: Globe, color: "from-green-400 to-blue-400", delay: 2 },
+                  { icon: Smartphone, color: "from-orange-400 to-red-400", delay: 3 },
+                  { icon: Settings, color: "from-yellow-400 to-orange-400", delay: 4 },
+                  { icon: ChartLine, color: "from-pink-400 to-purple-400", delay: 5 }
+                ].map((item, index) => (
+                  <motion.div
+                    key={index}
+                    animate={{ rotate: -360 }}
+                    transition={{ duration: 15, repeat: Infinity, ease: "linear", delay: item.delay }}
+                    className="absolute top-1/2 left-1/2 w-full h-full"
+                    style={{ transformOrigin: '50% 50%' }}
+                  >
+                    <motion.div
+                      animate={{ rotate: 360 }}
+                      transition={{ duration: 15, repeat: Infinity, ease: "linear", delay: item.delay }}
+                      className={`absolute w-16 h-16 bg-gradient-to-r ${item.color} rounded-2xl flex items-center justify-center shadow-lg`}
+                      style={{
+                        top: `${30 + 40 * Math.cos((index * 60) * Math.PI / 180)}%`,
+                        left: `${30 + 40 * Math.sin((index * 60) * Math.PI / 180)}%`,
+                        transform: 'translate(-50%, -50%)'
+                      }}
+                    >
+                      <item.icon className="w-8 h-8 text-white" />
+                    </motion.div>
+                  </motion.div>
+                ))}
+
+                {/* Connecting Lines */}
+                <svg className="absolute inset-0 w-full h-full">
+                  <defs>
+                    <linearGradient id="lineGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+                      <stop offset="0%" stopColor="#3B82F6" stopOpacity="0.3" />
+                      <stop offset="100%" stopColor="#8B5CF6" stopOpacity="0.3" />
+                    </linearGradient>
+                  </defs>
+                  {Array.from({ length: 6 }, (_, i) => (
+                    <motion.line
+                      key={i}
+                      x1="50%"
+                      y1="50%"
+                      x2={`${50 + 30 * Math.cos((i * 60) * Math.PI / 180)}%`}
+                      y2={`${50 + 30 * Math.sin((i * 60) * Math.PI / 180)}%`}
+                      stroke="url(#lineGradient)"
+                      strokeWidth="2"
+                      initial={{ pathLength: 0 }}
+                      animate={{ pathLength: 1 }}
+                      transition={{ duration: 2, delay: i * 0.2 }}
+                    />
+                  ))}
+                </svg>
+              </div>
+            </motion.div>
+          </div>
+        </div>
+
+        {/* Scroll Indicator */}
+        <motion.div
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ duration: 1, delay: 1.5 }}
+          className="absolute bottom-8 left-1/2 transform -translate-x-1/2 text-white/60"
+        >
+          <div className="animate-bounce">
+            <ArrowUp className="w-6 h-6 rotate-180" />
+          </div>
+        </motion.div>
       </section>
 
       {/* Core Services Section */}
