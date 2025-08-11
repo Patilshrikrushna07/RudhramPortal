@@ -79,20 +79,20 @@ export default function Home() {
       badgeColor: "bg-primary-500",
     },
     {
-      icon: Coffee,
-      title: "Java Full Stack Developers",
-      description: "Scalable enterprise apps with microservices",
-      technologies: ["Java", "Spring Boot", "Hibernate", "Angular/React", "REST APIs"],
-      gradient: "from-amber-50 to-amber-100",
-      badgeColor: "bg-accent-amber",
-    },
-    {
       icon: SiPython,
       title: "Python + LLM Developers",
       description: "AI-driven backend systems and NLP solutions",
       technologies: ["Python", "Flask/Django", "LangChain", "Hugging Face", "AI APIs"],
       gradient: "from-emerald-50 to-emerald-100",
       badgeColor: "bg-accent-emerald",
+    },
+    {
+      icon: Coffee,
+      title: "Java Full Stack Developers",
+      description: "Scalable enterprise apps with microservices",
+      technologies: ["Java", "Spring Boot", "Hibernate", "Angular/React", "REST APIs"],
+      gradient: "from-amber-50 to-amber-100",
+      badgeColor: "bg-accent-amber",
     },
     {
       icon: Settings,

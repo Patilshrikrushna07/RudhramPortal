@@ -107,7 +107,7 @@ export function Footer() {
 
         <div className="border-t border-gray-800 pt-8 flex flex-col md:flex-row justify-between items-center">
           <p className="text-gray-400 text-sm">
-            © 2024 Rudram Software Solutions. All rights reserved.
+            © 2025 Rudram Software Solutions. All rights reserved.
           </p>
           <div className="flex space-x-6 mt-4 md:mt-0">
             <a href="#" className="text-gray-400 hover:text-white text-sm transition-colors">
@@ -131,17 +131,12 @@ export function Footer() {
               target="_blank" 
               rel="noopener noreferrer"
               className="inline-flex items-center gap-2 text-orange-400 hover:text-orange-300 transition-colors font-medium"
-            >
-              <img 
-                src="/attached_assets/logo XBB png-01-01_1754836313988.jpg" 
-                alt="DevionX Technologies" 
-                className="w-5 h-5 object-contain"
-              />
-              @DevionX Technologies
+            > @DevionX Technologies
             </a>
           </div>
         </div>
       </div>
     </footer>
   );
+
 }
